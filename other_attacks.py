@@ -53,22 +53,22 @@ def model_selection(name):
             'mixer_l16_224',
             pretrained=True
         )
-    elif name == 'tf2torch_adv_inception_v3':
-        net = tf2torch_adv_inception_v3
-        model_path = os.path.join("pretrained_models", name + '.npy')
-        model = net.KitModel(model_path)
-    elif name == 'tf2torch_ens3_adv_inc_v3':
-        net = tf2torch_ens3_adv_inc_v3
-        model_path = os.path.join("pretrained_models", name + '.npy')
-        model = net.KitModel(model_path)
-    elif name == 'tf2torch_ens4_adv_inc_v3':
-        net = tf2torch_ens4_adv_inc_v3
-        model_path = os.path.join("pretrained_models", name + '.npy')
-        model = net.KitModel(model_path)
-    elif name == 'tf2torch_ens_adv_inc_res_v2':
-        net = tf2torch_ens_adv_inc_res_v2
-        model_path = os.path.join("pretrained_models", name + '.npy')
-        model = net.KitModel(model_path)
+    # elif name == 'tf2torch_adv_inception_v3':
+    #     net = tf2torch_adv_inception_v3
+    #     model_path = os.path.join("pretrained_models", name + '.npy')
+    #     model = net.KitModel(model_path)
+    # elif name == 'tf2torch_ens3_adv_inc_v3':
+    #     net = tf2torch_ens3_adv_inc_v3
+    #     model_path = os.path.join("pretrained_models", name + '.npy')
+    #     model = net.KitModel(model_path)
+    # elif name == 'tf2torch_ens4_adv_inc_v3':
+    #     net = tf2torch_ens4_adv_inc_v3
+    #     model_path = os.path.join("pretrained_models", name + '.npy')
+    #     model = net.KitModel(model_path)
+    # elif name == 'tf2torch_ens_adv_inc_res_v2':
+    #     net = tf2torch_ens_adv_inc_res_v2
+    #     model_path = os.path.join("pretrained_models", name + '.npy')
+    #     model = net.KitModel(model_path)
     elif name == 'cubResnet50':
         model = otherModel.CUB()[0]
     elif name == 'cubSEResnet154':
@@ -91,8 +91,10 @@ def model_transfer(clean_img, adv_img, label, res, save_path=r"C:\Users\PC\Deskt
 
     if args.dataset_name == "imagenet_compatible":
         models_transfer_name = ["resnet", "vgg", "mobile", "inception", "convnext", "vit", "swin", 'deit-b', 'deit-s',
-                                'mixer-b', 'mixer-l', 'tf2torch_adv_inception_v3', 'tf2torch_ens3_adv_inc_v3',
-                                'tf2torch_ens4_adv_inc_v3', 'tf2torch_ens_adv_inc_res_v2']
+                                'mixer-b', 'mixer-l', 
+                                # 'tf2torch_adv_inception_v3', 'tf2torch_ens3_adv_inc_v3',
+                                # 'tf2torch_ens4_adv_inc_v3', 'tf2torch_ens_adv_inc_res_v2'
+                                ]
         nb_classes = 1000
     elif args.dataset_name == "cub_200_2011":
         models_transfer_name = ["cubResnet50", "cubSEResnet154", "cubSEResnet101"]

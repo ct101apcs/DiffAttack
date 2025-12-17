@@ -1,100 +1,114 @@
+import math
+from typing import Iterable, Sequence, Tuple
 import numpy as np
 import torch
 from PIL import Image
-import cv2
-from typing import Tuple
 
 
-def aggregate_attention(prompts, attention_store, res: int, from_where, is_cross: bool, select: int, is_cpu=True):
-    out = []
-    attention_maps = attention_store.get_average_attention()
-    num_pixels = res ** 2
-    for location in from_where:
-        for item in attention_maps[f"{location}_{'cross' if is_cross else 'self'}"]:
-            if item.shape[1] == num_pixels:
-                cross_maps = item.reshape(len(prompts), -1, res, res, item.shape[-1])[select]
-                out.append(cross_maps)
-    out = torch.cat(out, dim=0)
-    out = out.sum(0) / out.shape[0]
-    return out.cpu() if is_cpu else out
+def view_images(images: np.ndarray,
+                num_rows: int = 1,
+                offset: int = 0,
+                show: bool = False,
+                save_path: str = None) -> None:
+    """Save or show a simple grid of images.
 
+    Expects images as N x H x W x C in [0,255] (uint8 or float).
+    Creates a single-row or multi-row grid and optionally saves it.
+    """
+    if images is None:
+        return
 
-def show_cross_attention(prompts, tokenizer, attention_store, res: int, from_where, select: int = 0, save_path=None):
-    tokens = tokenizer.encode(prompts[select])
-    decoder = tokenizer.decode
-    attention_maps = aggregate_attention(prompts, attention_store, res, from_where, True, select)
-    images = []
-    for i in range(len(tokens)):
-        image = attention_maps[:, :, i]
-        image = 255 * image / image.max()
-        image = image.unsqueeze(-1).expand(*image.shape, 3)
-        image = image.detach().cpu().numpy().astype(np.uint8)
-        image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
-        image = cv2.applyColorMap(image, cv2.COLORMAP_BONE)
-        image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
-        image = np.array(Image.fromarray(image).resize((256, 256)))
-        image = text_under_image(image, decoder(int(tokens[i])))
-        images.append(image)
-    view_images(np.stack(images, axis=0), save_path=save_path)
+    imgs = images
+    if isinstance(imgs, torch.Tensor):
+        imgs = imgs.detach().cpu().numpy()
 
+    if imgs.ndim == 3:
+        # Single image HWC -> add N=1
+        imgs = imgs[None]
+    assert imgs.ndim == 4, f"Expected images as [N,H,W,C], got shape {imgs.shape}"
 
-def show_self_attention_comp(prompts, attention_store, res: int, from_where,
-                             max_com=7, select: int = 0, save_path=None):
-    attention_maps = aggregate_attention(prompts, attention_store, res, from_where, False, select).numpy().reshape(
-        (res ** 2, res ** 2))
-    u, s, vh = np.linalg.svd(attention_maps - np.mean(attention_maps, axis=1, keepdims=True))
-    images = []
-    for i in range(max_com):
-        image = vh[i].reshape(res, res)
-        image = image - image.min()
-        image = 255 * image / image.max()
-        image = np.repeat(np.expand_dims(image, axis=2), 3, axis=2).astype(np.uint8)
-        image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
-        image = cv2.applyColorMap(image, cv2.COLORMAP_BONE)
-        image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
-        image = Image.fromarray(image).resize((256, 256))
-        image = np.array(image)
-        images.append(image)
-    view_images(np.concatenate(images, axis=1), save_path=save_path)
+    N, H, W, C = imgs.shape
+    if imgs.dtype != np.uint8:
+        imgs = np.clip(imgs, 0, 255).astype(np.uint8)
 
+    if num_rows <= 0:
+        num_rows = 1
+    num_cols = math.ceil(N / num_rows)
 
-def text_under_image(image: np.ndarray, text: str, text_color: Tuple[int, int, int] = (0, 0, 0)):
-    h, w, c = image.shape
-    offset = int(h * .2)
-    img = np.ones((h + offset, w, c), dtype=np.uint8) * 255
-    font = cv2.FONT_HERSHEY_SIMPLEX
-    img[:h] = image
-    textsize = cv2.getTextSize(text, font, 1, 2)[0]
-    text_x, text_y = (w - textsize[0]) // 2, h + offset - textsize[1] // 2
-    cv2.putText(img, text, (text_x, text_y), font, 1, text_color, 2)
-    return img
+    grid = np.zeros((num_rows * H, num_cols * W, C), dtype=np.uint8)
 
+    for idx in range(N):
+        r = idx // num_cols
+        c = idx % num_cols
+        grid[r*H:(r+1)*H, c*W:(c+1)*W, :] = imgs[idx]
 
-def view_images(images, num_rows=1, offset_ratio=0.02, save_path=None, show=False):
-    if type(images) is list:
-        num_empty = len(images) % num_rows
-    elif images.ndim == 4:
-        num_empty = images.shape[0] % num_rows
-    else:
-        images = [images]
-        num_empty = 0
-
-    empty_images = np.ones(images[0].shape, dtype=np.uint8) * 255
-    images = [image.astype(np.uint8) for image in images] + [empty_images] * num_empty
-    num_items = len(images)
-
-    h, w, c = images[0].shape
-    offset = int(h * offset_ratio)
-    num_cols = num_items // num_rows
-    image_ = np.ones((h * num_rows + offset * (num_rows - 1),
-                      w * num_cols + offset * (num_cols - 1), 3), dtype=np.uint8) * 255
-    for i in range(num_rows):
-        for j in range(num_cols):
-            image_[i * (h + offset): i * (h + offset) + h:, j * (w + offset): j * (w + offset) + w] = images[
-                i * num_cols + j]
-
-    pil_img = Image.fromarray(image_)
+    img = Image.fromarray(grid)
+    if save_path:
+        img.save(save_path)
     if show:
-        pil_img.show()
-    if save_path is not None:
-        pil_img.save(save_path)
+        img.show()
+
+
+@torch.no_grad()
+def aggregate_attention(prompt: Sequence[str],
+                        controller,
+                        res: int,
+                        from_where: Tuple[str, ...] = ("up", "down"),
+                        is_cross: bool = True,
+                        select: int = 0,
+                        is_cpu: bool = False) -> torch.Tensor:
+    """Aggregate attention maps from controller into a [res, res, token] tensor.
+
+    - res: target spatial resolution for the attention map (e.g., args.res // 32)
+    - from_where: which UNet blocks to use ("up", "down", "mid")
+    - is_cross: choose cross/self attention tensors
+    - select: sample index to select from the controller's batch (0 or 1)
+    - returns: tensor of shape [res, res, token_len]
+    """
+    # Prefer averaged attention over steps when available
+    attn_store = controller.get_average_attention() if hasattr(controller, 'get_average_attention') else getattr(controller, 'attention_store', {})
+
+    keys = [f"{w}_{'cross' if is_cross else 'self'}" for w in from_where]
+    maps = []
+    bsz = getattr(controller, 'batch_size', 2)
+
+    for key in keys:
+        for attn in attn_store.get(key, []):
+            # attn: [batch*heads, query, key]
+            if not isinstance(attn, torch.Tensor):
+                continue
+            bh, q, k = attn.shape
+            h = max(1, bh // max(1, bsz))
+            try:
+                attn = attn.reshape(bsz, h, q, k).mean(1)  # [bsz, q, k]
+            except Exception:
+                # If reshape fails, treat whole dim as heads=1
+                attn = attn.reshape(bh, q, k).mean(0, keepdim=True)
+                bsz = 1
+
+            # Try to reshape query tokens into spatial map [res, res]
+            if q == res * res:
+                att_sel = attn[select]  # [q, k]
+                att_sel = att_sel.reshape(res, res, k)  # [res, res, k]
+                maps.append(att_sel)
+            else:
+                # Attempt square reshape via sqrt; fallback: skip
+                sq = int(math.sqrt(q))
+                if sq * sq == q:
+                    att_sel = attn[select].reshape(sq, sq, k)
+                    # Resize to [res,res] via bilinear on channels as batch
+                    att_chw = att_sel.permute(2, 0, 1).unsqueeze(0)  # [1,k,sq,sq]
+                    att_resized = torch.nn.functional.interpolate(att_chw, size=(res, res), mode='bilinear', align_corners=False)
+                    att_resized = att_resized.squeeze(0).permute(1, 2, 0)  # [res,res,k]
+                    maps.append(att_resized)
+                else:
+                    # Cannot map spatially; skip this layer
+                    continue
+
+    if not maps:
+        # Fallback: return zeros with a reasonable token dim guess (77)
+        device = 'cpu' if is_cpu else (maps[0].device if maps else 'cpu')
+        return torch.zeros(res, res, 77, device=device)
+
+    att = torch.stack(maps, dim=0).mean(0)  # [res,res,k]
+    return att.cpu() if is_cpu else att

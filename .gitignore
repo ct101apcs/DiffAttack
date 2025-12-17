@@ -1,4 +1,9 @@
 .idea
+*.zip
 __pycache__
 /pretrained_models/
 /output/
+/datasets/
+/*_demo*
+/retrieved_images/
+/supplementary_runs/
