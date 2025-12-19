@@ -7,6 +7,14 @@ from torch import optim
 from utils import view_images, aggregate_attention
 from distances import LpDistance
 import other_attacks
+import os
+
+
+# Conditional import for learnable weights
+def get_weight_network_class():
+    """Lazy import of TimestepWeightNetwork to avoid circular imports."""
+    from timestep_weights import TimestepWeightNetwork
+    return TimestepWeightNetwork
 
 
 def preprocess(image, res=512):
@@ -331,7 +339,9 @@ def diffattack(
         iterations=30,
         verbose=True,
         topN=1,
-        args=None
+        args=None,
+        use_learnable_weights=False,
+        weight_network=None
 ):
     if args.dataset_name == "imagenet_compatible":
         from dataset_caption import imagenet_label
@@ -470,10 +480,28 @@ def diffattack(
 
     latent.requires_grad_(True)
 
+    # Setup optimizer(s)
     optimizer = optim.AdamW([latent], lr=1e-2)
+    
+    # Setup weight network optimizer if using learnable weights
+    weight_optimizer = None
+    if use_learnable_weights and weight_network is not None:
+        weight_optimizer = optim.Adam(weight_network.parameters(), lr=1e-4)
+        print(f"\n✓ Using learnable timestep weights")
+        print(f"  Weight network learning rate: 1e-4")
+        print(f"  Initial weights (self-attn): {weight_network.get_self_weights().detach().cpu().numpy()}")
+    
     cross_entro = torch.nn.CrossEntropyLoss()
     init_image = preprocess(image, res)
-
+    # Initialize per-timestep loss tracking
+    all_iteration_losses = {
+        'attack_loss': [],
+        'cross_attn_loss': [],
+        'self_attn_loss': [],
+        'total_loss': [],
+        'timestep_details': [],  # Will store controller.timestep_loss_details after each iteration
+        'learned_weights_history': []  # Track weight evolution during training
+    }
     #  “Pseudo” Mask for better Imperceptibility, yet sacrifice the transferability. Details please refer to Appendix D.
     apply_mask = args.is_apply_mask
     hard_mask = args.is_hard_mask
@@ -483,15 +511,35 @@ def diffattack(
         init_mask = torch.ones([1, 1, *init_image.shape[-2:]]).cuda()
 
     pbar = tqdm(range(iterations), desc="Iterations")
-    for _, _ in enumerate(pbar):
+    for iter_idx, _ in enumerate(pbar):
         controller.loss = 0
+        controller.current_iter = iter_idx  # Set iteration index for logging
+        controller.timestep_loss_log = []  # Reset timestep log for this iteration
 
         #  The DDIM should begin from 1, as the inversion cannot access X_T but only X_{T-1}
         controller.reset()
         latents = torch.cat([original_latent, latent])
 
+        # Track per-timestep losses for cross-attention and attack
+        timestep_cross_attn_losses = []
+        timestep_attack_losses = []
+        
+        # Compute and set weights if using learnable weights
+        if use_learnable_weights and weight_network is not None:
+            w_self, w_cross = weight_network()
+            if hasattr(controller, 'set_weights'):
+                controller.set_weights(w_self, w_cross)
+            
+            # Record weight history for visualization
+            all_iteration_losses['learned_weights_history'].append({
+                'iteration': iter_idx,
+                'self_weights': w_self.detach().cpu().numpy().tolist(),
+                'cross_weights': w_cross.detach().cpu().numpy().tolist()
+            })
 
         for ind, t in enumerate(model.scheduler.timesteps[1 + start_step - 1:]):
+            # Set the timestep index in the controller for tracking
+            controller.set_timestep_index(ind)
             latents = diffusion_step(model, latents, context[ind], t, guidance_scale)
 
         before_attention_map = aggregate_attention(prompt, controller, args.res // 32, ("up", "down"), True, 0, is_cpu=False)
@@ -507,8 +555,15 @@ def diffattack(
                                                         init_image.shape[-2:], mode="bilinear").clamp(0, 1)
             if hard_mask:
                 init_mask = init_mask.gt(0.5).float()
-        init_out_image = model.vae.decode(1 / 0.18215 * latents)['sample'][1:] * init_mask + (
-                1 - init_mask) * init_image
+        
+        # Free up CUDA memory before VAE decode (especially important with learnable weights)
+        # The VAE decode is memory-intensive, and we don't need weight gradients to flow through it
+        torch.cuda.empty_cache()
+        
+        # Use a separate context for VAE decode to manage memory better
+        with torch.cuda.amp.autocast(enabled=False):
+            init_out_image = model.vae.decode(1 / 0.18215 * latents)['sample'][1:] * init_mask + (
+                    1 - init_mask) * init_image
 
         out_image = (init_out_image / 2 + 0.5).clamp(0, 1)
         out_image = out_image.permute(0, 2, 3, 1)
@@ -532,7 +587,16 @@ def diffattack(
         self_attn_loss = controller.loss * args.self_attn_loss_weight
 
         loss = self_attn_loss + attack_loss + variance_cross_attn_loss
-
+        # Store losses for this iteration
+        all_iteration_losses['attack_loss'].append(attack_loss.item())
+        all_iteration_losses['cross_attn_loss'].append(variance_cross_attn_loss.item())
+        all_iteration_losses['self_attn_loss'].append(self_attn_loss.item())
+        all_iteration_losses['total_loss'].append(loss.item())
+        # Store timestep-level self-attention losses from controller
+        if hasattr(controller, 'timestep_loss_log') and controller.timestep_loss_log:
+            all_iteration_losses['timestep_details'].append(controller.timestep_loss_log.copy())
+        else:
+            all_iteration_losses['timestep_details'].append([])
         if verbose:
             pbar.set_postfix_str(
                 f"attack_loss: {attack_loss.item():.5f} "
@@ -541,8 +605,14 @@ def diffattack(
                 f"loss: {loss.item():.5f}")
 
         optimizer.zero_grad()
+        if weight_optimizer is not None:
+            weight_optimizer.zero_grad()
+        
         loss.backward()
+        
         optimizer.step()
+        if weight_optimizer is not None:
+            weight_optimizer.step()
 
     with torch.no_grad():
         controller.loss = 0
@@ -614,5 +684,49 @@ def diffattack(
     #                                save_path=r"{}_selfAttentionBefore.jpg".format(save_path))
     # utils.show_self_attention_comp(prompt, controller, res=14, from_where=("up", "down"),
     #                                save_path=r"{}_selfAttentionAfter.jpg".format(save_path), select=1)
+
+    """
+            ==========================================
+            === Per-Timestep Loss Analysis & Viz =====
+            ==========================================
+    """
+    # Generate timestep analysis visualizations
+    from utils import (plot_loss_per_timestep_iterations, 
+                      plot_loss_heatmap_timestep_vs_iteration,
+                      plot_average_loss_per_timestep,
+                      print_timestep_statistics,
+                      plot_learned_vs_initial_weights)
+    
+    timestep_analysis_dir = os.path.join(os.path.dirname(save_path), "timestep_analysis")
+    os.makedirs(timestep_analysis_dir, exist_ok=True)
+    
+    try:
+        # Print statistics to console
+        print_timestep_statistics(all_iteration_losses, num_timesteps=len(model.scheduler.timesteps[1 + start_step - 1:]))
+        
+        # Generate visualizations
+        plot_loss_per_timestep_iterations(all_iteration_losses, timestep_analysis_dir)
+        plot_loss_heatmap_timestep_vs_iteration(all_iteration_losses, timestep_analysis_dir)
+        plot_average_loss_per_timestep(all_iteration_losses, timestep_analysis_dir)
+        
+        print(f"\n✓ Timestep analysis saved to: {timestep_analysis_dir}")
+    except Exception as e:
+        print(f"\n⚠ Warning: Could not generate timestep analysis: {e}")
+    
+    # Visualize learned weights if using learnable weights
+    if use_learnable_weights and weight_network is not None:
+        try:
+            # Print weight summary to console
+            weight_network.print_weight_summary()
+            
+            # Generate learned weights visualization
+            plot_learned_vs_initial_weights(
+                weight_network, 
+                output_dir=timestep_analysis_dir,
+                weight_history=all_iteration_losses.get('learned_weights_history', [])
+            )
+            print(f"\n✓ Learned weights visualization saved to: {timestep_analysis_dir}")
+        except Exception as e:
+            print(f"\n⚠ Warning: Could not generate learned weights visualization: {e}")
 
     return image[0], 0, 0

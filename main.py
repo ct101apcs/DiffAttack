@@ -1,6 +1,10 @@
 import torch
 from diffusers import StableDiffusionPipeline, DDIMScheduler
-from attentionControl import AttentionControlEdit
+from attentionControl import (
+    AttentionControlEdit, 
+    AttentionControlEditLearnable,
+    AttentionControlEditFixedWeights
+)
 import diff_latent_attack
 from PIL import Image
 import numpy as np
@@ -48,6 +52,26 @@ parser.add_argument('--attack_loss_weight', default=10, type=int, help='attack l
 parser.add_argument('--cross_attn_loss_weight', default=10000, type=int, help='cross attention loss weight factor')
 parser.add_argument('--self_attn_loss_weight', default=100, type=int, help='self attention loss weight factor')
 
+# Timestep weight options
+parser.add_argument('--weight_mode', default='uniform', type=str,
+                    choices=['uniform', 'fixed', 'learnable', 'learnable_detached'],
+                    help='''Weight mode for timestep weighting:
+                        - uniform: Original DiffAttack (no weighting)
+                        - fixed: Fixed learned schedule [0.064, 0.103, 0.158, 0.269, 0.406] (RECOMMENDED)
+                        - learnable: Learnable weights (may suffer from collapse)
+                        - learnable_detached: Learnable with gradient detach (prevents collapse)''')
+parser.add_argument('--weight_schedule', default='learned', type=str,
+                    choices=['learned', 'increasing', 'uniform'],
+                    help='Schedule type for fixed weights: learned, increasing, or uniform')
+
+# Legacy argument for backward compatibility
+parser.add_argument('--use_learnable_weights', default=False, type=lambda x: x.lower() == 'true',
+                    help='[DEPRECATED] Use --weight_mode instead. If True, sets weight_mode to learnable_detached')
+parser.add_argument('--weight_lr', default=1e-4, type=float,
+                    help='Learning rate for weight network (only for learnable modes)')
+parser.add_argument('--num_active_timesteps', default=5, type=int,
+                    help='Number of active timesteps for weight network (default: 5, based on analysis)')
+
 
 def seed_torch(seed=42):
     """For reproducibility"""
@@ -66,22 +90,78 @@ seed_torch(42)
 
 def run_diffusion_attack(image, label, diffusion_model, diffusion_steps, guidance=2.5,
                          self_replace_steps=1., save_dir=r"C:\Users\PC\Desktop\output", res=224,
-                         model_name="inception", start_step=15, iterations=30, args=None):
-    controller = AttentionControlEdit(diffusion_steps, self_replace_steps, args.res)
+                         model_name="inception", start_step=15, iterations=30, args=None,
+                         weight_mode='uniform', weight_network=None, weight_schedule='learned'):
+    """
+    Run diffusion-based adversarial attack with configurable timestep weighting.
+    
+    Args:
+        weight_mode: 'uniform', 'fixed', 'learnable', or 'learnable_detached'
+        weight_network: TimestepWeightNetwork instance (for learnable modes)
+        weight_schedule: 'learned', 'increasing', or 'uniform' (for fixed mode)
+    """
+    
+    # Choose controller based on weight mode
+    if weight_mode == 'uniform':
+        controller = AttentionControlEdit(diffusion_steps, self_replace_steps, args.res)
+        print(f"\n✓ Using original AttentionControlEdit (uniform weighting)")
+        use_learnable = False
+        
+    elif weight_mode == 'fixed':
+        controller = AttentionControlEditFixedWeights(
+            diffusion_steps, 
+            self_replace_steps, 
+            args.res,
+            schedule_type=weight_schedule
+        )
+        schedule_info = controller.get_schedule_info()
+        print(f"\n✓ Using AttentionControlEditFixedWeights")
+        print(f"  Schedule type: {schedule_info['schedule_type']}")
+        print(f"  Weights: {schedule_info['weights']}")
+        use_learnable = False
+        
+    elif weight_mode in ['learnable', 'learnable_detached']:
+        detach = (weight_mode == 'learnable_detached')
+        controller = AttentionControlEditLearnable(
+            diffusion_steps, 
+            self_replace_steps, 
+            args.res,
+            weight_network=weight_network,
+            use_learned_weights=True,
+            detach_weights=detach
+        )
+        print(f"\n✓ Using AttentionControlEditLearnable")
+        print(f"  Detach weights: {detach} {'(prevents gradient pathology)' if detach else '(WARNING: may collapse!)'}")
+        use_learnable = True
+    else:
+        raise ValueError(f"Unknown weight_mode: {weight_mode}")
 
-    adv_image, clean_acc, adv_acc = diff_latent_attack.diffattack(diffusion_model, label, controller,
-                                                                  num_inference_steps=diffusion_steps,
-                                                                  guidance_scale=guidance,
-                                                                  image=image,
-                                                                  save_path=save_dir, res=res, model_name=model_name,
-                                                                  start_step=start_step,
-                                                                  iterations=iterations, args=args)
+    adv_image, clean_acc, adv_acc = diff_latent_attack.diffattack(
+        diffusion_model, label, controller,
+        num_inference_steps=diffusion_steps,
+        guidance_scale=guidance,
+        image=image,
+        save_path=save_dir, 
+        res=res, 
+        model_name=model_name,
+        start_step=start_step,
+        iterations=iterations, 
+        args=args,
+        use_learnable_weights=use_learnable,
+        weight_network=weight_network
+    )
 
     return adv_image, clean_acc, adv_acc
 
 
 if __name__ == "__main__":
     args = parser.parse_args()
+    
+    # Handle legacy --use_learnable_weights argument
+    if args.use_learnable_weights and args.weight_mode == 'uniform':
+        print("\n⚠ WARNING: --use_learnable_weights is deprecated. Using --weight_mode learnable_detached instead.")
+        args.weight_mode = 'learnable_detached'
+    
     assert args.res % 32 == 0 and args.res >= 96, "Please ensure the input resolution be a multiple of 32 and also >= 96."
 
     guidance = args.guidance
@@ -121,6 +201,41 @@ if __name__ == "__main__":
     pretrained_diffusion_path = args.pretrained_diffusion_path
 
     ldm_stable = StableDiffusionPipeline.from_pretrained(pretrained_diffusion_path).to('cuda:0')
+    ldm_stable.scheduler = DDIMScheduler.from_config(ldm_stable.scheduler.config)
+    
+    # Initialize weight network based on weight_mode
+    weight_network = None
+    weight_mode = args.weight_mode
+    
+    if weight_mode in ['learnable', 'learnable_detached']:
+        from timestep_weights import TimestepWeightNetwork
+        weight_network = TimestepWeightNetwork(
+            num_timesteps=args.num_active_timesteps,
+            device='cuda'
+        )
+        print(f"\n" + "="*50)
+        print(f"LEARNABLE TIMESTEP WEIGHTS ENABLED (mode: {weight_mode})")
+        print("="*50)
+        print(f"Number of timesteps: {args.num_active_timesteps}")
+        print(f"Weight network learning rate: {args.weight_lr}")
+        print(f"Detach weights: {weight_mode == 'learnable_detached'}")
+        init_self, init_cross = weight_network.get_initial_weights()
+        print(f"Initial self-attention weights: {init_self.cpu().numpy()}")
+        print(f"Initial cross-attention weights: {init_cross.cpu().numpy()}")
+        print("="*50 + "\n")
+    elif weight_mode == 'fixed':
+        print(f"\n" + "="*50)
+        print("FIXED TIMESTEP WEIGHTS ENABLED")
+        print("="*50)
+        print(f"Schedule type: {args.weight_schedule}")
+        if args.weight_schedule == 'learned':
+            print(f"Weights: [0.064, 0.103, 0.158, 0.269, 0.406]")
+        elif args.weight_schedule == 'increasing':
+            print(f"Weights: [0.05, 0.08, 0.13, 0.24, 0.50]")
+        print("="*50 + "\n")
+    else:
+        print(f"\n✓ Using uniform weighting (original DiffAttack)")
+    
     ldm_stable.scheduler = DDIMScheduler.from_config(ldm_stable.scheduler.config)
 
     "Attack a subset images"
@@ -165,14 +280,19 @@ if __name__ == "__main__":
         tmp_image = Image.open(image_path).convert('RGB')
         tmp_image.save(os.path.join(save_dir, str(ind).rjust(4, '0') + "_originImage.png"))
 
-        adv_image, clean_acc, adv_acc = run_diffusion_attack(tmp_image, label[ind:ind + 1],
-                                                             ldm_stable,
-                                                             diffusion_steps, guidance=guidance,
-                                                             res=res, model_name=model_name,
-                                                             start_step=start_step,
-                                                             iterations=iterations,
-                                                             save_dir=os.path.join(save_dir,
-                                                                                   str(ind).rjust(4, '0')), args=args)
+        adv_image, clean_acc, adv_acc = run_diffusion_attack(
+            tmp_image, label[ind:ind + 1],
+            ldm_stable,
+            diffusion_steps, guidance=guidance,
+            res=res, model_name=model_name,
+            start_step=start_step,
+            iterations=iterations,
+            save_dir=os.path.join(save_dir, str(ind).rjust(4, '0')), 
+            args=args,
+            weight_mode=weight_mode,
+            weight_network=weight_network,
+            weight_schedule=args.weight_schedule
+        )
         adv_image = adv_image.astype(np.float32) / 255.0
         adv_images.append(adv_image[None].transpose(0, 3, 1, 2))
 
