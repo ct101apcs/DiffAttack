@@ -1,6 +1,7 @@
 .idea
 *.zip
 __pycache__
+/test_*/
 /pretrained_models/
 /output/
 /datasets/
