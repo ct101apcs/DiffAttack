@@ -1,0 +1,85 @@
+
+******Attack based on Diffusion, Attacked Dataset: imagenet_compatible*********
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  33%|███▎      | 2/6 [00:00<00:00, 14.15it/s]Loading pipeline components...:  83%|████████▎ | 5/6 [00:00<00:00, 18.67it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 19.53it/s]
+
+Accuracy on benign examples: 100.0%
+gt_label: 388 pred_label: 388 pred_clean_logit 0.9999761581420898
+prompt generate:  giant panda  	labels:  [[388]]
+decoder:  [49406, 4687, 12952, 49407] [49406, 49407]
+DDIM_inverse:   0%|          | 0/19 [00:00<?, ?it/s]DDIM_inverse:   5%|▌         | 1/19 [00:00<00:02,  7.84it/s]DDIM_inverse:  16%|█▌        | 3/19 [00:00<00:01, 14.03it/s]DDIM_inverse:  26%|██▋       | 5/19 [00:00<00:00, 15.40it/s]DDIM_inverse:  37%|███▋      | 7/19 [00:00<00:00, 16.07it/s]DDIM_inverse:  47%|████▋     | 9/19 [00:00<00:00, 16.45it/s]DDIM_inverse:  58%|█████▊    | 11/19 [00:00<00:00, 16.77it/s]DDIM_inverse:  68%|██████▊   | 13/19 [00:00<00:00, 17.11it/s]DDIM_inverse:  79%|███████▉  | 15/19 [00:00<00:00, 17.38it/s]DDIM_inverse:  89%|████████▉ | 17/19 [00:01<00:00, 17.51it/s]DDIM_inverse: 100%|██████████| 19/19 [00:01<00:00, 17.40it/s]DDIM_inverse: 100%|██████████| 19/19 [00:01<00:00, 16.52it/s]
+Optimize_uncond_embed:   0%|          | 0/5 [00:00<?, ?it/s]Optimize_uncond_embed:  20%|██        | 1/5 [00:01<00:04,  1.22s/it]Optimize_uncond_embed:  40%|████      | 2/5 [00:02<00:04,  1.45s/it]Optimize_uncond_embed:  60%|██████    | 3/5 [00:04<00:03,  1.66s/it]Optimize_uncond_embed:  80%|████████  | 4/5 [00:06<00:01,  1.78s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:08<00:00,  1.77s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:08<00:00,  1.69s/it]
+Iterations:   0%|          | 0/30 [00:00<?, ?it/s]Iterations:   0%|          | 0/30 [00:00<?, ?it/s]
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000117, 0.953261]
+
+[DEBUG Iter 0] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.002944/0.046280/0.010002
+  Sum: 0.980228
+  All zeros: False
+  Spatial sum range: 0.024702 to 0.153251
+  Prob range: 0.045290 to 0.332617
+  Max prob per token (concentration): 0.225355
+  Entropy per token range: -1.942395 to -1.713725
+  Final entropy: -1.878989
+Traceback (most recent call last):
+  File "main.py", line 167, in <module>
+    adv_image, clean_acc, adv_acc = run_diffusion_attack(tmp_image, label[ind:ind + 1],
+  File "main.py", line 72, in run_diffusion_attack
+    adv_image, clean_acc, adv_acc = diff_latent_attack.diffattack(diffusion_model, label, controller,
+  File "/datastore/clc_hcmus/miniconda3/envs/py38/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/datastore/clc_hcmus/npctri/DiffAttack/diff_latent_attack.py", line 688, in diffattack
+    init_out_image = model.vae.decode(1 / 0.18215 * latents)['sample'][1:] * init_mask + (1 - init_mask) * init_image
+  File "/datastore/clc_hcmus/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/utils/accelerate_utils.py", line 46, in wrapper
+    return method(self, *args, **kwargs)
+  File "/datastore/clc_hcmus/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/models/autoencoders/autoencoder_kl.py", line 321, in decode
+    decoded = self._decode(z).sample
+  File "/datastore/clc_hcmus/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/models/autoencoders/autoencoder_kl.py", line 292, in _decode
+    dec = self.decoder(z)
+  File "/datastore/clc_hcmus/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/datastore/clc_hcmus/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/models/autoencoders/vae.py", line 337, in forward
+    sample = up_block(sample, latent_embeds)
+  File "/datastore/clc_hcmus/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/datastore/clc_hcmus/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/models/unets/unet_2d_blocks.py", line 2750, in forward
+    hidden_states = upsampler(hidden_states)
+  File "/datastore/clc_hcmus/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/datastore/clc_hcmus/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/models/upsampling.py", line 180, in forward
+    hidden_states = self.conv(hidden_states)
+  File "/datastore/clc_hcmus/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/datastore/clc_hcmus/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 457, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/datastore/clc_hcmus/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 453, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Unable to find a valid cuDNN algorithm to run convolution

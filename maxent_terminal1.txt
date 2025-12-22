@@ -1,0 +1,1506 @@
+
+******Attack based on Diffusion, Attacked Dataset: imagenet_compatible*********
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:00,  6.26it/s]Loading pipeline components...:  33%|███▎      | 2/6 [00:00<00:00,  7.75it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 18.77it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 15.37it/s]
+
+Accuracy on benign examples: 100.0%
+gt_label: 809 pred_label: 809 pred_clean_logit 0.9425603747367859
+prompt generate:  soup bowl  	labels:  [[809]]
+decoder:  [49406, 7077, 3814, 49407] [49406, 49407]
+DDIM_inverse:   0%|          | 0/19 [00:00<?, ?it/s]DDIM_inverse:   5%|▌         | 1/19 [00:00<00:02,  6.40it/s]DDIM_inverse:  11%|█         | 2/19 [00:00<00:02,  6.69it/s]DDIM_inverse:  16%|█▌        | 3/19 [00:00<00:02,  7.07it/s]DDIM_inverse:  21%|██        | 4/19 [00:00<00:02,  6.59it/s]DDIM_inverse:  26%|██▋       | 5/19 [00:00<00:02,  6.28it/s]DDIM_inverse:  32%|███▏      | 6/19 [00:00<00:02,  6.11it/s]DDIM_inverse:  37%|███▋      | 7/19 [00:01<00:02,  5.87it/s]DDIM_inverse:  42%|████▏     | 8/19 [00:01<00:01,  5.59it/s]DDIM_inverse:  47%|████▋     | 9/19 [00:01<00:01,  5.30it/s]DDIM_inverse:  53%|█████▎    | 10/19 [00:01<00:01,  5.13it/s]DDIM_inverse:  58%|█████▊    | 11/19 [00:01<00:01,  5.01it/s]DDIM_inverse:  63%|██████▎   | 12/19 [00:02<00:01,  4.94it/s]DDIM_inverse:  68%|██████▊   | 13/19 [00:02<00:01,  4.88it/s]DDIM_inverse:  74%|███████▎  | 14/19 [00:02<00:01,  4.85it/s]DDIM_inverse:  79%|███████▉  | 15/19 [00:02<00:00,  4.83it/s]DDIM_inverse:  84%|████████▍ | 16/19 [00:02<00:00,  4.89it/s]DDIM_inverse:  89%|████████▉ | 17/19 [00:03<00:00,  4.85it/s]DDIM_inverse:  95%|█████████▍| 18/19 [00:03<00:00,  4.83it/s]DDIM_inverse: 100%|██████████| 19/19 [00:03<00:00,  4.82it/s]DDIM_inverse: 100%|██████████| 19/19 [00:03<00:00,  5.25it/s]
+Optimize_uncond_embed:   0%|          | 0/5 [00:00<?, ?it/s]Optimize_uncond_embed:  20%|██        | 1/5 [00:04<00:16,  4.10s/it]Optimize_uncond_embed:  40%|████      | 2/5 [00:09<00:14,  4.86s/it]Optimize_uncond_embed:  60%|██████    | 3/5 [00:15<00:10,  5.30s/it]Optimize_uncond_embed:  80%|████████  | 4/5 [00:22<00:05,  5.92s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:30<00:00,  6.92s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:30<00:00,  6.18s/it]
+Iterations:   0%|          | 0/30 [00:00<?, ?it/s]Iterations:   0%|          | 0/30 [00:02<?, ?it/s, atk: -1.91064715 ent: -186.56982422 str: 0.00000000 loss: -188.48046875]Iterations:   3%|▎         | 1/30 [00:03<01:48,  3.75s/it, atk: -1.91064715 ent: -186.56982422 str: 0.00000000 loss: -188.48046875]Iterations:   3%|▎         | 1/30 [00:05<01:48,  3.75s/it, atk: -4.46523142 ent: -186.99298096 str: 0.89330834 loss: -190.56491089]Iterations:   7%|▋         | 2/30 [00:06<01:33,  3.34s/it, atk: -4.46523142 ent: -186.99298096 str: 0.89330834 loss: -190.56491089]Iterations:   7%|▋         | 2/30 [00:08<01:33,  3.34s/it, atk: -8.04511356 ent: -187.42561340 str: 1.03220046 loss: -194.43852234]Iterations:  10%|█         | 3/30 [00:09<01:22,  3.05s/it, atk: -8.04511356 ent: -187.42561340 str: 1.03220046 loss: -194.43852234]Iterations:  10%|█         | 3/30 [00:11<01:22,  3.05s/it, atk: -12.30933189 ent: -187.56047058 str: 1.21550393 loss: -198.65429688]Iterations:  13%|█▎        | 4/30 [00:12<01:19,  3.06s/it, atk: -12.30933189 ent: -187.56047058 str: 1.21550393 loss: -198.65429688]Iterations:  13%|█▎        | 4/30 [00:14<01:19,  3.06s/it, atk: -17.35514641 ent: -187.67510986 str: 1.41152215 loss: -203.61872864]Iterations:  17%|█▋        | 5/30 [00:15<01:16,  3.04s/it, atk: -17.35514641 ent: -187.67510986 str: 1.41152215 loss: -203.61872864]Iterations:  17%|█▋        | 5/30 [00:17<01:16,  3.04s/it, atk: -27.76983261 ent: -187.75949097 str: 1.45262098 loss: -214.07670593]Iterations:  20%|██        | 6/30 [00:18<01:14,  3.09s/it, atk: -27.76983261 ent: -187.75949097 str: 1.45262098 loss: -214.07670593]Iterations:  20%|██        | 6/30 [00:20<01:14,  3.09s/it, atk: -36.73929596 ent: -187.97883606 str: 1.61512816 loss: -223.10299683]Iterations:  23%|██▎       | 7/30 [00:21<01:11,  3.11s/it, atk: -36.73929596 ent: -187.97883606 str: 1.61512816 loss: -223.10299683]Iterations:  23%|██▎       | 7/30 [00:23<01:11,  3.11s/it, atk: -45.10273361 ent: -188.10836792 str: 1.58563650 loss: -231.62545776]Iterations:  27%|██▋       | 8/30 [00:25<01:08,  3.12s/it, atk: -45.10273361 ent: -188.10836792 str: 1.58563650 loss: -231.62545776]Iterations:  27%|██▋       | 8/30 [00:26<01:08,  3.12s/it, atk: -58.01864243 ent: -188.01637268 str: 1.60079372 loss: -244.43421936]Iterations:  30%|███       | 9/30 [00:28<01:05,  3.14s/it, atk: -58.01864243 ent: -188.01637268 str: 1.60079372 loss: -244.43421936]Iterations:  30%|███       | 9/30 [00:29<01:05,  3.14s/it, atk: -59.81765366 ent: -187.90742493 str: 1.40873253 loss: -246.31634521]Iterations:  33%|███▎      | 10/30 [00:30<01:00,  3.00s/it, atk: -59.81765366 ent: -187.90742493 str: 1.40873253 loss: -246.31634521]Iterations:  33%|███▎      | 10/30 [00:32<01:00,  3.00s/it, atk: -68.81542206 ent: -187.99328613 str: 1.46441782 loss: -255.34429932]Iterations:  37%|███▋      | 11/30 [00:33<00:56,  2.95s/it, atk: -68.81542206 ent: -187.99328613 str: 1.46441782 loss: -255.34429932]Iterations:  37%|███▋      | 11/30 [00:35<00:56,  2.95s/it, atk: -78.61296082 ent: -188.08634949 str: 1.50037646 loss: -265.19894409]Iterations:  40%|████      | 12/30 [00:36<00:51,  2.87s/it, atk: -78.61296082 ent: -188.08634949 str: 1.50037646 loss: -265.19894409]Iterations:  40%|████      | 12/30 [00:38<00:51,  2.87s/it, atk: -88.42517853 ent: -188.16781616 str: 1.53473294 loss: -275.05825806]Iterations:  43%|████▎     | 13/30 [00:39<00:49,  2.94s/it, atk: -88.42517853 ent: -188.16781616 str: 1.53473294 loss: -275.05825806]Iterations:  43%|████▎     | 13/30 [00:41<00:49,  2.94s/it, atk: -97.52877045 ent: -188.32849121 str: 1.61705053 loss: -284.24020386]Iterations:  47%|████▋     | 14/30 [00:42<00:48,  3.01s/it, atk: -97.52877045 ent: -188.32849121 str: 1.61705053 loss: -284.24020386]Iterations:  47%|████▋     | 14/30 [00:44<00:48,  3.01s/it, atk: -106.67282867 ent: -188.42355347 str: 1.69618332 loss: -293.40020752]Iterations:  50%|█████     | 15/30 [00:45<00:45,  3.05s/it, atk: -106.67282867 ent: -188.42355347 str: 1.69618332 loss: -293.40020752]Iterations:  50%|█████     | 15/30 [00:47<00:45,  3.05s/it, atk: -114.77646637 ent: -188.51577759 str: 1.75864530 loss: -301.53359985]Iterations:  53%|█████▎    | 16/30 [00:48<00:42,  3.03s/it, atk: -114.77646637 ent: -188.51577759 str: 1.75864530 loss: -301.53359985]Iterations:  53%|█████▎    | 16/30 [00:50<00:42,  3.03s/it, atk: -122.13420105 ent: -188.54496765 str: 1.78613639 loss: -308.89303589]Iterations:  57%|█████▋    | 17/30 [00:51<00:38,  2.94s/it, atk: -122.13420105 ent: -188.54496765 str: 1.78613639 loss: -308.89303589]Iterations:  57%|█████▋    | 17/30 [00:52<00:38,  2.94s/it, atk: -130.71191406 ent: -188.55490112 str: 1.78952312 loss: -317.47729492]Iterations:  60%|██████    | 18/30 [00:53<00:32,  2.74s/it, atk: -130.71191406 ent: -188.55490112 str: 1.78952312 loss: -317.47729492]Iterations:  60%|██████    | 18/30 [00:55<00:32,  2.74s/it, atk: -139.30883789 ent: -188.49195862 str: 1.76157212 loss: -326.03924561]Iterations:  63%|██████▎   | 19/30 [00:56<00:29,  2.69s/it, atk: -139.30883789 ent: -188.49195862 str: 1.76157212 loss: -326.03924561]Iterations:  63%|██████▎   | 19/30 [00:57<00:29,  2.69s/it, atk: -146.28099060 ent: -188.52618408 str: 1.77391970 loss: -333.03326416]Iterations:  67%|██████▋   | 20/30 [00:59<00:26,  2.68s/it, atk: -146.28099060 ent: -188.52618408 str: 1.77391970 loss: -333.03326416]Iterations:  67%|██████▋   | 20/30 [01:00<00:26,  2.68s/it, atk: -153.94410706 ent: -188.56103516 str: 1.77749765 loss: -340.72766113]Iterations:  70%|███████   | 21/30 [01:02<00:25,  2.84s/it, atk: -153.94410706 ent: -188.56103516 str: 1.77749765 loss: -340.72766113]Iterations:  70%|███████   | 21/30 [01:04<00:25,  2.84s/it, atk: -160.33700562 ent: -188.60229492 str: 1.78976953 loss: -347.14953613]Iterations:  73%|███████▎  | 22/30 [01:05<00:23,  2.93s/it, atk: -160.33700562 ent: -188.60229492 str: 1.78976953 loss: -347.14953613]Iterations:  73%|███████▎  | 22/30 [01:07<00:23,  2.93s/it, atk: -167.71856689 ent: -188.59379578 str: 1.81070840 loss: -354.50164795]Iterations:  77%|███████▋  | 23/30 [01:08<00:21,  3.01s/it, atk: -167.71856689 ent: -188.59379578 str: 1.81070840 loss: -354.50164795]Iterations:  77%|███████▋  | 23/30 [01:10<00:21,  3.01s/it, atk: -175.81510925 ent: -188.61259460 str: 1.83274722 loss: -362.59497070]Iterations:  80%|████████  | 24/30 [01:12<00:18,  3.14s/it, atk: -175.81510925 ent: -188.61259460 str: 1.83274722 loss: -362.59497070]Iterations:  80%|████████  | 24/30 [01:14<00:18,  3.14s/it, atk: -183.93246460 ent: -188.65327454 str: 1.85167396 loss: -370.73406982]Iterations:  83%|████████▎ | 25/30 [01:15<00:16,  3.21s/it, atk: -183.93246460 ent: -188.65327454 str: 1.85167396 loss: -370.73406982]Iterations:  83%|████████▎ | 25/30 [01:16<00:16,  3.21s/it, atk: -191.16076660 ent: -188.69317627 str: 1.86617053 loss: -377.98779297]Iterations:  87%|████████▋ | 26/30 [01:18<00:12,  3.05s/it, atk: -191.16076660 ent: -188.69317627 str: 1.86617053 loss: -377.98779297]Iterations:  87%|████████▋ | 26/30 [01:19<00:12,  3.05s/it, atk: -199.09042358 ent: -188.70483398 str: 1.87282920 loss: -385.92242432]Iterations:  90%|█████████ | 27/30 [01:20<00:08,  2.97s/it, atk: -199.09042358 ent: -188.70483398 str: 1.87282920 loss: -385.92242432]Iterations:  90%|█████████ | 27/30 [01:22<00:08,  2.97s/it, atk: -204.93096924 ent: -188.72219849 str: 1.89394224 loss: -391.75921631]Iterations:  93%|█████████▎| 28/30 [01:23<00:05,  2.98s/it, atk: -204.93096924 ent: -188.72219849 str: 1.89394224 loss: -391.75921631]Iterations:  93%|█████████▎| 28/30 [01:25<00:05,  2.98s/it, atk: -210.68270874 ent: -188.74801636 str: 1.91870224 loss: -397.51202393]Iterations:  97%|█████████▋| 29/30 [01:27<00:03,  3.01s/it, atk: -210.68270874 ent: -188.74801636 str: 1.91870224 loss: -397.51202393]Iterations:  97%|█████████▋| 29/30 [01:28<00:03,  3.01s/it, atk: -217.95666504 ent: -188.77157593 str: 1.93557906 loss: -404.79266357]Iterations: 100%|██████████| 30/30 [01:30<00:00,  3.12s/it, atk: -217.95666504 ent: -188.77157593 str: 1.93557906 loss: -404.79266357]Iterations: 100%|██████████| 30/30 [01:30<00:00,  3.01s/it, atk: -217.95666504 ent: -188.77157593 str: 1.93557906 loss: -404.79266357]
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000142, 0.970475]
+
+[DEBUG Iter 0] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.001478/0.014373/0.004021
+  Sum: 0.394054
+  All zeros: False
+  Spatial sum range: 0.013845 to 0.045679
+  Prob range: 0.055801 to 0.314665
+  Max prob per token (concentration): 0.228297
+  Entropy per token range: -1.939706 to -1.746470
+  Final entropy: -1.865698
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000151, 0.968201]
+
+[DEBUG Iter 10] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.001643/0.012736/0.004029
+  Sum: 0.394875
+  All zeros: False
+  Spatial sum range: 0.014906 to 0.044024
+  Prob range: 0.063653 to 0.289298
+  Max prob per token (concentration): 0.219101
+  Entropy per token range: -1.944412 to -1.781760
+  Final entropy: -1.879933
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000150, 0.967623]
+
+[DEBUG Iter 20] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.001741/0.012242/0.004050
+  Sum: 0.396868
+  All zeros: False
+  Spatial sum range: 0.015517 to 0.043054
+  Prob range: 0.067553 to 0.284335
+  Max prob per token (concentration): 0.216133
+  Entropy per token range: -1.944631 to -1.798735
+  Final entropy: -1.885610
+Accuracy on adversarial examples: 0.0%
+after_pred: tensor([666], device='cuda:0') tensor(1., device='cuda:0')
+after_true: tensor([809], device='cuda:0') tensor(2.0960e-10, device='cuda:0')
+L1: [3135.855]	L2: [10.980072]	Linf: [0.27843136]
+
+Accuracy on benign examples: 100.0%
+gt_label: 605 pred_label: 605 pred_clean_logit 0.882628321647644
+prompt generate:  iPod  	labels:  [[605]]
+decoder:  [49406, 17889, 49407] [49406, 49407]
+DDIM_inverse:   0%|          | 0/19 [00:00<?, ?it/s]DDIM_inverse:   5%|▌         | 1/19 [00:00<00:02,  7.15it/s]DDIM_inverse:  11%|█         | 2/19 [00:00<00:03,  4.49it/s]DDIM_inverse:  16%|█▌        | 3/19 [00:00<00:03,  4.02it/s]DDIM_inverse:  21%|██        | 4/19 [00:00<00:03,  3.91it/s]DDIM_inverse:  26%|██▋       | 5/19 [00:01<00:03,  3.73it/s]DDIM_inverse:  32%|███▏      | 6/19 [00:01<00:03,  3.76it/s]DDIM_inverse:  37%|███▋      | 7/19 [00:01<00:03,  3.84it/s]DDIM_inverse:  42%|████▏     | 8/19 [00:01<00:02,  3.98it/s]DDIM_inverse:  47%|████▋     | 9/19 [00:02<00:02,  4.00it/s]DDIM_inverse:  53%|█████▎    | 10/19 [00:02<00:02,  4.03it/s]DDIM_inverse:  58%|█████▊    | 11/19 [00:02<00:01,  4.18it/s]DDIM_inverse:  63%|██████▎   | 12/19 [00:02<00:01,  4.40it/s]DDIM_inverse:  68%|██████▊   | 13/19 [00:03<00:01,  4.49it/s]DDIM_inverse:  74%|███████▎  | 14/19 [00:03<00:01,  4.64it/s]DDIM_inverse:  79%|███████▉  | 15/19 [00:03<00:00,  4.65it/s]DDIM_inverse:  84%|████████▍ | 16/19 [00:03<00:00,  4.75it/s]DDIM_inverse:  89%|████████▉ | 17/19 [00:03<00:00,  4.74it/s]DDIM_inverse:  95%|█████████▍| 18/19 [00:04<00:00,  4.62it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  4.82it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  4.36it/s]
+Optimize_uncond_embed:   0%|          | 0/5 [00:00<?, ?it/s]Optimize_uncond_embed:  20%|██        | 1/5 [00:03<00:15,  3.91s/it]Optimize_uncond_embed:  40%|████      | 2/5 [00:09<00:14,  4.85s/it]Optimize_uncond_embed:  60%|██████    | 3/5 [00:16<00:11,  5.68s/it]Optimize_uncond_embed:  80%|████████  | 4/5 [00:23<00:06,  6.24s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:30<00:00,  6.64s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:30<00:00,  6.11s/it]
+Iterations:   0%|          | 0/30 [00:00<?, ?it/s]Iterations:   0%|          | 0/30 [00:01<?, ?it/s, atk: -0.88299477 ent: -184.95034790 str: 0.00000000 loss: -185.83334351]Iterations:   3%|▎         | 1/30 [00:03<01:30,  3.12s/it, atk: -0.88299477 ent: -184.95034790 str: 0.00000000 loss: -185.83334351]Iterations:   3%|▎         | 1/30 [00:04<01:30,  3.12s/it, atk: -2.60737062 ent: -185.14019775 str: 0.52429938 loss: -187.22326660]Iterations:   7%|▋         | 2/30 [00:06<01:27,  3.13s/it, atk: -2.60737062 ent: -185.14019775 str: 0.52429938 loss: -187.22326660]Iterations:   7%|▋         | 2/30 [00:07<01:27,  3.13s/it, atk: -10.80627632 ent: -185.72390747 str: 0.49069786 loss: -196.03948975]Iterations:  10%|█         | 3/30 [00:09<01:24,  3.15s/it, atk: -10.80627632 ent: -185.72390747 str: 0.49069786 loss: -196.03948975]Iterations:  10%|█         | 3/30 [00:11<01:24,  3.15s/it, atk: -23.74444962 ent: -185.87026978 str: 0.85967410 loss: -208.75505066]Iterations:  13%|█▎        | 4/30 [00:12<01:22,  3.16s/it, atk: -23.74444962 ent: -185.87026978 str: 0.85967410 loss: -208.75505066]Iterations:  13%|█▎        | 4/30 [00:14<01:22,  3.16s/it, atk: -39.16565704 ent: -186.30291748 str: 0.87562501 loss: -224.59295654]Iterations:  17%|█▋        | 5/30 [00:15<01:18,  3.16s/it, atk: -39.16565704 ent: -186.30291748 str: 0.87562501 loss: -224.59295654]Iterations:  17%|█▋        | 5/30 [00:17<01:18,  3.16s/it, atk: -49.14506531 ent: -186.53521729 str: 1.07913470 loss: -234.60115051]Iterations:  20%|██        | 6/30 [00:18<01:11,  2.98s/it, atk: -49.14506531 ent: -186.53521729 str: 1.07913470 loss: -234.60115051]Iterations:  20%|██        | 6/30 [00:19<01:11,  2.98s/it, atk: -60.83338165 ent: -186.53419495 str: 1.13277102 loss: -246.23480225]Iterations:  23%|██▎       | 7/30 [00:21<01:05,  2.86s/it, atk: -60.83338165 ent: -186.53419495 str: 1.13277102 loss: -246.23480225]Iterations:  23%|██▎       | 7/30 [00:22<01:05,  2.86s/it, atk: -68.77626038 ent: -186.57360840 str: 1.19073617 loss: -254.15913391]Iterations:  27%|██▋       | 8/30 [00:24<01:04,  2.91s/it, atk: -68.77626038 ent: -186.57360840 str: 1.19073617 loss: -254.15913391]Iterations:  27%|██▋       | 8/30 [00:25<01:04,  2.91s/it, atk: -75.36461639 ent: -186.51762390 str: 1.51192713 loss: -260.37030029]Iterations:  30%|███       | 9/30 [00:27<01:02,  2.98s/it, atk: -75.36461639 ent: -186.51762390 str: 1.51192713 loss: -260.37030029]Iterations:  30%|███       | 9/30 [00:28<01:02,  2.98s/it, atk: -78.37803650 ent: -186.79833984 str: 1.23167479 loss: -263.94470215]Iterations:  33%|███▎      | 10/30 [00:30<01:00,  3.02s/it, atk: -78.37803650 ent: -186.79833984 str: 1.23167479 loss: -263.94470215]Iterations:  33%|███▎      | 10/30 [00:32<01:00,  3.02s/it, atk: -88.67923737 ent: -187.11132812 str: 1.40144134 loss: -274.38912964]Iterations:  37%|███▋      | 11/30 [00:33<00:59,  3.11s/it, atk: -88.67923737 ent: -187.11132812 str: 1.40144134 loss: -274.38912964]Iterations:  37%|███▋      | 11/30 [00:35<00:59,  3.11s/it, atk: -98.45813751 ent: -186.71723938 str: 1.27592230 loss: -283.89944458]Iterations:  40%|████      | 12/30 [00:36<00:56,  3.13s/it, atk: -98.45813751 ent: -186.71723938 str: 1.27592230 loss: -283.89944458]Iterations:  40%|████      | 12/30 [00:38<00:56,  3.13s/it, atk: -108.60917664 ent: -186.62635803 str: 1.35505688 loss: -293.88049316]Iterations:  43%|████▎     | 13/30 [00:39<00:51,  3.01s/it, atk: -108.60917664 ent: -186.62635803 str: 1.35505688 loss: -293.88049316]Iterations:  43%|████▎     | 13/30 [00:40<00:51,  3.01s/it, atk: -120.74932098 ent: -186.59652710 str: 1.42473006 loss: -305.92111206]Iterations:  47%|████▋     | 14/30 [00:42<00:46,  2.91s/it, atk: -120.74932098 ent: -186.59652710 str: 1.42473006 loss: -305.92111206]Iterations:  47%|████▋     | 14/30 [00:43<00:46,  2.91s/it, atk: -131.46505737 ent: -186.52560425 str: 1.41977906 loss: -316.57086182]Iterations:  50%|█████     | 15/30 [00:44<00:42,  2.83s/it, atk: -131.46505737 ent: -186.52560425 str: 1.41977906 loss: -316.57086182]Iterations:  50%|█████     | 15/30 [00:46<00:42,  2.83s/it, atk: -138.29859924 ent: -186.45997620 str: 1.42470658 loss: -323.33386230]Iterations:  53%|█████▎    | 16/30 [00:48<00:42,  3.03s/it, atk: -138.29859924 ent: -186.45997620 str: 1.42470658 loss: -323.33386230]Iterations:  53%|█████▎    | 16/30 [00:50<00:42,  3.03s/it, atk: -146.99639893 ent: -186.35437012 str: 1.40981984 loss: -331.94094849]Iterations:  57%|█████▋    | 17/30 [00:51<00:40,  3.08s/it, atk: -146.99639893 ent: -186.35437012 str: 1.40981984 loss: -331.94094849]Iterations:  57%|█████▋    | 17/30 [00:53<00:40,  3.08s/it, atk: -156.01068115 ent: -186.20379639 str: 1.43107843 loss: -340.78338623]Iterations:  60%|██████    | 18/30 [00:55<00:38,  3.24s/it, atk: -156.01068115 ent: -186.20379639 str: 1.43107843 loss: -340.78338623]Iterations:  60%|██████    | 18/30 [00:56<00:38,  3.24s/it, atk: -161.64819336 ent: -186.16783142 str: 1.53142560 loss: -346.28460693]Iterations:  63%|██████▎   | 19/30 [00:58<00:35,  3.22s/it, atk: -161.64819336 ent: -186.16783142 str: 1.53142560 loss: -346.28460693]Iterations:  63%|██████▎   | 19/30 [00:59<00:35,  3.22s/it, atk: -169.19235229 ent: -186.24139404 str: 1.49578667 loss: -353.93795776]Iterations:  67%|██████▋   | 20/30 [01:01<00:31,  3.20s/it, atk: -169.19235229 ent: -186.24139404 str: 1.49578667 loss: -353.93795776]Iterations:  67%|██████▋   | 20/30 [01:03<00:31,  3.20s/it, atk: -177.98574829 ent: -186.20536804 str: 1.47931039 loss: -362.71179199]Iterations:  70%|███████   | 21/30 [01:04<00:27,  3.10s/it, atk: -177.98574829 ent: -186.20536804 str: 1.47931039 loss: -362.71179199]Iterations:  70%|███████   | 21/30 [01:05<00:27,  3.10s/it, atk: -185.45439148 ent: -186.18313599 str: 1.45132232 loss: -370.18621826]Iterations:  73%|███████▎  | 22/30 [01:06<00:23,  2.97s/it, atk: -185.45439148 ent: -186.18313599 str: 1.45132232 loss: -370.18621826]Iterations:  73%|███████▎  | 22/30 [01:08<00:23,  2.97s/it, atk: -192.18972778 ent: -186.18513489 str: 1.40232766 loss: -376.97253418]Iterations:  77%|███████▋  | 23/30 [01:09<00:20,  2.87s/it, atk: -192.18972778 ent: -186.18513489 str: 1.40232766 loss: -376.97253418]Iterations:  77%|███████▋  | 23/30 [01:11<00:20,  2.87s/it, atk: -199.58755493 ent: -186.20228577 str: 1.41064799 loss: -384.37921143]Iterations:  80%|████████  | 24/30 [01:12<00:17,  2.94s/it, atk: -199.58755493 ent: -186.20228577 str: 1.41064799 loss: -384.37921143]Iterations:  80%|████████  | 24/30 [01:14<00:17,  2.94s/it, atk: -206.23870850 ent: -186.25814819 str: 1.44121122 loss: -391.05566406]Iterations:  83%|████████▎ | 25/30 [01:15<00:15,  3.01s/it, atk: -206.23870850 ent: -186.25814819 str: 1.44121122 loss: -391.05566406]Iterations:  83%|████████▎ | 25/30 [01:17<00:15,  3.01s/it, atk: -213.71029663 ent: -186.30154419 str: 1.44915628 loss: -398.56268311]Iterations:  87%|████████▋ | 26/30 [01:18<00:12,  3.04s/it, atk: -213.71029663 ent: -186.30154419 str: 1.44915628 loss: -398.56268311]Iterations:  87%|████████▋ | 26/30 [01:20<00:12,  3.04s/it, atk: -220.78213501 ent: -186.34443665 str: 1.44336438 loss: -405.68322754]Iterations:  90%|█████████ | 27/30 [01:21<00:08,  2.94s/it, atk: -220.78213501 ent: -186.34443665 str: 1.44336438 loss: -405.68322754]Iterations:  90%|█████████ | 27/30 [01:23<00:08,  2.94s/it, atk: -226.93515015 ent: -186.38681030 str: 1.45004070 loss: -411.87191772]Iterations:  93%|█████████▎| 28/30 [01:24<00:05,  2.87s/it, atk: -226.93515015 ent: -186.38681030 str: 1.45004070 loss: -411.87191772]Iterations:  93%|█████████▎| 28/30 [01:25<00:05,  2.87s/it, atk: -233.09364319 ent: -186.44282532 str: 1.46923637 loss: -418.06723022]Iterations:  97%|█████████▋| 29/30 [01:26<00:02,  2.76s/it, atk: -233.09364319 ent: -186.44282532 str: 1.46923637 loss: -418.06723022]Iterations:  97%|█████████▋| 29/30 [01:28<00:02,  2.76s/it, atk: -239.04029846 ent: -186.51643372 str: 1.50199318 loss: -424.05474854]Iterations: 100%|██████████| 30/30 [01:29<00:00,  2.73s/it, atk: -239.04029846 ent: -186.51643372 str: 1.50199318 loss: -424.05474854]Iterations: 100%|██████████| 30/30 [01:29<00:00,  2.99s/it, atk: -239.04029846 ent: -186.51643372 str: 1.50199318 loss: -424.05474854]
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000113, 0.970245]
+
+[DEBUG Iter 0] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 1]) (batch=7, spatial=7, tokens=1)
+  Min/Max/Mean: 0.002967/0.018307/0.008528
+  Sum: 0.417852
+  All zeros: False
+  Spatial sum range: 0.043213 to 0.074152
+  Prob range: 0.044364 to 0.331267
+  Max prob per token (concentration): 0.240028
+  Entropy per token range: -1.937399 to -1.739882
+  Final entropy: -1.849504
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000108, 0.969134]
+
+[DEBUG Iter 10] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 1]) (batch=7, spatial=7, tokens=1)
+  Min/Max/Mean: 0.003416/0.017283/0.008284
+  Sum: 0.405914
+  All zeros: False
+  Spatial sum range: 0.044399 to 0.066928
+  Prob range: 0.054277 to 0.305282
+  Max prob per token (concentration): 0.230120
+  Entropy per token range: -1.938184 to -1.789127
+  Final entropy: -1.871113
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000114, 0.969434]
+
+[DEBUG Iter 20] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 1]) (batch=7, spatial=7, tokens=1)
+  Min/Max/Mean: 0.003045/0.017887/0.008324
+  Sum: 0.407881
+  All zeros: False
+  Spatial sum range: 0.043820 to 0.066210
+  Prob range: 0.048760 to 0.305832
+  Max prob per token (concentration): 0.236931
+  Entropy per token range: -1.941247 to -1.777773
+  Final entropy: -1.862054
+Accuracy on adversarial examples: 0.0%
+after_pred: tensor([761], device='cuda:0') tensor(1.0000, device='cuda:0')
+after_true: tensor([605], device='cuda:0') tensor(2.2498e-11, device='cuda:0')
+L1: [3636.1255]	L2: [16.876993]	Linf: [0.8392157]
+
+Accuracy on benign examples: 100.0%
+gt_label: 94 pred_label: 94 pred_clean_logit 0.9314026236534119
+prompt generate:  hummingbird  	labels:  [[94]]
+decoder:  [49406, 33072, 49407] [49406, 49407]
+DDIM_inverse:   0%|          | 0/19 [00:00<?, ?it/s]DDIM_inverse:   5%|▌         | 1/19 [00:00<00:02,  6.57it/s]DDIM_inverse:  11%|█         | 2/19 [00:00<00:03,  4.48it/s]DDIM_inverse:  16%|█▌        | 3/19 [00:00<00:04,  3.97it/s]DDIM_inverse:  21%|██        | 4/19 [00:00<00:03,  3.79it/s]DDIM_inverse:  26%|██▋       | 5/19 [00:01<00:03,  3.79it/s]DDIM_inverse:  32%|███▏      | 6/19 [00:01<00:03,  3.91it/s]DDIM_inverse:  37%|███▋      | 7/19 [00:01<00:03,  3.93it/s]DDIM_inverse:  42%|████▏     | 8/19 [00:01<00:02,  4.02it/s]DDIM_inverse:  47%|████▋     | 9/19 [00:02<00:02,  4.03it/s]DDIM_inverse:  53%|█████▎    | 10/19 [00:02<00:02,  4.05it/s]DDIM_inverse:  58%|█████▊    | 11/19 [00:02<00:01,  4.03it/s]DDIM_inverse:  63%|██████▎   | 12/19 [00:02<00:01,  4.06it/s]DDIM_inverse:  68%|██████▊   | 13/19 [00:03<00:01,  4.03it/s]DDIM_inverse:  74%|███████▎  | 14/19 [00:03<00:01,  4.08it/s]DDIM_inverse:  79%|███████▉  | 15/19 [00:03<00:00,  4.05it/s]DDIM_inverse:  84%|████████▍ | 16/19 [00:03<00:00,  4.08it/s]DDIM_inverse:  89%|████████▉ | 17/19 [00:04<00:00,  4.14it/s]DDIM_inverse:  95%|█████████▍| 18/19 [00:04<00:00,  4.15it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  4.06it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  4.06it/s]
+Optimize_uncond_embed:   0%|          | 0/5 [00:00<?, ?it/s]Optimize_uncond_embed:  20%|██        | 1/5 [00:04<00:19,  4.91s/it]Optimize_uncond_embed:  40%|████      | 2/5 [00:09<00:14,  4.96s/it]Optimize_uncond_embed:  60%|██████    | 3/5 [00:15<00:10,  5.33s/it]Optimize_uncond_embed:  80%|████████  | 4/5 [00:23<00:06,  6.24s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:31<00:00,  7.04s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:31<00:00,  6.36s/it]
+Iterations:   0%|          | 0/30 [00:00<?, ?it/s]Iterations:   0%|          | 0/30 [00:01<?, ?it/s, atk: -0.30065921 ent: -177.77539062 str: 0.00000000 loss: -178.07604980]Iterations:   3%|▎         | 1/30 [00:03<01:27,  3.03s/it, atk: -0.30065921 ent: -177.77539062 str: 0.00000000 loss: -178.07604980]Iterations:   3%|▎         | 1/30 [00:04<01:27,  3.03s/it, atk: -1.30609465 ent: -179.69258118 str: 1.24764383 loss: -179.75103760]Iterations:   7%|▋         | 2/30 [00:05<01:21,  2.92s/it, atk: -1.30609465 ent: -179.69258118 str: 1.24764383 loss: -179.75103760]Iterations:   7%|▋         | 2/30 [00:07<01:21,  2.92s/it, atk: -4.34732103 ent: -180.64215088 str: 1.35249901 loss: -183.63697815]Iterations:  10%|█         | 3/30 [00:08<01:21,  3.00s/it, atk: -4.34732103 ent: -180.64215088 str: 1.35249901 loss: -183.63697815]Iterations:  10%|█         | 3/30 [00:10<01:21,  3.00s/it, atk: -12.47642994 ent: -180.70976257 str: 1.55243051 loss: -191.63375854]Iterations:  13%|█▎        | 4/30 [00:12<01:19,  3.06s/it, atk: -12.47642994 ent: -180.70976257 str: 1.55243051 loss: -191.63375854]Iterations:  13%|█▎        | 4/30 [00:13<01:19,  3.06s/it, atk: -18.67440414 ent: -180.59368896 str: 1.45577836 loss: -197.81231689]Iterations:  17%|█▋        | 5/30 [00:15<01:16,  3.08s/it, atk: -18.67440414 ent: -180.59368896 str: 1.45577836 loss: -197.81231689]Iterations:  17%|█▋        | 5/30 [00:16<01:16,  3.08s/it, atk: -24.77981567 ent: -180.84503174 str: 1.61742306 loss: -204.00741577]Iterations:  20%|██        | 6/30 [00:18<01:14,  3.10s/it, atk: -24.77981567 ent: -180.84503174 str: 1.61742306 loss: -204.00741577]Iterations:  20%|██        | 6/30 [00:20<01:14,  3.10s/it, atk: -34.20939255 ent: -181.19880676 str: 1.80411613 loss: -213.60408020]Iterations:  23%|██▎       | 7/30 [00:21<01:11,  3.10s/it, atk: -34.20939255 ent: -181.19880676 str: 1.80411613 loss: -213.60408020]Iterations:  23%|██▎       | 7/30 [00:23<01:11,  3.10s/it, atk: -42.32022095 ent: -181.28540039 str: 1.92617381 loss: -221.67944336]Iterations:  27%|██▋       | 8/30 [00:24<01:07,  3.09s/it, atk: -42.32022095 ent: -181.28540039 str: 1.92617381 loss: -221.67944336]Iterations:  27%|██▋       | 8/30 [00:25<01:07,  3.09s/it, atk: -48.24173737 ent: -181.41864014 str: 1.99228919 loss: -227.66809082]Iterations:  30%|███       | 9/30 [00:27<01:01,  2.94s/it, atk: -48.24173737 ent: -181.41864014 str: 1.99228919 loss: -227.66809082]Iterations:  30%|███       | 9/30 [00:28<01:01,  2.94s/it, atk: -54.89469528 ent: -181.43205261 str: 2.01792812 loss: -234.30882263]Iterations:  33%|███▎      | 10/30 [00:29<00:56,  2.82s/it, atk: -54.89469528 ent: -181.43205261 str: 2.01792812 loss: -234.30882263]Iterations:  33%|███▎      | 10/30 [00:31<00:56,  2.82s/it, atk: -61.00688553 ent: -181.43373108 str: 2.05431914 loss: -240.38629150]Iterations:  37%|███▋      | 11/30 [00:32<00:54,  2.87s/it, atk: -61.00688553 ent: -181.43373108 str: 2.05431914 loss: -240.38629150]Iterations:  37%|███▋      | 11/30 [00:34<00:54,  2.87s/it, atk: -67.80372620 ent: -181.42167664 str: 2.07616830 loss: -247.14923096]Iterations:  40%|████      | 12/30 [00:35<00:53,  2.98s/it, atk: -67.80372620 ent: -181.42167664 str: 2.07616830 loss: -247.14923096]Iterations:  40%|████      | 12/30 [00:37<00:53,  2.98s/it, atk: -73.09519196 ent: -181.52593994 str: 2.10475326 loss: -252.51638794]Iterations:  43%|████▎     | 13/30 [00:39<00:52,  3.10s/it, atk: -73.09519196 ent: -181.52593994 str: 2.10475326 loss: -252.51638794]Iterations:  43%|████▎     | 13/30 [00:41<00:52,  3.10s/it, atk: -78.62370300 ent: -181.67848206 str: 2.13132381 loss: -258.17086792]Iterations:  47%|████▋     | 14/30 [00:42<00:50,  3.17s/it, atk: -78.62370300 ent: -181.67848206 str: 2.13132381 loss: -258.17086792]Iterations:  47%|████▋     | 14/30 [00:44<00:50,  3.17s/it, atk: -85.18309784 ent: -181.71557617 str: 2.14275336 loss: -264.75592041]Iterations:  50%|█████     | 15/30 [00:46<00:48,  3.26s/it, atk: -85.18309784 ent: -181.71557617 str: 2.14275336 loss: -264.75592041]Iterations:  50%|█████     | 15/30 [00:47<00:48,  3.26s/it, atk: -90.73920441 ent: -181.79092407 str: 2.15279484 loss: -270.37731934]Iterations:  53%|█████▎    | 16/30 [00:49<00:44,  3.17s/it, atk: -90.73920441 ent: -181.79092407 str: 2.15279484 loss: -270.37731934]Iterations:  53%|█████▎    | 16/30 [00:50<00:44,  3.17s/it, atk: -96.18153381 ent: -181.74076843 str: 2.18591189 loss: -275.73638916]Iterations:  57%|█████▋    | 17/30 [00:51<00:39,  3.06s/it, atk: -96.18153381 ent: -181.74076843 str: 2.18591189 loss: -275.73638916]Iterations:  57%|█████▋    | 17/30 [00:53<00:39,  3.06s/it, atk: -102.81012726 ent: -181.78065491 str: 2.21137857 loss: -282.37939453]Iterations:  60%|██████    | 18/30 [00:54<00:35,  2.94s/it, atk: -102.81012726 ent: -181.78065491 str: 2.21137857 loss: -282.37939453]Iterations:  60%|██████    | 18/30 [00:56<00:35,  2.94s/it, atk: -109.83283234 ent: -181.82530212 str: 2.22078371 loss: -289.43734741]Iterations:  63%|██████▎   | 19/30 [00:57<00:33,  3.08s/it, atk: -109.83283234 ent: -181.82530212 str: 2.22078371 loss: -289.43734741]Iterations:  63%|██████▎   | 19/30 [00:59<00:33,  3.08s/it, atk: -117.46138000 ent: -181.82043457 str: 2.23629975 loss: -297.04553223]Iterations:  67%|██████▋   | 20/30 [01:01<00:31,  3.13s/it, atk: -117.46138000 ent: -181.82043457 str: 2.23629975 loss: -297.04553223]Iterations:  67%|██████▋   | 20/30 [01:03<00:31,  3.13s/it, atk: -124.26245880 ent: -181.82261658 str: 2.25851417 loss: -303.82656860]Iterations:  70%|███████   | 21/30 [01:04<00:29,  3.25s/it, atk: -124.26245880 ent: -181.82261658 str: 2.25851417 loss: -303.82656860]Iterations:  70%|███████   | 21/30 [01:06<00:29,  3.25s/it, atk: -130.34121704 ent: -181.93515015 str: 2.26557541 loss: -310.01080322]Iterations:  73%|███████▎  | 22/30 [01:08<00:26,  3.28s/it, atk: -130.34121704 ent: -181.93515015 str: 2.26557541 loss: -310.01080322]Iterations:  73%|███████▎  | 22/30 [01:09<00:26,  3.28s/it, atk: -135.83210754 ent: -182.06431580 str: 2.26376820 loss: -315.63265991]Iterations:  77%|███████▋  | 23/30 [01:11<00:23,  3.34s/it, atk: -135.83210754 ent: -182.06431580 str: 2.26376820 loss: -315.63265991]Iterations:  77%|███████▋  | 23/30 [01:12<00:23,  3.34s/it, atk: -143.24270630 ent: -182.04844666 str: 2.26325893 loss: -323.02789307]Iterations:  80%|████████  | 24/30 [01:14<00:18,  3.14s/it, atk: -143.24270630 ent: -182.04844666 str: 2.26325893 loss: -323.02789307]Iterations:  80%|████████  | 24/30 [01:15<00:18,  3.14s/it, atk: -148.48641968 ent: -182.06455994 str: 2.27693439 loss: -328.27404785]Iterations:  83%|████████▎ | 25/30 [01:16<00:14,  3.00s/it, atk: -148.48641968 ent: -182.06455994 str: 2.27693439 loss: -328.27404785]Iterations:  83%|████████▎ | 25/30 [01:18<00:14,  3.00s/it, atk: -153.91477966 ent: -182.15161133 str: 2.29024696 loss: -333.77612305]Iterations:  87%|████████▋ | 26/30 [01:19<00:11,  2.78s/it, atk: -153.91477966 ent: -182.15161133 str: 2.29024696 loss: -333.77612305]Iterations:  87%|████████▋ | 26/30 [01:20<00:11,  2.78s/it, atk: -159.70655823 ent: -182.24822998 str: 2.30148935 loss: -339.65332031]Iterations:  90%|█████████ | 27/30 [01:21<00:08,  2.75s/it, atk: -159.70655823 ent: -182.24822998 str: 2.30148935 loss: -339.65332031]Iterations:  90%|█████████ | 27/30 [01:23<00:08,  2.75s/it, atk: -164.17761230 ent: -182.32084656 str: 2.31661558 loss: -344.18182373]Iterations:  93%|█████████▎| 28/30 [01:24<00:05,  2.73s/it, atk: -164.17761230 ent: -182.32084656 str: 2.31661558 loss: -344.18182373]Iterations:  93%|█████████▎| 28/30 [01:26<00:05,  2.73s/it, atk: -168.98806763 ent: -182.35514832 str: 2.33086991 loss: -349.01232910]Iterations:  97%|█████████▋| 29/30 [01:27<00:02,  2.93s/it, atk: -168.98806763 ent: -182.35514832 str: 2.33086991 loss: -349.01232910]Iterations:  97%|█████████▋| 29/30 [01:29<00:02,  2.93s/it, atk: -174.12536621 ent: -182.35073853 str: 2.33499932 loss: -354.14111328]Iterations: 100%|██████████| 30/30 [01:31<00:00,  3.04s/it, atk: -174.12536621 ent: -182.35073853 str: 2.33499932 loss: -354.14111328]Iterations: 100%|██████████| 30/30 [01:31<00:00,  3.04s/it, atk: -174.12536621 ent: -182.35073853 str: 2.33499932 loss: -354.14111328]
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000116, 0.961412]
+
+[DEBUG Iter 0] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 1]) (batch=7, spatial=7, tokens=1)
+  Min/Max/Mean: 0.004888/0.053969/0.015108
+  Sum: 0.740283
+  All zeros: False
+  Spatial sum range: 0.046909 to 0.172693
+  Prob range: 0.030859 to 0.317955
+  Max prob per token (concentration): 0.257520
+  Entropy per token range: -1.940394 to -1.607659
+  Final entropy: -1.777754
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000126, 0.961225]
+
+[DEBUG Iter 10] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 1]) (batch=7, spatial=7, tokens=1)
+  Min/Max/Mean: 0.004929/0.051966/0.014598
+  Sum: 0.715314
+  All zeros: False
+  Spatial sum range: 0.049750 to 0.167465
+  Prob range: 0.038025 to 0.310307
+  Max prob per token (concentration): 0.245800
+  Entropy per token range: -1.939495 to -1.649516
+  Final entropy: -1.814337
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000122, 0.960686]
+
+[DEBUG Iter 20] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 1]) (batch=7, spatial=7, tokens=1)
+  Min/Max/Mean: 0.004963/0.049822/0.014496
+  Sum: 0.710314
+  All zeros: False
+  Spatial sum range: 0.049385 to 0.165704
+  Prob range: 0.038521 to 0.300671
+  Max prob per token (concentration): 0.242924
+  Entropy per token range: -1.939476 to -1.659425
+  Final entropy: -1.818226
+Accuracy on adversarial examples: 0.0%
+after_pred: tensor([95], device='cuda:0') tensor(0.9988, device='cuda:0')
+after_true: tensor([94], device='cuda:0') tensor(1.7367e-08, device='cuda:0')
+L1: [4625.576]	L2: [17.649904]	Linf: [0.45490196]
+
+Accuracy on benign examples: 100.0%
+gt_label: 777 pred_label: 777 pred_clean_logit 0.8415653109550476
+prompt generate:  scabbard  	labels:  [[777]]
+decoder:  [49406, 31716, 17514, 49407] [49406, 49407]
+DDIM_inverse:   0%|          | 0/19 [00:00<?, ?it/s]DDIM_inverse:  11%|█         | 2/19 [00:00<00:02,  6.65it/s]DDIM_inverse:  16%|█▌        | 3/19 [00:00<00:02,  5.65it/s]DDIM_inverse:  21%|██        | 4/19 [00:00<00:02,  5.36it/s]DDIM_inverse:  26%|██▋       | 5/19 [00:00<00:02,  5.08it/s]DDIM_inverse:  32%|███▏      | 6/19 [00:01<00:02,  5.09it/s]DDIM_inverse:  37%|███▋      | 7/19 [00:01<00:02,  4.98it/s]DDIM_inverse:  42%|████▏     | 8/19 [00:01<00:02,  5.03it/s]DDIM_inverse:  47%|████▋     | 9/19 [00:01<00:01,  5.03it/s]DDIM_inverse:  53%|█████▎    | 10/19 [00:01<00:01,  5.03it/s]DDIM_inverse:  58%|█████▊    | 11/19 [00:02<00:01,  4.92it/s]DDIM_inverse:  63%|██████▎   | 12/19 [00:02<00:01,  5.02it/s]DDIM_inverse:  68%|██████▊   | 13/19 [00:02<00:01,  4.92it/s]DDIM_inverse:  74%|███████▎  | 14/19 [00:02<00:01,  4.96it/s]DDIM_inverse:  79%|███████▉  | 15/19 [00:02<00:00,  4.97it/s]DDIM_inverse:  84%|████████▍ | 16/19 [00:03<00:00,  4.97it/s]DDIM_inverse:  89%|████████▉ | 17/19 [00:03<00:00,  4.88it/s]DDIM_inverse:  95%|█████████▍| 18/19 [00:03<00:00,  4.92it/s]DDIM_inverse: 100%|██████████| 19/19 [00:03<00:00,  4.89it/s]DDIM_inverse: 100%|██████████| 19/19 [00:03<00:00,  5.04it/s]
+Optimize_uncond_embed:   0%|          | 0/5 [00:00<?, ?it/s]Optimize_uncond_embed:  20%|██        | 1/5 [00:04<00:19,  4.81s/it]Optimize_uncond_embed:  40%|████      | 2/5 [00:10<00:16,  5.57s/it]Optimize_uncond_embed:  60%|██████    | 3/5 [00:17<00:12,  6.14s/it]Optimize_uncond_embed:  80%|████████  | 4/5 [00:24<00:06,  6.23s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:32<00:00,  7.11s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:32<00:00,  6.56s/it]
+Iterations:   0%|          | 0/30 [00:00<?, ?it/s]Iterations:   0%|          | 0/30 [00:01<?, ?it/s, atk: -2.47691202 ent: -187.40769958 str: 0.00000000 loss: -189.88461304]Iterations:   3%|▎         | 1/30 [00:03<01:37,  3.38s/it, atk: -2.47691202 ent: -187.40769958 str: 0.00000000 loss: -189.88461304]Iterations:   3%|▎         | 1/30 [00:05<01:37,  3.38s/it, atk: -11.57903290 ent: -187.55784607 str: 0.22382531 loss: -198.91305542]Iterations:   7%|▋         | 2/30 [00:06<01:34,  3.38s/it, atk: -11.57903290 ent: -187.55784607 str: 0.22382531 loss: -198.91305542]Iterations:   7%|▋         | 2/30 [00:08<01:34,  3.38s/it, atk: -27.76047707 ent: -187.56204224 str: 0.20938271 loss: -215.11312866]Iterations:  10%|█         | 3/30 [00:09<01:25,  3.16s/it, atk: -27.76047707 ent: -187.56204224 str: 0.20938271 loss: -215.11312866]Iterations:  10%|█         | 3/30 [00:11<01:25,  3.16s/it, atk: -40.94998169 ent: -187.52732849 str: 0.33350766 loss: -228.14379883]Iterations:  13%|█▎        | 4/30 [00:12<01:18,  3.01s/it, atk: -40.94998169 ent: -187.52732849 str: 0.33350766 loss: -228.14379883]Iterations:  13%|█▎        | 4/30 [00:14<01:18,  3.01s/it, atk: -56.37804031 ent: -187.72579956 str: 0.48121497 loss: -243.62261963]Iterations:  17%|█▋        | 5/30 [00:15<01:13,  2.94s/it, atk: -56.37804031 ent: -187.72579956 str: 0.48121497 loss: -243.62261963]Iterations:  17%|█▋        | 5/30 [00:16<01:13,  2.94s/it, atk: -70.70926666 ent: -187.76411438 str: 0.51214665 loss: -257.96124268]Iterations:  20%|██        | 6/30 [00:18<01:11,  2.98s/it, atk: -70.70926666 ent: -187.76411438 str: 0.51214665 loss: -257.96124268]Iterations:  20%|██        | 6/30 [00:20<01:11,  2.98s/it, atk: -85.10353088 ent: -187.77642822 str: 0.56589836 loss: -272.31405640]Iterations:  23%|██▎       | 7/30 [00:21<01:09,  3.04s/it, atk: -85.10353088 ent: -187.77642822 str: 0.56589836 loss: -272.31405640]Iterations:  23%|██▎       | 7/30 [00:23<01:09,  3.04s/it, atk: -99.08535767 ent: -187.81829834 str: 0.66930920 loss: -286.23434448]Iterations:  27%|██▋       | 8/30 [00:24<01:08,  3.13s/it, atk: -99.08535767 ent: -187.81829834 str: 0.66930920 loss: -286.23434448]Iterations:  27%|██▋       | 8/30 [00:26<01:08,  3.13s/it, atk: -105.78453827 ent: -188.23408508 str: 1.22431660 loss: -292.79431152]Iterations:  30%|███       | 9/30 [00:27<01:05,  3.13s/it, atk: -105.78453827 ent: -188.23408508 str: 1.22431660 loss: -292.79431152]Iterations:  30%|███       | 9/30 [00:29<01:05,  3.13s/it, atk: -114.72746277 ent: -188.26582336 str: 1.30237460 loss: -301.69091797]Iterations:  33%|███▎      | 10/30 [00:31<01:02,  3.14s/it, atk: -114.72746277 ent: -188.26582336 str: 1.30237460 loss: -301.69091797]Iterations:  33%|███▎      | 10/30 [00:32<01:02,  3.14s/it, atk: -126.26995850 ent: -188.33691406 str: 1.34205365 loss: -313.26483154]Iterations:  37%|███▋      | 11/30 [00:34<00:59,  3.11s/it, atk: -126.26995850 ent: -188.33691406 str: 1.34205365 loss: -313.26483154]Iterations:  37%|███▋      | 11/30 [00:35<00:59,  3.11s/it, atk: -136.70484924 ent: -188.42936707 str: 1.39408410 loss: -323.74011230]Iterations:  40%|████      | 12/30 [00:36<00:53,  2.98s/it, atk: -136.70484924 ent: -188.42936707 str: 1.39408410 loss: -323.74011230]Iterations:  40%|████      | 12/30 [00:38<00:53,  2.98s/it, atk: -149.70974731 ent: -188.49771118 str: 1.40989685 loss: -336.79754639]Iterations:  43%|████▎     | 13/30 [00:39<00:48,  2.88s/it, atk: -149.70974731 ent: -188.49771118 str: 1.40989685 loss: -336.79754639]Iterations:  43%|████▎     | 13/30 [00:40<00:48,  2.88s/it, atk: -162.43486023 ent: -188.56149292 str: 1.43118143 loss: -349.56518555]Iterations:  47%|████▋     | 14/30 [00:42<00:46,  2.91s/it, atk: -162.43486023 ent: -188.56149292 str: 1.43118143 loss: -349.56518555]Iterations:  47%|████▋     | 14/30 [00:44<00:46,  2.91s/it, atk: -175.17019653 ent: -188.62498474 str: 1.44914627 loss: -362.34603882]Iterations:  50%|█████     | 15/30 [00:45<00:44,  2.99s/it, atk: -175.17019653 ent: -188.62498474 str: 1.44914627 loss: -362.34603882]Iterations:  50%|█████     | 15/30 [00:47<00:44,  2.99s/it, atk: -187.46290588 ent: -188.68986511 str: 1.47008193 loss: -374.68267822]Iterations:  53%|█████▎    | 16/30 [00:49<00:44,  3.17s/it, atk: -187.46290588 ent: -188.68986511 str: 1.47008193 loss: -374.68267822]Iterations:  53%|█████▎    | 16/30 [00:50<00:44,  3.17s/it, atk: -198.10430908 ent: -188.73295593 str: 1.47500539 loss: -385.36224365]Iterations:  57%|█████▋    | 17/30 [00:52<00:41,  3.17s/it, atk: -198.10430908 ent: -188.73295593 str: 1.47500539 loss: -385.36224365]Iterations:  57%|█████▋    | 17/30 [00:54<00:41,  3.17s/it, atk: -209.78948975 ent: -188.76029968 str: 1.47565329 loss: -397.07415771]Iterations:  60%|██████    | 18/30 [00:55<00:38,  3.19s/it, atk: -209.78948975 ent: -188.76029968 str: 1.47565329 loss: -397.07415771]Iterations:  60%|██████    | 18/30 [00:57<00:38,  3.19s/it, atk: -220.50642395 ent: -188.78862000 str: 1.48003769 loss: -407.81500244]Iterations:  63%|██████▎   | 19/30 [00:58<00:34,  3.12s/it, atk: -220.50642395 ent: -188.78862000 str: 1.48003769 loss: -407.81500244]Iterations:  63%|██████▎   | 19/30 [00:59<00:34,  3.12s/it, atk: -229.44296265 ent: -188.80583191 str: 1.50576293 loss: -416.74304199]Iterations:  67%|██████▋   | 20/30 [01:00<00:28,  2.85s/it, atk: -229.44296265 ent: -188.80583191 str: 1.50576293 loss: -416.74304199]Iterations:  67%|██████▋   | 20/30 [01:02<00:28,  2.85s/it, atk: -237.09204102 ent: -188.82122803 str: 1.54066074 loss: -424.37261963]Iterations:  70%|███████   | 21/30 [01:03<00:24,  2.69s/it, atk: -237.09204102 ent: -188.82122803 str: 1.54066074 loss: -424.37261963]Iterations:  70%|███████   | 21/30 [01:04<00:24,  2.69s/it, atk: -244.83308411 ent: -188.84999084 str: 1.52980423 loss: -432.15325928]Iterations:  73%|███████▎  | 22/30 [01:06<00:22,  2.84s/it, atk: -244.83308411 ent: -188.84999084 str: 1.52980423 loss: -432.15325928]Iterations:  73%|███████▎  | 22/30 [01:07<00:22,  2.84s/it, atk: -251.63301086 ent: -188.86067200 str: 1.65425682 loss: -438.83941650]Iterations:  77%|███████▋  | 23/30 [01:09<00:20,  2.93s/it, atk: -251.63301086 ent: -188.86067200 str: 1.65425682 loss: -438.83941650]Iterations:  77%|███████▋  | 23/30 [01:11<00:20,  2.93s/it, atk: -260.61526489 ent: -188.86082458 str: 1.62513387 loss: -447.85095215]Iterations:  80%|████████  | 24/30 [01:12<00:17,  3.00s/it, atk: -260.61526489 ent: -188.86082458 str: 1.62513387 loss: -447.85095215]Iterations:  80%|████████  | 24/30 [01:14<00:17,  3.00s/it, atk: -269.39337158 ent: -188.86073303 str: 1.60737908 loss: -456.64672852]Iterations:  83%|████████▎ | 25/30 [01:15<00:15,  3.08s/it, atk: -269.39337158 ent: -188.86073303 str: 1.60737908 loss: -456.64672852]Iterations:  83%|████████▎ | 25/30 [01:17<00:15,  3.08s/it, atk: -278.05026245 ent: -188.86387634 str: 1.62973499 loss: -465.28442383]Iterations:  87%|████████▋ | 26/30 [01:19<00:12,  3.11s/it, atk: -278.05026245 ent: -188.86387634 str: 1.62973499 loss: -465.28442383]Iterations:  87%|████████▋ | 26/30 [01:20<00:12,  3.11s/it, atk: -286.91488647 ent: -188.87142944 str: 1.65175867 loss: -474.13455200]Iterations:  90%|█████████ | 27/30 [01:21<00:08,  2.99s/it, atk: -286.91488647 ent: -188.87142944 str: 1.65175867 loss: -474.13455200]Iterations:  90%|█████████ | 27/30 [01:23<00:08,  2.99s/it, atk: -294.66159058 ent: -188.87152100 str: 1.68523002 loss: -481.84786987]Iterations:  93%|█████████▎| 28/30 [01:24<00:05,  2.89s/it, atk: -294.66159058 ent: -188.87152100 str: 1.68523002 loss: -481.84786987]Iterations:  93%|█████████▎| 28/30 [01:25<00:05,  2.89s/it, atk: -303.27038574 ent: -188.86016846 str: 1.72315013 loss: -490.40740967]Iterations:  97%|█████████▋| 29/30 [01:27<00:02,  2.83s/it, atk: -303.27038574 ent: -188.86016846 str: 1.72315013 loss: -490.40740967]Iterations:  97%|█████████▋| 29/30 [01:28<00:02,  2.83s/it, atk: -309.48461914 ent: -188.85272217 str: 1.71298814 loss: -496.62435913]Iterations: 100%|██████████| 30/30 [01:30<00:00,  2.89s/it, atk: -309.48461914 ent: -188.85272217 str: 1.71298814 loss: -496.62435913]Iterations: 100%|██████████| 30/30 [01:30<00:00,  3.00s/it, atk: -309.48461914 ent: -188.85272217 str: 1.71298814 loss: -496.62435913]
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000144, 0.964895]
+
+[DEBUG Iter 0] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.001053/0.013230/0.004379
+  Sum: 0.429096
+  All zeros: False
+  Spatial sum range: 0.013107 to 0.047861
+  Prob range: 0.041416 to 0.276419
+  Max prob per token (concentration): 0.220485
+  Entropy per token range: -1.935533 to -1.790460
+  Final entropy: -1.874077
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000141, 0.965943]
+
+[DEBUG Iter 10] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.001011/0.011157/0.004279
+  Sum: 0.419389
+  All zeros: False
+  Spatial sum range: 0.012805 to 0.044174
+  Prob range: 0.041549 to 0.268978
+  Max prob per token (concentration): 0.216388
+  Entropy per token range: -1.936636 to -1.797150
+  Final entropy: -1.883369
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000138, 0.963294]
+
+[DEBUG Iter 20] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.001041/0.010647/0.004223
+  Sum: 0.413805
+  All zeros: False
+  Spatial sum range: 0.012908 to 0.043912
+  Prob range: 0.044182 to 0.258606
+  Max prob per token (concentration): 0.211919
+  Entropy per token range: -1.938579 to -1.803190
+  Final entropy: -1.888212
+Accuracy on adversarial examples: 0.0%
+after_pred: tensor([893], device='cuda:0') tensor(0.9945, device='cuda:0')
+after_true: tensor([777], device='cuda:0') tensor(1.6869e-14, device='cuda:0')
+L1: [5515.42]	L2: [20.003603]	Linf: [0.67450976]
+
+Accuracy on benign examples: 100.0%
+gt_label: 768 pred_label: 768 pred_clean_logit 0.3755243420600891
+prompt generate:  rugby ball  	labels:  [[768]]
+decoder:  [49406, 4964, 1069, 49407] [49406, 49407]
+DDIM_inverse:   0%|          | 0/19 [00:00<?, ?it/s]DDIM_inverse:   5%|▌         | 1/19 [00:00<00:02,  7.94it/s]DDIM_inverse:  11%|█         | 2/19 [00:00<00:03,  4.97it/s]DDIM_inverse:  16%|█▌        | 3/19 [00:00<00:03,  4.51it/s]DDIM_inverse:  21%|██        | 4/19 [00:00<00:03,  4.35it/s]DDIM_inverse:  26%|██▋       | 5/19 [00:01<00:03,  4.23it/s]DDIM_inverse:  32%|███▏      | 6/19 [00:01<00:03,  4.20it/s]DDIM_inverse:  37%|███▋      | 7/19 [00:01<00:02,  4.14it/s]DDIM_inverse:  42%|████▏     | 8/19 [00:01<00:02,  4.14it/s]DDIM_inverse:  47%|████▋     | 9/19 [00:02<00:02,  4.11it/s]DDIM_inverse:  53%|█████▎    | 10/19 [00:02<00:02,  4.14it/s]DDIM_inverse:  58%|█████▊    | 11/19 [00:02<00:01,  4.09it/s]DDIM_inverse:  63%|██████▎   | 12/19 [00:02<00:01,  4.10it/s]DDIM_inverse:  68%|██████▊   | 13/19 [00:03<00:01,  4.06it/s]DDIM_inverse:  74%|███████▎  | 14/19 [00:03<00:01,  4.08it/s]DDIM_inverse:  79%|███████▉  | 15/19 [00:03<00:00,  4.05it/s]DDIM_inverse:  84%|████████▍ | 16/19 [00:03<00:00,  4.14it/s]DDIM_inverse:  89%|████████▉ | 17/19 [00:04<00:00,  4.12it/s]DDIM_inverse:  95%|█████████▍| 18/19 [00:04<00:00,  4.11it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  4.11it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  4.19it/s]
+Optimize_uncond_embed:   0%|          | 0/5 [00:00<?, ?it/s]Optimize_uncond_embed:  20%|██        | 1/5 [00:04<00:16,  4.20s/it]Optimize_uncond_embed:  40%|████      | 2/5 [00:09<00:13,  4.59s/it]Optimize_uncond_embed:  60%|██████    | 3/5 [00:15<00:10,  5.48s/it]Optimize_uncond_embed:  80%|████████  | 4/5 [00:23<00:06,  6.28s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:30<00:00,  6.69s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:30<00:00,  6.11s/it]
+Iterations:   0%|          | 0/30 [00:00<?, ?it/s]Iterations:   0%|          | 0/30 [00:01<?, ?it/s, atk: -11.71478653 ent: -193.34074402 str: 0.00000000 loss: -205.05552673]Iterations:   3%|▎         | 1/30 [00:02<01:24,  2.91s/it, atk: -11.71478653 ent: -193.34074402 str: 0.00000000 loss: -205.05552673]Iterations:   3%|▎         | 1/30 [00:04<01:24,  2.91s/it, atk: -35.39596939 ent: -193.36866760 str: 2.20582175 loss: -226.55880737]Iterations:   7%|▋         | 2/30 [00:06<01:25,  3.04s/it, atk: -35.39596939 ent: -193.36866760 str: 2.20582175 loss: -226.55880737]Iterations:   7%|▋         | 2/30 [00:07<01:25,  3.04s/it, atk: -45.26426315 ent: -193.30462646 str: 2.10536265 loss: -236.46353149]Iterations:  10%|█         | 3/30 [00:09<01:23,  3.09s/it, atk: -45.26426315 ent: -193.30462646 str: 2.10536265 loss: -236.46353149]Iterations:  10%|█         | 3/30 [00:10<01:23,  3.09s/it, atk: -52.79007721 ent: -193.32456970 str: 2.21319675 loss: -243.90145874]Iterations:  13%|█▎        | 4/30 [00:12<01:23,  3.22s/it, atk: -52.79007721 ent: -193.32456970 str: 2.21319675 loss: -243.90145874]Iterations:  13%|█▎        | 4/30 [00:14<01:23,  3.22s/it, atk: -56.29634094 ent: -193.44963074 str: 2.12746143 loss: -247.61851501]Iterations:  17%|█▋        | 5/30 [00:15<01:20,  3.21s/it, atk: -56.29634094 ent: -193.44963074 str: 2.12746143 loss: -247.61851501]Iterations:  17%|█▋        | 5/30 [00:17<01:20,  3.21s/it, atk: -62.46022034 ent: -193.45471191 str: 2.33642006 loss: -253.57852173]Iterations:  20%|██        | 6/30 [00:18<01:15,  3.15s/it, atk: -62.46022034 ent: -193.45471191 str: 2.33642006 loss: -253.57852173]Iterations:  20%|██        | 6/30 [00:20<01:15,  3.15s/it, atk: -69.01235962 ent: -193.44752502 str: 2.52738690 loss: -259.93249512]Iterations:  23%|██▎       | 7/30 [00:21<01:08,  2.98s/it, atk: -69.01235962 ent: -193.44752502 str: 2.52738690 loss: -259.93249512]Iterations:  23%|██▎       | 7/30 [00:22<01:08,  2.98s/it, atk: -75.97955322 ent: -193.44351196 str: 2.53588915 loss: -266.88717651]Iterations:  27%|██▋       | 8/30 [00:24<01:04,  2.92s/it, atk: -75.97955322 ent: -193.44351196 str: 2.53588915 loss: -266.88717651]Iterations:  27%|██▋       | 8/30 [00:25<01:04,  2.92s/it, atk: -79.60888672 ent: -193.43270874 str: 2.51492834 loss: -270.52667236]Iterations:  30%|███       | 9/30 [00:27<01:00,  2.88s/it, atk: -79.60888672 ent: -193.43270874 str: 2.51492834 loss: -270.52667236]Iterations:  30%|███       | 9/30 [00:28<01:00,  2.88s/it, atk: -82.22853088 ent: -193.49128723 str: 2.63397980 loss: -273.08584595]Iterations:  33%|███▎      | 10/30 [00:30<00:59,  2.97s/it, atk: -82.22853088 ent: -193.49128723 str: 2.63397980 loss: -273.08584595]Iterations:  33%|███▎      | 10/30 [00:32<00:59,  2.97s/it, atk: -89.79403687 ent: -193.50599670 str: 2.61408925 loss: -280.68594360]Iterations:  37%|███▋      | 11/30 [00:33<00:58,  3.08s/it, atk: -89.79403687 ent: -193.50599670 str: 2.61408925 loss: -280.68594360]Iterations:  37%|███▋      | 11/30 [00:35<00:58,  3.08s/it, atk: -90.60275269 ent: -193.50773621 str: 2.54481459 loss: -281.56567383]Iterations:  40%|████      | 12/30 [00:36<00:56,  3.15s/it, atk: -90.60275269 ent: -193.50773621 str: 2.54481459 loss: -281.56567383]Iterations:  40%|████      | 12/30 [00:38<00:56,  3.15s/it, atk: -95.17092896 ent: -193.49114990 str: 2.57580042 loss: -286.08627319]Iterations:  43%|████▎     | 13/30 [00:40<00:54,  3.18s/it, atk: -95.17092896 ent: -193.49114990 str: 2.57580042 loss: -286.08627319]Iterations:  43%|████▎     | 13/30 [00:41<00:54,  3.18s/it, atk: -100.02819061 ent: -193.49456787 str: 2.69008136 loss: -290.83267212]Iterations:  47%|████▋     | 14/30 [00:43<00:50,  3.13s/it, atk: -100.02819061 ent: -193.49456787 str: 2.69008136 loss: -290.83267212]Iterations:  47%|████▋     | 14/30 [00:44<00:50,  3.13s/it, atk: -102.71948242 ent: -193.48274231 str: 2.73232675 loss: -293.46990967]Iterations:  50%|█████     | 15/30 [00:45<00:44,  2.98s/it, atk: -102.71948242 ent: -193.48274231 str: 2.73232675 loss: -293.46990967]Iterations:  50%|█████     | 15/30 [00:47<00:44,  2.98s/it, atk: -108.50248718 ent: -193.50939941 str: 2.67576838 loss: -299.33612061]Iterations:  53%|█████▎    | 16/30 [00:48<00:40,  2.88s/it, atk: -108.50248718 ent: -193.50939941 str: 2.67576838 loss: -299.33612061]Iterations:  53%|█████▎    | 16/30 [00:49<00:40,  2.88s/it, atk: -114.23666382 ent: -193.51318359 str: 2.77698088 loss: -304.97286987]Iterations:  57%|█████▋    | 17/30 [00:51<00:36,  2.84s/it, atk: -114.23666382 ent: -193.51318359 str: 2.77698088 loss: -304.97286987]Iterations:  57%|█████▋    | 17/30 [00:52<00:36,  2.84s/it, atk: -116.31005096 ent: -193.50588989 str: 2.86921382 loss: -306.94671631]Iterations:  60%|██████    | 18/30 [00:54<00:35,  2.93s/it, atk: -116.31005096 ent: -193.50588989 str: 2.86921382 loss: -306.94671631]Iterations:  60%|██████    | 18/30 [00:56<00:35,  2.93s/it, atk: -119.89105225 ent: -193.51573181 str: 2.84546542 loss: -310.56130981]Iterations:  63%|██████▎   | 19/30 [00:57<00:33,  3.00s/it, atk: -119.89105225 ent: -193.51573181 str: 2.84546542 loss: -310.56130981]Iterations:  63%|██████▎   | 19/30 [00:59<00:33,  3.00s/it, atk: -123.97006226 ent: -193.51788330 str: 2.85351348 loss: -314.63442993]Iterations:  67%|██████▋   | 20/30 [01:00<00:30,  3.05s/it, atk: -123.97006226 ent: -193.51788330 str: 2.85351348 loss: -314.63442993]Iterations:  67%|██████▋   | 20/30 [01:02<00:30,  3.05s/it, atk: -128.18701172 ent: -193.52804565 str: 2.84799552 loss: -318.86706543]Iterations:  70%|███████   | 21/30 [01:03<00:28,  3.14s/it, atk: -128.18701172 ent: -193.52804565 str: 2.84799552 loss: -318.86706543]Iterations:  70%|███████   | 21/30 [01:05<00:28,  3.14s/it, atk: -132.28480530 ent: -193.52832031 str: 2.82295060 loss: -322.99017334]Iterations:  73%|███████▎  | 22/30 [01:06<00:24,  3.09s/it, atk: -132.28480530 ent: -193.52832031 str: 2.82295060 loss: -322.99017334]Iterations:  73%|███████▎  | 22/30 [01:08<00:24,  3.09s/it, atk: -136.56246948 ent: -193.52511597 str: 2.79654908 loss: -327.29101562]Iterations:  77%|███████▋  | 23/30 [01:09<00:20,  2.98s/it, atk: -136.56246948 ent: -193.52511597 str: 2.79654908 loss: -327.29101562]Iterations:  77%|███████▋  | 23/30 [01:11<00:20,  2.98s/it, atk: -139.40393066 ent: -193.51644897 str: 2.79361486 loss: -330.12677002]Iterations:  80%|████████  | 24/30 [01:12<00:17,  2.88s/it, atk: -139.40393066 ent: -193.51644897 str: 2.79361486 loss: -330.12677002]Iterations:  80%|████████  | 24/30 [01:13<00:17,  2.88s/it, atk: -143.16934204 ent: -193.52583313 str: 2.78447270 loss: -333.91070557]Iterations:  83%|████████▎ | 25/30 [01:15<00:14,  2.87s/it, atk: -143.16934204 ent: -193.52583313 str: 2.78447270 loss: -333.91070557]Iterations:  83%|████████▎ | 25/30 [01:16<00:14,  2.87s/it, atk: -146.25047302 ent: -193.54066467 str: 2.79216027 loss: -336.99896240]Iterations:  87%|████████▋ | 26/30 [01:18<00:11,  2.95s/it, atk: -146.25047302 ent: -193.54066467 str: 2.79216027 loss: -336.99896240]Iterations:  87%|████████▋ | 26/30 [01:20<00:11,  2.95s/it, atk: -150.75384521 ent: -193.54310608 str: 2.79740047 loss: -341.49957275]Iterations:  90%|█████████ | 27/30 [01:21<00:09,  3.01s/it, atk: -150.75384521 ent: -193.54310608 str: 2.79740047 loss: -341.49957275]Iterations:  90%|█████████ | 27/30 [01:23<00:09,  3.01s/it, atk: -155.04528809 ent: -193.55014038 str: 2.81674933 loss: -345.77868652]Iterations:  93%|█████████▎| 28/30 [01:24<00:06,  3.06s/it, atk: -155.04528809 ent: -193.55014038 str: 2.81674933 loss: -345.77868652]Iterations:  93%|█████████▎| 28/30 [01:26<00:06,  3.06s/it, atk: -159.18069458 ent: -193.55097961 str: 2.83793592 loss: -349.89373779]Iterations:  97%|█████████▋| 29/30 [01:27<00:03,  3.10s/it, atk: -159.18069458 ent: -193.55097961 str: 2.83793592 loss: -349.89373779]Iterations:  97%|█████████▋| 29/30 [01:29<00:03,  3.10s/it, atk: -162.57615662 ent: -193.54719543 str: 2.84866023 loss: -353.27468872]Iterations: 100%|██████████| 30/30 [01:30<00:00,  3.08s/it, atk: -162.57615662 ent: -193.54719543 str: 2.84866023 loss: -353.27468872]Iterations: 100%|██████████| 30/30 [01:30<00:00,  3.03s/it, atk: -162.57615662 ent: -193.54719543 str: 2.84866023 loss: -353.27468872]
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000109, 0.967175]
+
+[DEBUG Iter 0] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.003130/0.018787/0.006425
+  Sum: 0.629617
+  All zeros: False
+  Spatial sum range: 0.024434 to 0.081404
+  Prob range: 0.066982 to 0.230789
+  Max prob per token (concentration): 0.173291
+  Entropy per token range: -1.944716 to -1.895349
+  Final entropy: -1.933407
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000147, 0.962574]
+
+[DEBUG Iter 10] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.003308/0.017050/0.006355
+  Sum: 0.622758
+  All zeros: False
+  Spatial sum range: 0.025688 to 0.078470
+  Prob range: 0.077001 to 0.217277
+  Max prob per token (concentration): 0.168588
+  Entropy per token range: -1.945143 to -1.901310
+  Final entropy: -1.935060
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000151, 0.962891]
+
+[DEBUG Iter 20] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.003208/0.016363/0.006293
+  Sum: 0.616725
+  All zeros: False
+  Spatial sum range: 0.025548 to 0.076618
+  Prob range: 0.075882 to 0.213573
+  Max prob per token (concentration): 0.167701
+  Entropy per token range: -1.944890 to -1.902664
+  Final entropy: -1.935280
+Accuracy on adversarial examples: 0.0%
+after_pred: tensor([981], device='cuda:0') tensor(0.9851, device='cuda:0')
+after_true: tensor([768], device='cuda:0') tensor(5.5610e-08, device='cuda:0')
+L1: [8076.0864]	L2: [30.606167]	Linf: [0.8980392]
+
+Accuracy on benign examples: 100.0%
+gt_label: 663 pred_label: 663 pred_clean_logit 0.8165990710258484
+prompt generate:  monastery  	labels:  [[663]]
+decoder:  [49406, 21850, 49407] [49406, 49407]
+DDIM_inverse:   0%|          | 0/19 [00:00<?, ?it/s]DDIM_inverse:   5%|▌         | 1/19 [00:00<00:01,  9.46it/s]DDIM_inverse:  11%|█         | 2/19 [00:00<00:02,  6.41it/s]DDIM_inverse:  16%|█▌        | 3/19 [00:00<00:02,  5.43it/s]DDIM_inverse:  21%|██        | 4/19 [00:00<00:02,  5.15it/s]DDIM_inverse:  26%|██▋       | 5/19 [00:00<00:02,  4.73it/s]DDIM_inverse:  32%|███▏      | 6/19 [00:01<00:02,  4.51it/s]DDIM_inverse:  37%|███▋      | 7/19 [00:01<00:02,  4.33it/s]DDIM_inverse:  42%|████▏     | 8/19 [00:01<00:02,  4.27it/s]DDIM_inverse:  47%|████▋     | 9/19 [00:01<00:02,  4.20it/s]DDIM_inverse:  53%|█████▎    | 10/19 [00:02<00:02,  4.18it/s]DDIM_inverse:  58%|█████▊    | 11/19 [00:02<00:01,  4.13it/s]DDIM_inverse:  63%|██████▎   | 12/19 [00:02<00:01,  4.13it/s]DDIM_inverse:  68%|██████▊   | 13/19 [00:02<00:01,  4.11it/s]DDIM_inverse:  74%|███████▎  | 14/19 [00:03<00:01,  4.09it/s]DDIM_inverse:  79%|███████▉  | 15/19 [00:03<00:00,  4.11it/s]DDIM_inverse:  84%|████████▍ | 16/19 [00:03<00:00,  4.07it/s]DDIM_inverse:  89%|████████▉ | 17/19 [00:03<00:00,  4.10it/s]DDIM_inverse:  95%|█████████▍| 18/19 [00:04<00:00,  3.92it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  3.85it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  4.27it/s]
+Optimize_uncond_embed:   0%|          | 0/5 [00:00<?, ?it/s]Optimize_uncond_embed:  20%|██        | 1/5 [00:04<00:19,  4.77s/it]Optimize_uncond_embed:  40%|████      | 2/5 [00:10<00:15,  5.20s/it]Optimize_uncond_embed:  60%|██████    | 3/5 [00:15<00:10,  5.30s/it]Optimize_uncond_embed:  80%|████████  | 4/5 [00:22<00:05,  5.97s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:31<00:00,  6.86s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:31<00:00,  6.23s/it]
+Iterations:   0%|          | 0/30 [00:00<?, ?it/s]Iterations:   0%|          | 0/30 [00:01<?, ?it/s, atk: -1.12909985 ent: -190.29646301 str: 0.00000000 loss: -191.42556763]Iterations:   3%|▎         | 1/30 [00:03<01:33,  3.22s/it, atk: -1.12909985 ent: -190.29646301 str: 0.00000000 loss: -191.42556763]Iterations:   3%|▎         | 1/30 [00:04<01:33,  3.22s/it, atk: -3.88885403 ent: -190.59060669 str: 0.89782310 loss: -193.58163452]Iterations:   7%|▋         | 2/30 [00:05<01:22,  2.93s/it, atk: -3.88885403 ent: -190.59060669 str: 0.89782310 loss: -193.58163452]Iterations:   7%|▋         | 2/30 [00:07<01:22,  2.93s/it, atk: -14.75919724 ent: -190.84384155 str: 1.29518497 loss: -204.30786133]Iterations:  10%|█         | 3/30 [00:08<01:18,  2.91s/it, atk: -14.75919724 ent: -190.84384155 str: 1.29518497 loss: -204.30786133]Iterations:  10%|█         | 3/30 [00:10<01:18,  2.91s/it, atk: -28.20682716 ent: -191.01176453 str: 1.48626351 loss: -217.73233032]Iterations:  13%|█▎        | 4/30 [00:11<01:12,  2.81s/it, atk: -28.20682716 ent: -191.01176453 str: 1.48626351 loss: -217.73233032]Iterations:  13%|█▎        | 4/30 [00:13<01:12,  2.81s/it, atk: -42.86490631 ent: -191.10638428 str: 1.52976441 loss: -232.44152832]Iterations:  17%|█▋        | 5/30 [00:14<01:12,  2.89s/it, atk: -42.86490631 ent: -191.10638428 str: 1.52976441 loss: -232.44152832]Iterations:  17%|█▋        | 5/30 [00:16<01:12,  2.89s/it, atk: -54.50394440 ent: -191.23815918 str: 1.62941885 loss: -244.11268616]Iterations:  20%|██        | 6/30 [00:17<01:11,  2.98s/it, atk: -54.50394440 ent: -191.23815918 str: 1.62941885 loss: -244.11268616]Iterations:  20%|██        | 6/30 [00:19<01:11,  2.98s/it, atk: -64.27184296 ent: -191.35574341 str: 1.71267664 loss: -253.91491699]Iterations:  23%|██▎       | 7/30 [00:21<01:12,  3.13s/it, atk: -64.27184296 ent: -191.35574341 str: 1.71267664 loss: -253.91491699]Iterations:  23%|██▎       | 7/30 [00:22<01:12,  3.13s/it, atk: -70.42121124 ent: -191.42739868 str: 1.79125500 loss: -260.05737305]Iterations:  27%|██▋       | 8/30 [00:24<01:09,  3.14s/it, atk: -70.42121124 ent: -191.42739868 str: 1.79125500 loss: -260.05737305]Iterations:  27%|██▋       | 8/30 [00:25<01:09,  3.14s/it, atk: -80.49203491 ent: -191.52644348 str: 1.89795089 loss: -270.12054443]Iterations:  30%|███       | 9/30 [00:27<01:07,  3.19s/it, atk: -80.49203491 ent: -191.52644348 str: 1.89795089 loss: -270.12054443]Iterations:  30%|███       | 9/30 [00:28<01:07,  3.19s/it, atk: -86.94052124 ent: -191.56198120 str: 1.93671978 loss: -276.56579590]Iterations:  33%|███▎      | 10/30 [00:29<00:58,  2.93s/it, atk: -86.94052124 ent: -191.56198120 str: 1.93671978 loss: -276.56579590]Iterations:  33%|███▎      | 10/30 [00:31<00:58,  2.93s/it, atk: -93.09531403 ent: -191.61143494 str: 1.97586083 loss: -282.73089600]Iterations:  37%|███▋      | 11/30 [00:32<00:52,  2.75s/it, atk: -93.09531403 ent: -191.61143494 str: 1.97586083 loss: -282.73089600]Iterations:  37%|███▋      | 11/30 [00:33<00:52,  2.75s/it, atk: -101.01348114 ent: -191.66160583 str: 2.02819467 loss: -290.64688110]Iterations:  40%|████      | 12/30 [00:34<00:48,  2.67s/it, atk: -101.01348114 ent: -191.66160583 str: 2.02819467 loss: -290.64688110]Iterations:  40%|████      | 12/30 [00:36<00:48,  2.67s/it, atk: -107.67996216 ent: -191.73361206 str: 2.06811690 loss: -297.34545898]Iterations:  43%|████▎     | 13/30 [00:37<00:47,  2.80s/it, atk: -107.67996216 ent: -191.73361206 str: 2.06811690 loss: -297.34545898]Iterations:  43%|████▎     | 13/30 [00:39<00:47,  2.80s/it, atk: -114.97453308 ent: -191.75920105 str: 2.10567307 loss: -304.62805176]Iterations:  47%|████▋     | 14/30 [00:41<00:46,  2.91s/it, atk: -114.97453308 ent: -191.75920105 str: 2.10567307 loss: -304.62805176]Iterations:  47%|████▋     | 14/30 [00:42<00:46,  2.91s/it, atk: -120.52476501 ent: -191.78109741 str: 2.14430237 loss: -310.16156006]Iterations:  50%|█████     | 15/30 [00:44<00:45,  3.05s/it, atk: -120.52476501 ent: -191.78109741 str: 2.14430237 loss: -310.16156006]Iterations:  50%|█████     | 15/30 [00:46<00:45,  3.05s/it, atk: -126.55169678 ent: -191.80110168 str: 2.17400742 loss: -316.17877197]Iterations:  53%|█████▎    | 16/30 [00:47<00:43,  3.08s/it, atk: -126.55169678 ent: -191.80110168 str: 2.17400742 loss: -316.17877197]Iterations:  53%|█████▎    | 16/30 [00:49<00:43,  3.08s/it, atk: -130.72909546 ent: -191.81051636 str: 2.18259478 loss: -320.35699463]Iterations:  57%|█████▋    | 17/30 [00:50<00:40,  3.11s/it, atk: -130.72909546 ent: -191.81051636 str: 2.18259478 loss: -320.35699463]Iterations:  57%|█████▋    | 17/30 [00:52<00:40,  3.11s/it, atk: -136.62458801 ent: -191.83589172 str: 2.22948599 loss: -326.23098755]Iterations:  60%|██████    | 18/30 [00:53<00:36,  3.05s/it, atk: -136.62458801 ent: -191.83589172 str: 2.22948599 loss: -326.23098755]Iterations:  60%|██████    | 18/30 [00:55<00:36,  3.05s/it, atk: -142.20030212 ent: -191.85581970 str: 2.24911094 loss: -331.80700684]Iterations:  63%|██████▎   | 19/30 [00:56<00:32,  2.92s/it, atk: -142.20030212 ent: -191.85581970 str: 2.24911094 loss: -331.80700684]Iterations:  63%|██████▎   | 19/30 [00:57<00:32,  2.92s/it, atk: -147.68583679 ent: -191.87953186 str: 2.26963997 loss: -337.29571533]Iterations:  67%|██████▋   | 20/30 [00:58<00:28,  2.83s/it, atk: -147.68583679 ent: -191.87953186 str: 2.26963997 loss: -337.29571533]Iterations:  67%|██████▋   | 20/30 [01:00<00:28,  2.83s/it, atk: -153.52120972 ent: -191.89573669 str: 2.27779889 loss: -343.13916016]Iterations:  70%|███████   | 21/30 [01:02<00:26,  2.97s/it, atk: -153.52120972 ent: -191.89573669 str: 2.27779889 loss: -343.13916016]Iterations:  70%|███████   | 21/30 [01:04<00:26,  2.97s/it, atk: -159.04864502 ent: -191.90946960 str: 2.29561639 loss: -348.66247559]Iterations:  73%|███████▎  | 22/30 [01:05<00:24,  3.09s/it, atk: -159.04864502 ent: -191.90946960 str: 2.29561639 loss: -348.66247559]Iterations:  73%|███████▎  | 22/30 [01:07<00:24,  3.09s/it, atk: -163.98110962 ent: -191.92733765 str: 2.32509303 loss: -353.58337402]Iterations:  77%|███████▋  | 23/30 [01:08<00:21,  3.11s/it, atk: -163.98110962 ent: -191.92733765 str: 2.32509303 loss: -353.58337402]Iterations:  77%|███████▋  | 23/30 [01:10<00:21,  3.11s/it, atk: -165.54495239 ent: -191.94387817 str: 2.30883908 loss: -355.17999268]Iterations:  80%|████████  | 24/30 [01:11<00:18,  3.13s/it, atk: -165.54495239 ent: -191.94387817 str: 2.30883908 loss: -355.17999268]Iterations:  80%|████████  | 24/30 [01:13<00:18,  3.13s/it, atk: -173.33126831 ent: -191.97581482 str: 2.33927679 loss: -362.96780396]Iterations:  83%|████████▎ | 25/30 [01:15<00:16,  3.21s/it, atk: -173.33126831 ent: -191.97581482 str: 2.33927679 loss: -362.96780396]Iterations:  83%|████████▎ | 25/30 [01:16<00:16,  3.21s/it, atk: -173.63511658 ent: -192.00544739 str: 2.37864375 loss: -363.26190186]Iterations:  87%|████████▋ | 26/30 [01:17<00:12,  3.04s/it, atk: -173.63511658 ent: -192.00544739 str: 2.37864375 loss: -363.26190186]Iterations:  87%|████████▋ | 26/30 [01:19<00:12,  3.04s/it, atk: -180.39154053 ent: -192.00030518 str: 2.36845851 loss: -370.02337646]Iterations:  90%|█████████ | 27/30 [01:20<00:08,  2.91s/it, atk: -180.39154053 ent: -192.00030518 str: 2.36845851 loss: -370.02337646]Iterations:  90%|█████████ | 27/30 [01:21<00:08,  2.91s/it, atk: -185.13095093 ent: -191.99192810 str: 2.34971833 loss: -374.77316284]Iterations:  93%|█████████▎| 28/30 [01:23<00:05,  2.82s/it, atk: -185.13095093 ent: -191.99192810 str: 2.34971833 loss: -374.77316284]Iterations:  93%|█████████▎| 28/30 [01:24<00:05,  2.82s/it, atk: -190.14514160 ent: -191.99771118 str: 2.34709501 loss: -379.79577637]Iterations:  97%|█████████▋| 29/30 [01:26<00:02,  2.91s/it, atk: -190.14514160 ent: -191.99771118 str: 2.34709501 loss: -379.79577637]Iterations:  97%|█████████▋| 29/30 [01:27<00:02,  2.91s/it, atk: -195.33241272 ent: -191.96031189 str: 2.35124087 loss: -384.94146729]Iterations: 100%|██████████| 30/30 [01:29<00:00,  2.98s/it, atk: -195.33241272 ent: -191.96031189 str: 2.35124087 loss: -384.94146729]Iterations: 100%|██████████| 30/30 [01:29<00:00,  2.98s/it, atk: -195.33241272 ent: -191.96031189 str: 2.35124087 loss: -384.94146729]
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000111, 0.969845]
+
+[DEBUG Iter 0] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 1]) (batch=7, spatial=7, tokens=1)
+  Min/Max/Mean: 0.001317/0.005402/0.003196
+  Sum: 0.156593
+  All zeros: False
+  Spatial sum range: 0.016266 to 0.028067
+  Prob range: 0.080940 to 0.332089
+  Max prob per token (concentration): 0.213658
+  Entropy per token range: -1.940323 to -1.795560
+  Final entropy: -1.902965
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000116, 0.967312]
+
+[DEBUG Iter 10] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 1]) (batch=7, spatial=7, tokens=1)
+  Min/Max/Mean: 0.001514/0.004851/0.003161
+  Sum: 0.154912
+  All zeros: False
+  Spatial sum range: 0.017347 to 0.027297
+  Prob range: 0.087251 to 0.279640
+  Max prob per token (concentration): 0.203418
+  Entropy per token range: -1.939977 to -1.856092
+  Final entropy: -1.916114
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000118, 0.966630]
+
+[DEBUG Iter 20] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 1]) (batch=7, spatial=7, tokens=1)
+  Min/Max/Mean: 0.001549/0.005156/0.003140
+  Sum: 0.153858
+  All zeros: False
+  Spatial sum range: 0.017436 to 0.027366
+  Prob range: 0.085677 to 0.255794
+  Max prob per token (concentration): 0.199225
+  Entropy per token range: -1.939332 to -1.866390
+  Final entropy: -1.918957
+Accuracy on adversarial examples: 0.0%
+after_pred: tensor([497], device='cuda:0') tensor(1.0000, device='cuda:0')
+after_true: tensor([663], device='cuda:0') tensor(2.2056e-09, device='cuda:0')
+L1: [9999.533]	L2: [39.21749]	Linf: [0.77254903]
+
+Accuracy on benign examples: 100.0%
+gt_label: 717 pred_label: 717 pred_clean_logit 0.9892811179161072
+prompt generate:  pickup  	labels:  [[717]]
+decoder:  [49406, 15382, 49407] [49406, 49407]
+DDIM_inverse:   0%|          | 0/19 [00:00<?, ?it/s]DDIM_inverse:   5%|▌         | 1/19 [00:00<00:02,  8.70it/s]DDIM_inverse:  11%|█         | 2/19 [00:00<00:03,  5.33it/s]DDIM_inverse:  16%|█▌        | 3/19 [00:00<00:03,  4.92it/s]DDIM_inverse:  21%|██        | 4/19 [00:00<00:03,  4.61it/s]DDIM_inverse:  26%|██▋       | 5/19 [00:01<00:03,  4.54it/s]DDIM_inverse:  32%|███▏      | 6/19 [00:01<00:02,  4.49it/s]DDIM_inverse:  37%|███▋      | 7/19 [00:01<00:02,  4.37it/s]DDIM_inverse:  42%|████▏     | 8/19 [00:01<00:02,  4.25it/s]DDIM_inverse:  47%|████▋     | 9/19 [00:01<00:02,  4.23it/s]DDIM_inverse:  53%|█████▎    | 10/19 [00:02<00:02,  4.15it/s]DDIM_inverse:  58%|█████▊    | 11/19 [00:02<00:01,  4.16it/s]DDIM_inverse:  63%|██████▎   | 12/19 [00:02<00:01,  4.10it/s]DDIM_inverse:  68%|██████▊   | 13/19 [00:02<00:01,  4.29it/s]DDIM_inverse:  74%|███████▎  | 14/19 [00:03<00:01,  4.47it/s]DDIM_inverse:  79%|███████▉  | 15/19 [00:03<00:00,  4.62it/s]DDIM_inverse:  84%|████████▍ | 16/19 [00:03<00:00,  4.65it/s]DDIM_inverse:  89%|████████▉ | 17/19 [00:03<00:00,  4.73it/s]DDIM_inverse:  95%|█████████▍| 18/19 [00:03<00:00,  4.72it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  4.80it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  4.55it/s]
+Optimize_uncond_embed:   0%|          | 0/5 [00:00<?, ?it/s]Optimize_uncond_embed:  20%|██        | 1/5 [00:03<00:15,  3.95s/it]Optimize_uncond_embed:  40%|████      | 2/5 [00:09<00:14,  4.73s/it]Optimize_uncond_embed:  60%|██████    | 3/5 [00:16<00:11,  5.69s/it]Optimize_uncond_embed:  80%|████████  | 4/5 [00:23<00:06,  6.43s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:30<00:00,  6.69s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:30<00:00,  6.16s/it]
+Iterations:   0%|          | 0/30 [00:00<?, ?it/s]Iterations:   0%|          | 0/30 [00:01<?, ?it/s, atk: -0.88945782 ent: -191.84625244 str: 0.00000000 loss: -192.73571777]Iterations:   3%|▎         | 1/30 [00:03<01:33,  3.22s/it, atk: -0.88945782 ent: -191.84625244 str: 0.00000000 loss: -192.73571777]Iterations:   3%|▎         | 1/30 [00:05<01:33,  3.22s/it, atk: -4.80027628 ent: -191.54611206 str: 0.47610378 loss: -195.87028503]Iterations:   7%|▋         | 2/30 [00:06<01:32,  3.30s/it, atk: -4.80027628 ent: -191.54611206 str: 0.47610378 loss: -195.87028503]Iterations:   7%|▋         | 2/30 [00:08<01:32,  3.30s/it, atk: -18.73971939 ent: -191.73950195 str: 0.52051127 loss: -209.95870972]Iterations:  10%|█         | 3/30 [00:09<01:27,  3.23s/it, atk: -18.73971939 ent: -191.73950195 str: 0.52051127 loss: -209.95870972]Iterations:  10%|█         | 3/30 [00:11<01:27,  3.23s/it, atk: -38.38483047 ent: -191.99221802 str: 0.58701581 loss: -229.79003906]Iterations:  13%|█▎        | 4/30 [00:12<01:23,  3.21s/it, atk: -38.38483047 ent: -191.99221802 str: 0.58701581 loss: -229.79003906]Iterations:  13%|█▎        | 4/30 [00:14<01:23,  3.21s/it, atk: -56.85428619 ent: -191.79460144 str: 0.67064691 loss: -247.97824097]Iterations:  17%|█▋        | 5/30 [00:15<01:18,  3.14s/it, atk: -56.85428619 ent: -191.79460144 str: 0.67064691 loss: -247.97824097]Iterations:  17%|█▋        | 5/30 [00:17<01:18,  3.14s/it, atk: -72.01497650 ent: -191.52764893 str: 0.64751977 loss: -262.89511108]Iterations:  20%|██        | 6/30 [00:18<01:10,  2.96s/it, atk: -72.01497650 ent: -191.52764893 str: 0.64751977 loss: -262.89511108]Iterations:  20%|██        | 6/30 [00:19<01:10,  2.96s/it, atk: -87.49916840 ent: -191.92385864 str: 0.63759559 loss: -278.78543091]Iterations:  23%|██▎       | 7/30 [00:21<01:05,  2.84s/it, atk: -87.49916840 ent: -191.92385864 str: 0.63759559 loss: -278.78543091]Iterations:  23%|██▎       | 7/30 [00:22<01:05,  2.84s/it, atk: -99.06604004 ent: -192.12722778 str: 0.69683236 loss: -290.49642944]Iterations:  27%|██▋       | 8/30 [00:23<01:02,  2.82s/it, atk: -99.06604004 ent: -192.12722778 str: 0.69683236 loss: -290.49642944]Iterations:  27%|██▋       | 8/30 [00:25<01:02,  2.82s/it, atk: -109.08650208 ent: -192.17515564 str: 0.73475254 loss: -300.52691650]Iterations:  30%|███       | 9/30 [00:27<01:01,  2.92s/it, atk: -109.08650208 ent: -192.17515564 str: 0.73475254 loss: -300.52691650]Iterations:  30%|███       | 9/30 [00:28<01:01,  2.92s/it, atk: -119.07151794 ent: -192.15036011 str: 0.75928664 loss: -310.46258545]Iterations:  33%|███▎      | 10/30 [00:30<00:59,  2.99s/it, atk: -119.07151794 ent: -192.15036011 str: 0.75928664 loss: -310.46258545]Iterations:  33%|███▎      | 10/30 [00:32<00:59,  2.99s/it, atk: -126.36727142 ent: -192.07919312 str: 0.75396967 loss: -317.69250488]Iterations:  37%|███▋      | 11/30 [00:33<00:58,  3.10s/it, atk: -126.36727142 ent: -192.07919312 str: 0.75396967 loss: -317.69250488]Iterations:  37%|███▋      | 11/30 [00:35<00:58,  3.10s/it, atk: -133.53730774 ent: -192.06419373 str: 0.74225569 loss: -324.85925293]Iterations:  40%|████      | 12/30 [00:36<00:56,  3.12s/it, atk: -133.53730774 ent: -192.06419373 str: 0.74225569 loss: -324.85925293]Iterations:  40%|████      | 12/30 [00:38<00:56,  3.12s/it, atk: -140.74639893 ent: -191.78401184 str: 0.73105520 loss: -331.79937744]Iterations:  43%|████▎     | 13/30 [00:39<00:52,  3.09s/it, atk: -140.74639893 ent: -191.78401184 str: 0.73105520 loss: -331.79937744]Iterations:  43%|████▎     | 13/30 [00:41<00:52,  3.09s/it, atk: -147.56320190 ent: -191.87249756 str: 0.75601369 loss: -338.67968750]Iterations:  47%|████▋     | 14/30 [00:42<00:47,  2.97s/it, atk: -147.56320190 ent: -191.87249756 str: 0.75601369 loss: -338.67968750]Iterations:  47%|████▋     | 14/30 [00:43<00:47,  2.97s/it, atk: -154.17346191 ent: -191.93974304 str: 0.80290240 loss: -345.31030273]Iterations:  50%|█████     | 15/30 [00:45<00:43,  2.87s/it, atk: -154.17346191 ent: -191.93974304 str: 0.80290240 loss: -345.31030273]Iterations:  50%|█████     | 15/30 [00:46<00:43,  2.87s/it, atk: -161.04737854 ent: -191.92202759 str: 0.84370178 loss: -352.12570190]Iterations:  53%|█████▎    | 16/30 [00:48<00:41,  2.95s/it, atk: -161.04737854 ent: -191.92202759 str: 0.84370178 loss: -352.12570190]Iterations:  53%|█████▎    | 16/30 [00:49<00:41,  2.95s/it, atk: -166.95228577 ent: -191.94557190 str: 0.80042201 loss: -358.09744263]Iterations:  57%|█████▋    | 17/30 [00:51<00:39,  3.01s/it, atk: -166.95228577 ent: -191.94557190 str: 0.80042201 loss: -358.09744263]Iterations:  57%|█████▋    | 17/30 [00:53<00:39,  3.01s/it, atk: -174.19970703 ent: -191.92333984 str: 0.80527598 loss: -365.31774902]Iterations:  60%|██████    | 18/30 [00:54<00:36,  3.05s/it, atk: -174.19970703 ent: -191.92333984 str: 0.80527598 loss: -365.31774902]Iterations:  60%|██████    | 18/30 [00:56<00:36,  3.05s/it, atk: -180.45286560 ent: -191.88235474 str: 0.80903441 loss: -371.52618408]Iterations:  63%|██████▎   | 19/30 [00:57<00:33,  3.09s/it, atk: -180.45286560 ent: -191.88235474 str: 0.80903441 loss: -371.52618408]Iterations:  63%|██████▎   | 19/30 [00:59<00:33,  3.09s/it, atk: -186.75152588 ent: -191.87548828 str: 0.82042867 loss: -377.80657959]Iterations:  67%|██████▋   | 20/30 [01:01<00:31,  3.19s/it, atk: -186.75152588 ent: -191.87548828 str: 0.82042867 loss: -377.80657959]Iterations:  67%|██████▋   | 20/30 [01:02<00:31,  3.19s/it, atk: -193.07737732 ent: -191.91258240 str: 0.84366024 loss: -384.14630127]Iterations:  70%|███████   | 21/30 [01:04<00:28,  3.16s/it, atk: -193.07737732 ent: -191.91258240 str: 0.84366024 loss: -384.14630127]Iterations:  70%|███████   | 21/30 [01:05<00:28,  3.16s/it, atk: -199.37583923 ent: -191.94635010 str: 0.86191511 loss: -390.46026611]Iterations:  73%|███████▎  | 22/30 [01:06<00:24,  3.01s/it, atk: -199.37583923 ent: -191.94635010 str: 0.86191511 loss: -390.46026611]Iterations:  73%|███████▎  | 22/30 [01:08<00:24,  3.01s/it, atk: -205.57206726 ent: -191.94474792 str: 0.86858124 loss: -396.64825439]Iterations:  77%|███████▋  | 23/30 [01:09<00:20,  2.90s/it, atk: -205.57206726 ent: -191.94474792 str: 0.86858124 loss: -396.64825439]Iterations:  77%|███████▋  | 23/30 [01:10<00:20,  2.90s/it, atk: -211.90054321 ent: -191.96208191 str: 0.88861746 loss: -402.97399902]Iterations:  80%|████████  | 24/30 [01:12<00:17,  2.90s/it, atk: -211.90054321 ent: -191.96208191 str: 0.88861746 loss: -402.97399902]Iterations:  80%|████████  | 24/30 [01:14<00:17,  2.90s/it, atk: -217.99598694 ent: -191.96884155 str: 0.90528160 loss: -409.05953979]Iterations:  83%|████████▎ | 25/30 [01:15<00:14,  2.97s/it, atk: -217.99598694 ent: -191.96884155 str: 0.90528160 loss: -409.05953979]Iterations:  83%|████████▎ | 25/30 [01:17<00:14,  2.97s/it, atk: -224.00924683 ent: -191.96545410 str: 0.92373973 loss: -415.05096436]Iterations:  87%|████████▋ | 26/30 [01:18<00:12,  3.05s/it, atk: -224.00924683 ent: -191.96545410 str: 0.92373973 loss: -415.05096436]Iterations:  87%|████████▋ | 26/30 [01:20<00:12,  3.05s/it, atk: -229.79571533 ent: -191.96430969 str: 0.93251067 loss: -420.82751465]Iterations:  90%|█████████ | 27/30 [01:21<00:09,  3.08s/it, atk: -229.79571533 ent: -191.96430969 str: 0.93251067 loss: -420.82751465]Iterations:  90%|█████████ | 27/30 [01:23<00:09,  3.08s/it, atk: -235.77285767 ent: -191.96791077 str: 0.94890183 loss: -426.79187012]Iterations:  93%|█████████▎| 28/30 [01:25<00:06,  3.11s/it, atk: -235.77285767 ent: -191.96791077 str: 0.94890183 loss: -426.79187012]Iterations:  93%|█████████▎| 28/30 [01:26<00:06,  3.11s/it, atk: -240.79002380 ent: -191.94160461 str: 0.98419023 loss: -431.74743652]Iterations:  97%|█████████▋| 29/30 [01:27<00:03,  3.05s/it, atk: -240.79002380 ent: -191.94160461 str: 0.98419023 loss: -431.74743652]Iterations:  97%|█████████▋| 29/30 [01:29<00:03,  3.05s/it, atk: -246.51675415 ent: -191.98713684 str: 0.98098087 loss: -437.52288818]Iterations: 100%|██████████| 30/30 [01:30<00:00,  2.94s/it, atk: -246.51675415 ent: -191.98713684 str: 0.98098087 loss: -437.52288818]Iterations: 100%|██████████| 30/30 [01:30<00:00,  3.02s/it, atk: -246.51675415 ent: -191.98713684 str: 0.98098087 loss: -437.52288818]
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000128, 0.977581]
+
+[DEBUG Iter 0] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 1]) (batch=7, spatial=7, tokens=1)
+  Min/Max/Mean: 0.000994/0.005997/0.003449
+  Sum: 0.168989
+  All zeros: False
+  Spatial sum range: 0.008912 to 0.030607
+  Prob range: 0.083016 to 0.226906
+  Max prob per token (concentration): 0.201899
+  Entropy per token range: -1.935663 to -1.899276
+  Final entropy: -1.918463
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000125, 0.974687]
+
+[DEBUG Iter 10] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 1]) (batch=7, spatial=7, tokens=1)
+  Min/Max/Mean: 0.001029/0.005938/0.003538
+  Sum: 0.173386
+  All zeros: False
+  Spatial sum range: 0.009238 to 0.030955
+  Prob range: 0.086676 to 0.218820
+  Max prob per token (concentration): 0.198773
+  Entropy per token range: -1.931365 to -1.899904
+  Final entropy: -1.920792
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000148, 0.973279]
+
+[DEBUG Iter 20] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 1]) (batch=7, spatial=7, tokens=1)
+  Min/Max/Mean: 0.001190/0.005964/0.003562
+  Sum: 0.174552
+  All zeros: False
+  Spatial sum range: 0.009872 to 0.030710
+  Prob range: 0.084765 to 0.231178
+  Max prob per token (concentration): 0.202650
+  Entropy per token range: -1.930986 to -1.898961
+  Final entropy: -1.919126
+Accuracy on adversarial examples: 0.0%
+after_pred: tensor([468], device='cuda:0') tensor(1.0000, device='cuda:0')
+after_true: tensor([717], device='cuda:0') tensor(1.1444e-11, device='cuda:0')
+L1: [8139.808]	L2: [35.215797]	Linf: [0.8117647]
+
+Accuracy on benign examples: 100.0%
+gt_label: 671 pred_label: 671 pred_clean_logit 0.6306856274604797
+prompt generate:  mountain bike  	labels:  [[671]]
+decoder:  [49406, 3965, 3701, 49407] [49406, 49407]
+DDIM_inverse:   0%|          | 0/19 [00:00<?, ?it/s]DDIM_inverse:   5%|▌         | 1/19 [00:00<00:02,  7.80it/s]DDIM_inverse:  11%|█         | 2/19 [00:00<00:03,  5.26it/s]DDIM_inverse:  16%|█▌        | 3/19 [00:00<00:03,  4.59it/s]DDIM_inverse:  21%|██        | 4/19 [00:00<00:03,  4.42it/s]DDIM_inverse:  26%|██▋       | 5/19 [00:01<00:03,  4.29it/s]DDIM_inverse:  32%|███▏      | 6/19 [00:01<00:03,  4.26it/s]DDIM_inverse:  37%|███▋      | 7/19 [00:01<00:02,  4.17it/s]DDIM_inverse:  42%|████▏     | 8/19 [00:01<00:02,  4.16it/s]DDIM_inverse:  47%|████▋     | 9/19 [00:02<00:02,  4.10it/s]DDIM_inverse:  53%|█████▎    | 10/19 [00:02<00:02,  4.12it/s]DDIM_inverse:  58%|█████▊    | 11/19 [00:02<00:01,  4.11it/s]DDIM_inverse:  63%|██████▎   | 12/19 [00:02<00:01,  4.14it/s]DDIM_inverse:  68%|██████▊   | 13/19 [00:03<00:01,  4.09it/s]DDIM_inverse:  74%|███████▎  | 14/19 [00:03<00:01,  4.07it/s]DDIM_inverse:  79%|███████▉  | 15/19 [00:03<00:00,  4.11it/s]DDIM_inverse:  84%|████████▍ | 16/19 [00:03<00:00,  4.12it/s]DDIM_inverse:  89%|████████▉ | 17/19 [00:04<00:00,  4.09it/s]DDIM_inverse:  95%|█████████▍| 18/19 [00:04<00:00,  4.11it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  3.93it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  4.18it/s]
+Optimize_uncond_embed:   0%|          | 0/5 [00:00<?, ?it/s]Optimize_uncond_embed:  20%|██        | 1/5 [00:04<00:19,  4.98s/it]Optimize_uncond_embed:  40%|████      | 2/5 [00:10<00:15,  5.12s/it]Optimize_uncond_embed:  60%|██████    | 3/5 [00:16<00:10,  5.47s/it]Optimize_uncond_embed:  80%|████████  | 4/5 [00:23<00:06,  6.24s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:31<00:00,  6.91s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:31<00:00,  6.32s/it]
+Iterations:   0%|          | 0/30 [00:00<?, ?it/s]Iterations:   0%|          | 0/30 [00:01<?, ?it/s, atk: -11.61487007 ent: -188.29598999 str: 0.00000000 loss: -199.91085815]Iterations:   3%|▎         | 1/30 [00:02<01:16,  2.64s/it, atk: -11.61487007 ent: -188.29598999 str: 0.00000000 loss: -199.91085815]Iterations:   3%|▎         | 1/30 [00:04<01:16,  2.64s/it, atk: -38.20957947 ent: -188.19638062 str: 0.65116829 loss: -225.75479126]Iterations:   7%|▋         | 2/30 [00:05<01:16,  2.72s/it, atk: -38.20957947 ent: -188.19638062 str: 0.65116829 loss: -225.75479126]Iterations:   7%|▋         | 2/30 [00:06<01:16,  2.72s/it, atk: -56.81806946 ent: -188.35072327 str: 1.25828159 loss: -243.91050720]Iterations:  10%|█         | 3/30 [00:08<01:15,  2.81s/it, atk: -56.81806946 ent: -188.35072327 str: 1.25828159 loss: -243.91050720]Iterations:  10%|█         | 3/30 [00:10<01:15,  2.81s/it, atk: -79.37103271 ent: -188.33370972 str: 1.45269692 loss: -266.25204468]Iterations:  13%|█▎        | 4/30 [00:11<01:16,  2.94s/it, atk: -79.37103271 ent: -188.33370972 str: 1.45269692 loss: -266.25204468]Iterations:  13%|█▎        | 4/30 [00:13<01:16,  2.94s/it, atk: -93.90943909 ent: -188.26713562 str: 1.60927081 loss: -280.56732178]Iterations:  17%|█▋        | 5/30 [00:14<01:12,  2.91s/it, atk: -93.90943909 ent: -188.26713562 str: 1.60927081 loss: -280.56732178]Iterations:  17%|█▋        | 5/30 [00:15<01:12,  2.91s/it, atk: -107.39413452 ent: -188.29727173 str: 1.66196120 loss: -294.02944946]Iterations:  20%|██        | 6/30 [00:17<01:10,  2.92s/it, atk: -107.39413452 ent: -188.29727173 str: 1.66196120 loss: -294.02944946]Iterations:  20%|██        | 6/30 [00:18<01:10,  2.92s/it, atk: -120.43713379 ent: -188.25773621 str: 1.68462491 loss: -307.01025391]Iterations:  23%|██▎       | 7/30 [00:20<01:09,  3.00s/it, atk: -120.43713379 ent: -188.25773621 str: 1.68462491 loss: -307.01025391]Iterations:  23%|██▎       | 7/30 [00:22<01:09,  3.00s/it, atk: -123.33221436 ent: -188.02359009 str: 1.70506632 loss: -309.65075684]Iterations:  27%|██▋       | 8/30 [00:23<01:05,  2.99s/it, atk: -123.33221436 ent: -188.02359009 str: 1.70506632 loss: -309.65075684]Iterations:  27%|██▋       | 8/30 [00:24<01:05,  2.99s/it, atk: -139.50169373 ent: -188.12171936 str: 1.66305673 loss: -325.96035767]Iterations:  30%|███       | 9/30 [00:26<01:00,  2.89s/it, atk: -139.50169373 ent: -188.12171936 str: 1.66305673 loss: -325.96035767]Iterations:  30%|███       | 9/30 [00:27<01:00,  2.89s/it, atk: -148.03285217 ent: -188.20553589 str: 1.62407553 loss: -334.61431885]Iterations:  33%|███▎      | 10/30 [00:28<00:55,  2.80s/it, atk: -148.03285217 ent: -188.20553589 str: 1.62407553 loss: -334.61431885]Iterations:  33%|███▎      | 10/30 [00:30<00:55,  2.80s/it, atk: -157.08447266 ent: -188.14823914 str: 1.60250306 loss: -343.63018799]Iterations:  37%|███▋      | 11/30 [00:31<00:54,  2.86s/it, atk: -157.08447266 ent: -188.14823914 str: 1.60250306 loss: -343.63018799]Iterations:  37%|███▋      | 11/30 [00:33<00:54,  2.86s/it, atk: -162.25393677 ent: -188.36857605 str: 1.62261260 loss: -348.99987793]Iterations:  40%|████      | 12/30 [00:34<00:53,  2.95s/it, atk: -162.25393677 ent: -188.36857605 str: 1.62261260 loss: -348.99987793]Iterations:  40%|████      | 12/30 [00:36<00:53,  2.95s/it, atk: -173.81590271 ent: -188.40089417 str: 1.60418355 loss: -360.61260986]Iterations:  43%|████▎     | 13/30 [00:38<00:51,  3.02s/it, atk: -173.81590271 ent: -188.40089417 str: 1.60418355 loss: -360.61260986]Iterations:  43%|████▎     | 13/30 [00:39<00:51,  3.02s/it, atk: -182.45098877 ent: -188.35281372 str: 1.66150165 loss: -369.14230347]Iterations:  47%|████▋     | 14/30 [00:41<00:50,  3.14s/it, atk: -182.45098877 ent: -188.35281372 str: 1.66150165 loss: -369.14230347]Iterations:  47%|████▋     | 14/30 [00:43<00:50,  3.14s/it, atk: -190.23544312 ent: -188.25828552 str: 1.63251030 loss: -376.86120605]Iterations:  50%|█████     | 15/30 [00:44<00:47,  3.14s/it, atk: -190.23544312 ent: -188.25828552 str: 1.63251030 loss: -376.86120605]Iterations:  50%|█████     | 15/30 [00:46<00:47,  3.14s/it, atk: -198.90057373 ent: -188.35760498 str: 1.68758333 loss: -385.57061768]Iterations:  53%|█████▎    | 16/30 [00:47<00:43,  3.08s/it, atk: -198.90057373 ent: -188.35760498 str: 1.68758333 loss: -385.57061768]Iterations:  53%|█████▎    | 16/30 [00:48<00:43,  3.08s/it, atk: -204.74288940 ent: -188.40754700 str: 1.68444645 loss: -391.46600342]Iterations:  57%|█████▋    | 17/30 [00:50<00:38,  2.96s/it, atk: -204.74288940 ent: -188.40754700 str: 1.68444645 loss: -391.46600342]Iterations:  57%|█████▋    | 17/30 [00:51<00:38,  2.96s/it, atk: -206.48332214 ent: -188.39460754 str: 1.65995502 loss: -393.21795654]Iterations:  60%|██████    | 18/30 [00:52<00:34,  2.84s/it, atk: -206.48332214 ent: -188.39460754 str: 1.65995502 loss: -393.21795654]Iterations:  60%|██████    | 18/30 [00:54<00:34,  2.84s/it, atk: -215.30673218 ent: -188.49754333 str: 1.73497522 loss: -402.06930542]Iterations:  63%|██████▎   | 19/30 [00:55<00:31,  2.86s/it, atk: -215.30673218 ent: -188.49754333 str: 1.73497522 loss: -402.06930542]Iterations:  63%|██████▎   | 19/30 [00:57<00:31,  2.86s/it, atk: -222.81532288 ent: -188.52838135 str: 1.75663197 loss: -409.58706665]Iterations:  67%|██████▋   | 20/30 [00:58<00:29,  2.95s/it, atk: -222.81532288 ent: -188.52838135 str: 1.75663197 loss: -409.58706665]Iterations:  67%|██████▋   | 20/30 [01:00<00:29,  2.95s/it, atk: -230.68173218 ent: -188.53569031 str: 1.76024115 loss: -417.45718384]Iterations:  70%|███████   | 21/30 [01:02<00:27,  3.05s/it, atk: -230.68173218 ent: -188.53569031 str: 1.76024115 loss: -417.45718384]Iterations:  70%|███████   | 21/30 [01:03<00:27,  3.05s/it, atk: -234.93820190 ent: -188.59669495 str: 1.82589746 loss: -421.70898438]Iterations:  73%|███████▎  | 22/30 [01:05<00:24,  3.07s/it, atk: -234.93820190 ent: -188.59669495 str: 1.82589746 loss: -421.70898438]Iterations:  73%|███████▎  | 22/30 [01:06<00:24,  3.07s/it, atk: -240.72859192 ent: -188.61831665 str: 1.84866321 loss: -427.49822998]Iterations:  77%|███████▋  | 23/30 [01:08<00:21,  3.09s/it, atk: -240.72859192 ent: -188.61831665 str: 1.84866321 loss: -427.49822998]Iterations:  77%|███████▋  | 23/30 [01:09<00:21,  3.09s/it, atk: -248.03683472 ent: -188.61375427 str: 1.86379778 loss: -434.78680420]Iterations:  80%|████████  | 24/30 [01:11<00:18,  3.01s/it, atk: -248.03683472 ent: -188.61375427 str: 1.86379778 loss: -434.78680420]Iterations:  80%|████████  | 24/30 [01:12<00:18,  3.01s/it, atk: -255.54080200 ent: -188.59484863 str: 1.87225735 loss: -442.26339722]Iterations:  83%|████████▎ | 25/30 [01:13<00:14,  2.91s/it, atk: -255.54080200 ent: -188.59484863 str: 1.87225735 loss: -442.26339722]Iterations:  83%|████████▎ | 25/30 [01:15<00:14,  2.91s/it, atk: -262.48016357 ent: -188.57135010 str: 1.87868571 loss: -449.17282104]Iterations:  87%|████████▋ | 26/30 [01:16<00:11,  2.84s/it, atk: -262.48016357 ent: -188.57135010 str: 1.87868571 loss: -449.17282104]Iterations:  87%|████████▋ | 26/30 [01:17<00:11,  2.84s/it, atk: -268.49179077 ent: -188.54418945 str: 1.88319778 loss: -455.15277100]Iterations:  90%|█████████ | 27/30 [01:19<00:08,  2.86s/it, atk: -268.49179077 ent: -188.54418945 str: 1.88319778 loss: -455.15277100]Iterations:  90%|█████████ | 27/30 [01:21<00:08,  2.86s/it, atk: -274.29501343 ent: -188.51268005 str: 1.88705003 loss: -460.92065430]Iterations:  93%|█████████▎| 28/30 [01:22<00:05,  2.96s/it, atk: -274.29501343 ent: -188.51268005 str: 1.88705003 loss: -460.92065430]Iterations:  93%|█████████▎| 28/30 [01:24<00:05,  2.96s/it, atk: -279.84692383 ent: -188.48519897 str: 1.89167023 loss: -466.44046021]Iterations:  97%|█████████▋| 29/30 [01:25<00:03,  3.02s/it, atk: -279.84692383 ent: -188.48519897 str: 1.89167023 loss: -466.44046021]Iterations:  97%|█████████▋| 29/30 [01:27<00:03,  3.02s/it, atk: -285.84133911 ent: -188.46812439 str: 1.90119421 loss: -472.40826416]Iterations: 100%|██████████| 30/30 [01:28<00:00,  3.06s/it, atk: -285.84133911 ent: -188.46812439 str: 1.90119421 loss: -472.40826416]Iterations: 100%|██████████| 30/30 [01:28<00:00,  2.97s/it, atk: -285.84133911 ent: -188.46812439 str: 1.90119421 loss: -472.40826416]
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000148, 0.962371]
+
+[DEBUG Iter 0] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.001897/0.019100/0.005821
+  Sum: 0.570472
+  All zeros: False
+  Spatial sum range: 0.016298 to 0.072080
+  Prob range: 0.050754 to 0.280317
+  Max prob per token (concentration): 0.210574
+  Entropy per token range: -1.942400 to -1.797035
+  Final entropy: -1.882960
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000117, 0.965995]
+
+[DEBUG Iter 10] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.001697/0.018167/0.005811
+  Sum: 0.569488
+  All zeros: False
+  Spatial sum range: 0.015091 to 0.070431
+  Prob range: 0.044934 to 0.282547
+  Max prob per token (concentration): 0.211793
+  Entropy per token range: -1.941794 to -1.798736
+  Final entropy: -1.881482
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000121, 0.964668]
+
+[DEBUG Iter 20] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.001748/0.017707/0.005778
+  Sum: 0.566239
+  All zeros: False
+  Spatial sum range: 0.014991 to 0.069448
+  Prob range: 0.047336 to 0.276031
+  Max prob per token (concentration): 0.210157
+  Entropy per token range: -1.942566 to -1.805930
+  Final entropy: -1.885357
+Accuracy on adversarial examples: 0.0%
+after_pred: tensor([880], device='cuda:0') tensor(1., device='cuda:0')
+after_true: tensor([671], device='cuda:0') tensor(2.2335e-13, device='cuda:0')
+L1: [7048.5386]	L2: [27.720821]	Linf: [0.84313726]
+
+Accuracy on benign examples: 100.0%
+gt_label: 324 pred_label: 324 pred_clean_logit 0.9429625272750854
+prompt generate:  cabbage butterfly  	labels:  [[324]]
+decoder:  [49406, 18407, 9738, 49407] [49406, 49407]
+DDIM_inverse:   0%|          | 0/19 [00:00<?, ?it/s]DDIM_inverse:   5%|▌         | 1/19 [00:00<00:01,  9.55it/s]DDIM_inverse:  11%|█         | 2/19 [00:00<00:02,  6.06it/s]DDIM_inverse:  16%|█▌        | 3/19 [00:00<00:02,  5.42it/s]DDIM_inverse:  21%|██        | 4/19 [00:00<00:02,  5.16it/s]DDIM_inverse:  26%|██▋       | 5/19 [00:00<00:02,  5.04it/s]DDIM_inverse:  32%|███▏      | 6/19 [00:01<00:02,  4.95it/s]DDIM_inverse:  37%|███▋      | 7/19 [00:01<00:02,  4.90it/s]DDIM_inverse:  42%|████▏     | 8/19 [00:01<00:02,  4.84it/s]DDIM_inverse:  47%|████▋     | 9/19 [00:01<00:02,  4.89it/s]DDIM_inverse:  53%|█████▎    | 10/19 [00:01<00:01,  5.12it/s]DDIM_inverse:  58%|█████▊    | 11/19 [00:02<00:01,  5.05it/s]DDIM_inverse:  63%|██████▎   | 12/19 [00:02<00:01,  4.93it/s]DDIM_inverse:  68%|██████▊   | 13/19 [00:02<00:01,  4.94it/s]DDIM_inverse:  74%|███████▎  | 14/19 [00:02<00:01,  4.86it/s]DDIM_inverse:  79%|███████▉  | 15/19 [00:02<00:00,  4.92it/s]DDIM_inverse:  84%|████████▍ | 16/19 [00:03<00:00,  4.86it/s]DDIM_inverse:  89%|████████▉ | 17/19 [00:03<00:00,  4.91it/s]DDIM_inverse:  95%|█████████▍| 18/19 [00:03<00:00,  4.85it/s]DDIM_inverse: 100%|██████████| 19/19 [00:03<00:00,  4.89it/s]DDIM_inverse: 100%|██████████| 19/19 [00:03<00:00,  5.01it/s]
+Optimize_uncond_embed:   0%|          | 0/5 [00:00<?, ?it/s]Optimize_uncond_embed:  20%|██        | 1/5 [00:04<00:17,  4.36s/it]Optimize_uncond_embed:  40%|████      | 2/5 [00:10<00:15,  5.18s/it]Optimize_uncond_embed:  60%|██████    | 3/5 [00:16<00:11,  5.84s/it]Optimize_uncond_embed:  80%|████████  | 4/5 [00:23<00:06,  6.09s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:31<00:00,  6.86s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:31<00:00,  6.29s/it]
+Iterations:   0%|          | 0/30 [00:00<?, ?it/s]Iterations:   0%|          | 0/30 [00:01<?, ?it/s, atk: -8.53176022 ent: -189.43472290 str: 0.00000000 loss: -197.96647644]Iterations:   3%|▎         | 1/30 [00:03<01:36,  3.33s/it, atk: -8.53176022 ent: -189.43472290 str: 0.00000000 loss: -197.96647644]Iterations:   3%|▎         | 1/30 [00:05<01:36,  3.33s/it, atk: -19.84181023 ent: -189.63226318 str: 0.96978474 loss: -208.50428772]Iterations:   7%|▋         | 2/30 [00:06<01:30,  3.23s/it, atk: -19.84181023 ent: -189.63226318 str: 0.96978474 loss: -208.50428772]Iterations:   7%|▋         | 2/30 [00:08<01:30,  3.23s/it, atk: -38.35540771 ent: -189.99397278 str: 1.14831758 loss: -227.20106506]Iterations:  10%|█         | 3/30 [00:09<01:26,  3.20s/it, atk: -38.35540771 ent: -189.99397278 str: 1.14831758 loss: -227.20106506]Iterations:  10%|█         | 3/30 [00:11<01:26,  3.20s/it, atk: -51.44678497 ent: -190.35536194 str: 1.21277976 loss: -240.58937073]Iterations:  13%|█▎        | 4/30 [00:12<01:20,  3.10s/it, atk: -51.44678497 ent: -190.35536194 str: 1.21277976 loss: -240.58937073]Iterations:  13%|█▎        | 4/30 [00:14<01:20,  3.10s/it, atk: -60.48823547 ent: -190.65037537 str: 1.26292598 loss: -249.87568665]Iterations:  17%|█▋        | 5/30 [00:15<01:13,  2.96s/it, atk: -60.48823547 ent: -190.65037537 str: 1.26292598 loss: -249.87568665]Iterations:  17%|█▋        | 5/30 [00:16<01:13,  2.96s/it, atk: -70.61676788 ent: -190.89260864 str: 1.42510796 loss: -260.08425903]Iterations:  20%|██        | 6/30 [00:18<01:10,  2.93s/it, atk: -70.61676788 ent: -190.89260864 str: 1.42510796 loss: -260.08425903]Iterations:  20%|██        | 6/30 [00:19<01:10,  2.93s/it, atk: -83.63460541 ent: -191.17597961 str: 1.57933724 loss: -273.23126221]Iterations:  23%|██▎       | 7/30 [00:21<01:09,  3.03s/it, atk: -83.63460541 ent: -191.17597961 str: 1.57933724 loss: -273.23126221]Iterations:  23%|██▎       | 7/30 [00:23<01:09,  3.03s/it, atk: -102.31478882 ent: -191.35728455 str: 1.67172909 loss: -292.00033569]Iterations:  27%|██▋       | 8/30 [00:24<01:08,  3.12s/it, atk: -102.31478882 ent: -191.35728455 str: 1.67172909 loss: -292.00033569]Iterations:  27%|██▋       | 8/30 [00:26<01:08,  3.12s/it, atk: -128.61059570 ent: -191.51197815 str: 1.77237916 loss: -318.35018921]Iterations:  30%|███       | 9/30 [00:28<01:06,  3.17s/it, atk: -128.61059570 ent: -191.51197815 str: 1.77237916 loss: -318.35018921]Iterations:  30%|███       | 9/30 [00:29<01:06,  3.17s/it, atk: -148.42530823 ent: -191.61486816 str: 1.88752055 loss: -338.15264893]Iterations:  33%|███▎      | 10/30 [00:31<01:03,  3.19s/it, atk: -148.42530823 ent: -191.61486816 str: 1.88752055 loss: -338.15264893]Iterations:  33%|███▎      | 10/30 [00:33<01:03,  3.19s/it, atk: -166.75558472 ent: -191.49916077 str: 1.90207326 loss: -356.35266113]Iterations:  37%|███▋      | 11/30 [00:34<01:01,  3.24s/it, atk: -166.75558472 ent: -191.49916077 str: 1.90207326 loss: -356.35266113]Iterations:  37%|███▋      | 11/30 [00:36<01:01,  3.24s/it, atk: -184.79202271 ent: -191.69137573 str: 1.99083757 loss: -374.49255371]Iterations:  40%|████      | 12/30 [00:37<00:55,  3.06s/it, atk: -184.79202271 ent: -191.69137573 str: 1.99083757 loss: -374.49255371]Iterations:  40%|████      | 12/30 [00:38<00:55,  3.06s/it, atk: -197.69548035 ent: -191.63012695 str: 2.05473161 loss: -387.27087402]Iterations:  43%|████▎     | 13/30 [00:39<00:50,  2.94s/it, atk: -197.69548035 ent: -191.63012695 str: 2.05473161 loss: -387.27087402]Iterations:  43%|████▎     | 13/30 [00:41<00:50,  2.94s/it, atk: -210.41119385 ent: -191.49238586 str: 2.04482722 loss: -399.85876465]Iterations:  47%|████▋     | 14/30 [00:42<00:45,  2.86s/it, atk: -210.41119385 ent: -191.49238586 str: 2.04482722 loss: -399.85876465]Iterations:  47%|████▋     | 14/30 [00:44<00:45,  2.86s/it, atk: -224.21537781 ent: -191.44631958 str: 2.03164744 loss: -413.63006592]Iterations:  50%|█████     | 15/30 [00:45<00:45,  3.01s/it, atk: -224.21537781 ent: -191.44631958 str: 2.03164744 loss: -413.63006592]Iterations:  50%|█████     | 15/30 [00:47<00:45,  3.01s/it, atk: -235.97415161 ent: -191.50868225 str: 2.05333185 loss: -425.42950439]Iterations:  53%|█████▎    | 16/30 [00:49<00:43,  3.13s/it, atk: -235.97415161 ent: -191.50868225 str: 2.05333185 loss: -425.42950439]Iterations:  53%|█████▎    | 16/30 [00:51<00:43,  3.13s/it, atk: -246.73034668 ent: -191.60443115 str: 2.09671736 loss: -436.23806763]Iterations:  57%|█████▋    | 17/30 [00:52<00:40,  3.15s/it, atk: -246.73034668 ent: -191.60443115 str: 2.09671736 loss: -436.23806763]Iterations:  57%|█████▋    | 17/30 [00:54<00:40,  3.15s/it, atk: -257.06661987 ent: -191.73161316 str: 2.15499473 loss: -446.64324951]Iterations:  60%|██████    | 18/30 [00:55<00:37,  3.15s/it, atk: -257.06661987 ent: -191.73161316 str: 2.15499473 loss: -446.64324951]Iterations:  60%|██████    | 18/30 [00:57<00:37,  3.15s/it, atk: -268.09994507 ent: -191.78991699 str: 2.20382309 loss: -457.68603516]Iterations:  63%|██████▎   | 19/30 [00:58<00:34,  3.13s/it, atk: -268.09994507 ent: -191.78991699 str: 2.20382309 loss: -457.68603516]Iterations:  63%|██████▎   | 19/30 [01:00<00:34,  3.13s/it, atk: -279.61148071 ent: -191.80610657 str: 2.23947239 loss: -469.17810059]Iterations:  67%|██████▋   | 20/30 [01:01<00:29,  2.98s/it, atk: -279.61148071 ent: -191.80610657 str: 2.23947239 loss: -469.17810059]Iterations:  67%|██████▋   | 20/30 [01:03<00:29,  2.98s/it, atk: -293.01153564 ent: -191.84304810 str: 2.26968908 loss: -482.58489990]Iterations:  70%|███████   | 21/30 [01:04<00:26,  2.93s/it, atk: -293.01153564 ent: -191.84304810 str: 2.26968908 loss: -482.58489990]Iterations:  70%|███████   | 21/30 [01:05<00:26,  2.93s/it, atk: -303.98214722 ent: -191.88829041 str: 2.32293820 loss: -493.54748535]Iterations:  73%|███████▎  | 22/30 [01:06<00:22,  2.87s/it, atk: -303.98214722 ent: -191.88829041 str: 2.32293820 loss: -493.54748535]Iterations:  73%|███████▎  | 22/30 [01:08<00:22,  2.87s/it, atk: -309.90679932 ent: -191.84294128 str: 2.31530499 loss: -499.43444824]Iterations:  77%|███████▋  | 23/30 [01:10<00:20,  2.97s/it, atk: -309.90679932 ent: -191.84294128 str: 2.31530499 loss: -499.43444824]Iterations:  77%|███████▋  | 23/30 [01:11<00:20,  2.97s/it, atk: -324.70748901 ent: -191.79411316 str: 2.36706543 loss: -514.13452148]Iterations:  80%|████████  | 24/30 [01:13<00:18,  3.02s/it, atk: -324.70748901 ent: -191.79411316 str: 2.36706543 loss: -514.13452148]Iterations:  80%|████████  | 24/30 [01:15<00:18,  3.02s/it, atk: -331.11172485 ent: -191.80085754 str: 2.41343474 loss: -520.49914551]Iterations:  83%|████████▎ | 25/30 [01:16<00:15,  3.07s/it, atk: -331.11172485 ent: -191.80085754 str: 2.41343474 loss: -520.49914551]Iterations:  83%|████████▎ | 25/30 [01:18<00:15,  3.07s/it, atk: -345.27197266 ent: -191.72834778 str: 2.37950873 loss: -534.62078857]Iterations:  87%|████████▋ | 26/30 [01:19<00:12,  3.06s/it, atk: -345.27197266 ent: -191.72834778 str: 2.37950873 loss: -534.62078857]Iterations:  87%|████████▋ | 26/30 [01:21<00:12,  3.06s/it, atk: -356.87451172 ent: -191.77738953 str: 2.41111732 loss: -546.24078369]Iterations:  90%|█████████ | 27/30 [01:23<00:09,  3.20s/it, atk: -356.87451172 ent: -191.77738953 str: 2.41111732 loss: -546.24078369]Iterations:  90%|█████████ | 27/30 [01:24<00:09,  3.20s/it, atk: -369.10263062 ent: -191.79919434 str: 2.39613628 loss: -558.50567627]Iterations:  93%|█████████▎| 28/30 [01:25<00:06,  3.04s/it, atk: -369.10263062 ent: -191.79919434 str: 2.39613628 loss: -558.50567627]Iterations:  93%|█████████▎| 28/30 [01:27<00:06,  3.04s/it, atk: -384.55761719 ent: -191.77297974 str: 2.42507505 loss: -573.90551758]Iterations:  97%|█████████▋| 29/30 [01:28<00:02,  2.95s/it, atk: -384.55761719 ent: -191.77297974 str: 2.42507505 loss: -573.90551758]Iterations:  97%|█████████▋| 29/30 [01:29<00:02,  2.95s/it, atk: -398.40722656 ent: -191.73728943 str: 2.43724155 loss: -587.70727539]Iterations: 100%|██████████| 30/30 [01:31<00:00,  2.85s/it, atk: -398.40722656 ent: -191.73728943 str: 2.43724155 loss: -587.70727539]Iterations: 100%|██████████| 30/30 [01:31<00:00,  3.04s/it, atk: -398.40722656 ent: -191.73728943 str: 2.43724155 loss: -587.70727539]
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000174, 0.949123]
+
+[DEBUG Iter 0] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.003058/0.017551/0.006080
+  Sum: 0.595802
+  All zeros: False
+  Spatial sum range: 0.026714 to 0.055836
+  Prob range: 0.064170 to 0.344611
+  Max prob per token (concentration): 0.217753
+  Entropy per token range: -1.936882 to -1.749771
+  Final entropy: -1.894347
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000185, 0.947791]
+
+[DEBUG Iter 10] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.002789/0.012525/0.005738
+  Sum: 0.562291
+  All zeros: False
+  Spatial sum range: 0.025067 to 0.049982
+  Prob range: 0.076515 to 0.270000
+  Max prob per token (concentration): 0.195922
+  Entropy per token range: -1.937918 to -1.851185
+  Final entropy: -1.914992
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000193, 0.945755]
+
+[DEBUG Iter 20] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.002847/0.011121/0.005786
+  Sum: 0.567030
+  All zeros: False
+  Spatial sum range: 0.026480 to 0.050115
+  Prob range: 0.084258 to 0.250120
+  Max prob per token (concentration): 0.192344
+  Entropy per token range: -1.940224 to -1.877422
+  Final entropy: -1.918430
+Accuracy on adversarial examples: 0.0%
+after_pred: tensor([64], device='cuda:0') tensor(0.8988, device='cuda:0')
+after_true: tensor([324], device='cuda:0') tensor(1.2196e-18, device='cuda:0')
+L1: [6372.22]	L2: [23.538525]	Linf: [0.58431375]
+
+Accuracy on benign examples: 100.0%
+gt_label: 759 pred_label: 759 pred_clean_logit 0.9951533079147339
+prompt generate:  reflex camera  	labels:  [[759]]
+decoder:  [49406, 36050, 3934, 49407] [49406, 49407]
+DDIM_inverse:   0%|          | 0/19 [00:00<?, ?it/s]DDIM_inverse:   5%|▌         | 1/19 [00:00<00:01,  9.66it/s]DDIM_inverse:  11%|█         | 2/19 [00:00<00:03,  5.35it/s]DDIM_inverse:  16%|█▌        | 3/19 [00:00<00:03,  4.75it/s]DDIM_inverse:  21%|██        | 4/19 [00:00<00:03,  4.44it/s]DDIM_inverse:  26%|██▋       | 5/19 [00:01<00:03,  4.42it/s]DDIM_inverse:  32%|███▏      | 6/19 [00:01<00:03,  4.27it/s]DDIM_inverse:  37%|███▋      | 7/19 [00:01<00:02,  4.23it/s]DDIM_inverse:  42%|████▏     | 8/19 [00:01<00:02,  4.13it/s]DDIM_inverse:  47%|████▋     | 9/19 [00:02<00:02,  4.15it/s]DDIM_inverse:  53%|█████▎    | 10/19 [00:02<00:02,  4.09it/s]DDIM_inverse:  58%|█████▊    | 11/19 [00:02<00:01,  4.12it/s]DDIM_inverse:  63%|██████▎   | 12/19 [00:02<00:01,  4.20it/s]DDIM_inverse:  68%|██████▊   | 13/19 [00:02<00:01,  4.22it/s]DDIM_inverse:  74%|███████▎  | 14/19 [00:03<00:01,  4.13it/s]DDIM_inverse:  79%|███████▉  | 15/19 [00:03<00:00,  4.17it/s]DDIM_inverse:  84%|████████▍ | 16/19 [00:03<00:00,  3.94it/s]DDIM_inverse:  89%|████████▉ | 17/19 [00:04<00:00,  3.80it/s]DDIM_inverse:  95%|█████████▍| 18/19 [00:04<00:00,  3.81it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  3.88it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  4.16it/s]
+Optimize_uncond_embed:   0%|          | 0/5 [00:00<?, ?it/s]Optimize_uncond_embed:  20%|██        | 1/5 [00:04<00:16,  4.18s/it]Optimize_uncond_embed:  40%|████      | 2/5 [00:08<00:13,  4.44s/it]Optimize_uncond_embed:  60%|██████    | 3/5 [00:15<00:10,  5.38s/it]Optimize_uncond_embed:  80%|████████  | 4/5 [00:22<00:06,  6.29s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:30<00:00,  6.75s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:30<00:00,  6.11s/it]
+Iterations:   0%|          | 0/30 [00:00<?, ?it/s]Iterations:   0%|          | 0/30 [00:01<?, ?it/s, atk: -0.10091475 ent: -191.59841919 str: 0.00000000 loss: -191.69934082]Iterations:   3%|▎         | 1/30 [00:02<01:19,  2.75s/it, atk: -0.10091475 ent: -191.59841919 str: 0.00000000 loss: -191.69934082]Iterations:   3%|▎         | 1/30 [00:04<01:19,  2.75s/it, atk: -0.88421375 ent: -192.32385254 str: 1.25788546 loss: -191.95018005]Iterations:   7%|▋         | 2/30 [00:05<01:24,  3.02s/it, atk: -0.88421375 ent: -192.32385254 str: 1.25788546 loss: -191.95018005]Iterations:   7%|▋         | 2/30 [00:07<01:24,  3.02s/it, atk: -7.01894188 ent: -192.55366516 str: 1.52786672 loss: -198.04473877]Iterations:  10%|█         | 3/30 [00:09<01:24,  3.12s/it, atk: -7.01894188 ent: -192.55366516 str: 1.52786672 loss: -198.04473877]Iterations:  10%|█         | 3/30 [00:10<01:24,  3.12s/it, atk: -23.80172729 ent: -192.21243286 str: 1.78096271 loss: -214.23320007]Iterations:  13%|█▎        | 4/30 [00:12<01:21,  3.12s/it, atk: -23.80172729 ent: -192.21243286 str: 1.78096271 loss: -214.23320007]Iterations:  13%|█▎        | 4/30 [00:14<01:21,  3.12s/it, atk: -49.83962631 ent: -192.30519104 str: 2.09385824 loss: -240.05096436]Iterations:  17%|█▋        | 5/30 [00:15<01:18,  3.14s/it, atk: -49.83962631 ent: -192.30519104 str: 2.09385824 loss: -240.05096436]Iterations:  17%|█▋        | 5/30 [00:17<01:18,  3.14s/it, atk: -52.99864197 ent: -192.45439148 str: 2.07742286 loss: -243.37561035]Iterations:  20%|██        | 6/30 [00:18<01:13,  3.06s/it, atk: -52.99864197 ent: -192.45439148 str: 2.07742286 loss: -243.37561035]Iterations:  20%|██        | 6/30 [00:19<01:13,  3.06s/it, atk: -68.30745697 ent: -192.56126404 str: 2.00152326 loss: -258.86718750]Iterations:  23%|██▎       | 7/30 [00:20<01:05,  2.85s/it, atk: -68.30745697 ent: -192.56126404 str: 2.00152326 loss: -258.86718750]Iterations:  23%|██▎       | 7/30 [00:22<01:05,  2.85s/it, atk: -84.62187958 ent: -192.54147339 str: 2.10096502 loss: -275.06237793]Iterations:  27%|██▋       | 8/30 [00:23<01:02,  2.84s/it, atk: -84.62187958 ent: -192.54147339 str: 2.10096502 loss: -275.06237793]Iterations:  27%|██▋       | 8/30 [00:25<01:02,  2.84s/it, atk: -103.91285706 ent: -192.55210876 str: 2.16961980 loss: -294.29534912]Iterations:  30%|███       | 9/30 [00:26<01:01,  2.91s/it, atk: -103.91285706 ent: -192.55210876 str: 2.16961980 loss: -294.29534912]Iterations:  30%|███       | 9/30 [00:28<01:01,  2.91s/it, atk: -125.27951050 ent: -192.55859375 str: 2.21674395 loss: -315.62136841]Iterations:  33%|███▎      | 10/30 [00:29<00:59,  2.99s/it, atk: -125.27951050 ent: -192.55859375 str: 2.21674395 loss: -315.62136841]Iterations:  33%|███▎      | 10/30 [00:31<00:59,  2.99s/it, atk: -115.13902283 ent: -192.76605225 str: 2.19792604 loss: -305.70715332]Iterations:  37%|███▋      | 11/30 [00:33<00:58,  3.10s/it, atk: -115.13902283 ent: -192.76605225 str: 2.19792604 loss: -305.70715332]Iterations:  37%|███▋      | 11/30 [00:34<00:58,  3.10s/it, atk: -122.22827148 ent: -192.92628479 str: 2.16847849 loss: -312.98608398]Iterations:  40%|████      | 12/30 [00:36<00:56,  3.12s/it, atk: -122.22827148 ent: -192.92628479 str: 2.16847849 loss: -312.98608398]Iterations:  40%|████      | 12/30 [00:38<00:56,  3.12s/it, atk: -144.60134888 ent: -192.95294189 str: 2.12713265 loss: -335.42715454]Iterations:  43%|████▎     | 13/30 [00:39<00:53,  3.15s/it, atk: -144.60134888 ent: -192.95294189 str: 2.12713265 loss: -335.42715454]Iterations:  43%|████▎     | 13/30 [00:41<00:53,  3.15s/it, atk: -151.96670532 ent: -193.01080322 str: 2.33692408 loss: -342.64056396]Iterations:  47%|████▋     | 14/30 [00:42<00:49,  3.10s/it, atk: -151.96670532 ent: -193.01080322 str: 2.33692408 loss: -342.64056396]Iterations:  47%|████▋     | 14/30 [00:44<00:49,  3.10s/it, atk: -166.16990662 ent: -193.06309509 str: 2.31969166 loss: -356.91333008]Iterations:  50%|█████     | 15/30 [00:45<00:44,  2.98s/it, atk: -166.16990662 ent: -193.06309509 str: 2.31969166 loss: -356.91333008]Iterations:  50%|█████     | 15/30 [00:46<00:44,  2.98s/it, atk: -175.93856812 ent: -193.11534119 str: 2.41999507 loss: -366.63391113]Iterations:  53%|█████▎    | 16/30 [00:47<00:40,  2.88s/it, atk: -175.93856812 ent: -193.11534119 str: 2.41999507 loss: -366.63391113]Iterations:  53%|█████▎    | 16/30 [00:49<00:40,  2.88s/it, atk: -188.50546265 ent: -193.15258789 str: 2.47435713 loss: -379.18371582]Iterations:  57%|█████▋    | 17/30 [00:50<00:35,  2.76s/it, atk: -188.50546265 ent: -193.15258789 str: 2.47435713 loss: -379.18371582]Iterations:  57%|█████▋    | 17/30 [00:51<00:35,  2.76s/it, atk: -197.49955750 ent: -193.11956787 str: 2.45423222 loss: -388.16488647]Iterations:  60%|██████    | 18/30 [00:53<00:32,  2.71s/it, atk: -197.49955750 ent: -193.11956787 str: 2.45423222 loss: -388.16488647]Iterations:  60%|██████    | 18/30 [00:54<00:32,  2.71s/it, atk: -211.78025818 ent: -193.15614319 str: 2.50347686 loss: -402.43292236]Iterations:  63%|██████▎   | 19/30 [00:55<00:30,  2.74s/it, atk: -211.78025818 ent: -193.15614319 str: 2.50347686 loss: -402.43292236]Iterations:  63%|██████▎   | 19/30 [00:57<00:30,  2.74s/it, atk: -225.15908813 ent: -193.11575317 str: 2.51414824 loss: -415.76068115]Iterations:  67%|██████▋   | 20/30 [00:59<00:28,  2.88s/it, atk: -225.15908813 ent: -193.11575317 str: 2.51414824 loss: -415.76068115]Iterations:  67%|██████▋   | 20/30 [01:00<00:28,  2.88s/it, atk: -234.13079834 ent: -193.07565308 str: 2.53600240 loss: -424.67047119]Iterations:  70%|███████   | 21/30 [01:02<00:27,  3.00s/it, atk: -234.13079834 ent: -193.07565308 str: 2.53600240 loss: -424.67047119]Iterations:  70%|███████   | 21/30 [01:03<00:27,  3.00s/it, atk: -246.14978027 ent: -193.04904175 str: 2.54225683 loss: -436.65655518]Iterations:  73%|███████▎  | 22/30 [01:05<00:23,  2.94s/it, atk: -246.14978027 ent: -193.04904175 str: 2.54225683 loss: -436.65655518]Iterations:  73%|███████▎  | 22/30 [01:06<00:23,  2.94s/it, atk: -257.03811646 ent: -193.04917908 str: 2.52172804 loss: -447.56555176]Iterations:  77%|███████▋  | 23/30 [01:07<00:20,  2.87s/it, atk: -257.03811646 ent: -193.04917908 str: 2.52172804 loss: -447.56555176]Iterations:  77%|███████▋  | 23/30 [01:09<00:20,  2.87s/it, atk: -264.66641235 ent: -193.05232239 str: 2.54509234 loss: -455.17364502]Iterations:  80%|████████  | 24/30 [01:10<00:16,  2.80s/it, atk: -264.66641235 ent: -193.05232239 str: 2.54509234 loss: -455.17364502]Iterations:  80%|████████  | 24/30 [01:12<00:16,  2.80s/it, atk: -270.44107056 ent: -193.07432556 str: 2.57415295 loss: -460.94122314]Iterations:  83%|████████▎ | 25/30 [01:13<00:14,  2.87s/it, atk: -270.44107056 ent: -193.07432556 str: 2.57415295 loss: -460.94122314]Iterations:  83%|████████▎ | 25/30 [01:15<00:14,  2.87s/it, atk: -279.54583740 ent: -193.08514404 str: 2.58506751 loss: -470.04592896]Iterations:  87%|████████▋ | 26/30 [01:16<00:12,  3.01s/it, atk: -279.54583740 ent: -193.08514404 str: 2.58506751 loss: -470.04592896]Iterations:  87%|████████▋ | 26/30 [01:18<00:12,  3.01s/it, atk: -284.48672485 ent: -193.12622070 str: 2.61827016 loss: -474.99468994]Iterations:  90%|█████████ | 27/30 [01:20<00:09,  3.07s/it, atk: -284.48672485 ent: -193.12622070 str: 2.61827016 loss: -474.99468994]Iterations:  90%|█████████ | 27/30 [01:21<00:09,  3.07s/it, atk: -295.04345703 ent: -193.14625549 str: 2.65247893 loss: -485.53723145]Iterations:  93%|█████████▎| 28/30 [01:23<00:06,  3.13s/it, atk: -295.04345703 ent: -193.14625549 str: 2.65247893 loss: -485.53723145]Iterations:  93%|█████████▎| 28/30 [01:25<00:06,  3.13s/it, atk: -304.78945923 ent: -193.13063049 str: 2.65139151 loss: -495.26867676]Iterations:  97%|█████████▋| 29/30 [01:26<00:03,  3.15s/it, atk: -304.78945923 ent: -193.13063049 str: 2.65139151 loss: -495.26867676]Iterations:  97%|█████████▋| 29/30 [01:28<00:03,  3.15s/it, atk: -311.20730591 ent: -193.09841919 str: 2.67775369 loss: -501.62796021]Iterations: 100%|██████████| 30/30 [01:29<00:00,  3.04s/it, atk: -311.20730591 ent: -193.09841919 str: 2.67775369 loss: -501.62796021]Iterations: 100%|██████████| 30/30 [01:29<00:00,  2.98s/it, atk: -311.20730591 ent: -193.09841919 str: 2.67775369 loss: -501.62796021]
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000124, 0.968200]
+
+[DEBUG Iter 0] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.001896/0.013750/0.004720
+  Sum: 0.462578
+  All zeros: False
+  Spatial sum range: 0.015350 to 0.059492
+  Prob range: 0.063508 to 0.251382
+  Max prob per token (concentration): 0.193670
+  Entropy per token range: -1.942531 to -1.869658
+  Final entropy: -1.915984
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000135, 0.965655]
+
+[DEBUG Iter 10] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.001805/0.012024/0.004673
+  Sum: 0.457990
+  All zeros: False
+  Spatial sum range: 0.015116 to 0.053512
+  Prob range: 0.085441 to 0.226751
+  Max prob per token (concentration): 0.183999
+  Entropy per token range: -1.944050 to -1.897489
+  Final entropy: -1.927661
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000142, 0.962869]
+
+[DEBUG Iter 20] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.001978/0.011484/0.004633
+  Sum: 0.454043
+  All zeros: False
+  Spatial sum range: 0.015823 to 0.051972
+  Prob range: 0.087304 to 0.220963
+  Max prob per token (concentration): 0.180851
+  Entropy per token range: -1.943402 to -1.908766
+  Final entropy: -1.930757
+Accuracy on adversarial examples: 0.0%
+after_pred: tensor([704], device='cuda:0') tensor(1., device='cuda:0')
+after_true: tensor([759], device='cuda:0') tensor(1.7105e-14, device='cuda:0')
+L1: [5806.624]	L2: [24.434036]	Linf: [0.7294118]
+
+Accuracy on benign examples: 0.0%
+gt_label: 634 pred_label: 388 pred_clean_logit 0.00823988951742649
+prompt generate:  lumbermill  	labels:  [[388]]
+decoder:  [49406, 27421, 6637, 49407] [49406, 49407]
+DDIM_inverse:   0%|          | 0/19 [00:00<?, ?it/s]DDIM_inverse:   5%|▌         | 1/19 [00:00<00:02,  8.52it/s]DDIM_inverse:  11%|█         | 2/19 [00:00<00:03,  5.04it/s]DDIM_inverse:  16%|█▌        | 3/19 [00:00<00:03,  4.62it/s]DDIM_inverse:  21%|██        | 4/19 [00:00<00:03,  4.33it/s]DDIM_inverse:  26%|██▋       | 5/19 [00:01<00:03,  4.25it/s]DDIM_inverse:  32%|███▏      | 6/19 [00:01<00:03,  4.18it/s]DDIM_inverse:  37%|███▋      | 7/19 [00:01<00:02,  4.18it/s]DDIM_inverse:  42%|████▏     | 8/19 [00:01<00:02,  4.20it/s]DDIM_inverse:  47%|████▋     | 9/19 [00:02<00:02,  4.32it/s]DDIM_inverse:  53%|█████▎    | 10/19 [00:02<00:02,  4.22it/s]DDIM_inverse:  58%|█████▊    | 11/19 [00:02<00:01,  4.23it/s]DDIM_inverse:  63%|██████▎   | 12/19 [00:02<00:01,  4.14it/s]DDIM_inverse:  68%|██████▊   | 13/19 [00:03<00:01,  4.14it/s]DDIM_inverse:  74%|███████▎  | 14/19 [00:03<00:01,  4.09it/s]DDIM_inverse:  79%|███████▉  | 15/19 [00:03<00:00,  4.10it/s]DDIM_inverse:  84%|████████▍ | 16/19 [00:03<00:00,  4.13it/s]DDIM_inverse:  89%|████████▉ | 17/19 [00:04<00:00,  4.12it/s]DDIM_inverse:  95%|█████████▍| 18/19 [00:04<00:00,  4.11it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  4.10it/s]DDIM_inverse: 100%|██████████| 19/19 [00:04<00:00,  4.23it/s]
+Optimize_uncond_embed:   0%|          | 0/5 [00:00<?, ?it/s]Optimize_uncond_embed:  20%|██        | 1/5 [00:04<00:19,  4.86s/it]Optimize_uncond_embed:  40%|████      | 2/5 [00:10<00:16,  5.46s/it]Optimize_uncond_embed:  60%|██████    | 3/5 [00:15<00:10,  5.35s/it]Optimize_uncond_embed:  80%|████████  | 4/5 [00:23<00:06,  6.04s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:31<00:00,  6.93s/it]Optimize_uncond_embed: 100%|██████████| 5/5 [00:31<00:00,  6.32s/it]
+Iterations:   0%|          | 0/30 [00:00<?, ?it/s]Iterations:   0%|          | 0/30 [00:01<?, ?it/s, atk: -44.48468018 ent: -192.12738037 str: 0.00000000 loss: -236.61206055]Iterations:   3%|▎         | 1/30 [00:02<01:22,  2.84s/it, atk: -44.48468018 ent: -192.12738037 str: 0.00000000 loss: -236.61206055]Iterations:   3%|▎         | 1/30 [00:04<01:22,  2.84s/it, atk: -66.89904785 ent: -192.33084106 str: 0.94613677 loss: -258.28375244]Iterations:   7%|▋         | 2/30 [00:05<01:14,  2.66s/it, atk: -66.89904785 ent: -192.33084106 str: 0.94613677 loss: -258.28375244]Iterations:   7%|▋         | 2/30 [00:06<01:14,  2.66s/it, atk: -106.68610382 ent: -192.39390564 str: 1.26503193 loss: -297.81497192]Iterations:  10%|█         | 3/30 [00:08<01:12,  2.69s/it, atk: -106.68610382 ent: -192.39390564 str: 1.26503193 loss: -297.81497192]Iterations:  10%|█         | 3/30 [00:09<01:12,  2.69s/it, atk: -134.59358215 ent: -192.40641785 str: 1.39521933 loss: -325.60479736]Iterations:  13%|█▎        | 4/30 [00:11<01:13,  2.84s/it, atk: -134.59358215 ent: -192.40641785 str: 1.39521933 loss: -325.60479736]Iterations:  13%|█▎        | 4/30 [00:12<01:13,  2.84s/it, atk: -173.15962219 ent: -192.43487549 str: 1.53186178 loss: -364.06262207]Iterations:  17%|█▋        | 5/30 [00:14<01:14,  2.98s/it, atk: -173.15962219 ent: -192.43487549 str: 1.53186178 loss: -364.06262207]Iterations:  17%|█▋        | 5/30 [00:16<01:14,  2.98s/it, atk: -193.13906860 ent: -192.54957581 str: 1.63986909 loss: -384.04876709]Iterations:  20%|██        | 6/30 [00:17<01:13,  3.05s/it, atk: -193.13906860 ent: -192.54957581 str: 1.63986909 loss: -384.04876709]Iterations:  20%|██        | 6/30 [00:19<01:13,  3.05s/it, atk: -203.92213440 ent: -192.60829163 str: 1.62636673 loss: -394.90405273]Iterations:  23%|██▎       | 7/30 [00:20<01:11,  3.13s/it, atk: -203.92213440 ent: -192.60829163 str: 1.62636673 loss: -394.90405273]Iterations:  23%|██▎       | 7/30 [00:22<01:11,  3.13s/it, atk: -231.25372314 ent: -192.57060242 str: 1.65252328 loss: -422.17181396]Iterations:  27%|██▋       | 8/30 [00:24<01:12,  3.30s/it, atk: -231.25372314 ent: -192.57060242 str: 1.65252328 loss: -422.17181396]Iterations:  27%|██▋       | 8/30 [00:26<01:12,  3.30s/it, atk: -249.61718750 ent: -192.55519104 str: 1.71486962 loss: -440.45751953]Iterations:  30%|███       | 9/30 [00:27<01:06,  3.15s/it, atk: -249.61718750 ent: -192.55519104 str: 1.71486962 loss: -440.45751953]Iterations:  30%|███       | 9/30 [00:28<01:06,  3.15s/it, atk: -269.04656982 ent: -192.61174011 str: 1.76234472 loss: -459.89593506]Iterations:  33%|███▎      | 10/30 [00:29<00:59,  2.98s/it, atk: -269.04656982 ent: -192.61174011 str: 1.76234472 loss: -459.89593506]Iterations:  33%|███▎      | 10/30 [00:31<00:59,  2.98s/it, atk: -287.08135986 ent: -192.63177490 str: 1.85186625 loss: -477.86126709]Iterations:  37%|███▋      | 11/30 [00:32<00:54,  2.89s/it, atk: -287.08135986 ent: -192.63177490 str: 1.85186625 loss: -477.86126709]Iterations:  37%|███▋      | 11/30 [00:34<00:54,  2.89s/it, atk: -298.07965088 ent: -192.63284302 str: 1.93385744 loss: -488.77862549]Iterations:  40%|████      | 12/30 [00:35<00:53,  2.97s/it, atk: -298.07965088 ent: -192.63284302 str: 1.93385744 loss: -488.77862549]Iterations:  40%|████      | 12/30 [00:37<00:53,  2.97s/it, atk: -311.00244141 ent: -192.62001038 str: 1.96211398 loss: -501.66033936]Iterations:  43%|████▎     | 13/30 [00:39<00:51,  3.05s/it, atk: -311.00244141 ent: -192.62001038 str: 1.96211398 loss: -501.66033936]Iterations:  43%|████▎     | 13/30 [00:40<00:51,  3.05s/it, atk: -320.87078857 ent: -192.59356689 str: 1.95695293 loss: -511.50741577]Iterations:  47%|████▋     | 14/30 [00:42<00:49,  3.10s/it, atk: -320.87078857 ent: -192.59356689 str: 1.95695293 loss: -511.50741577]Iterations:  47%|████▋     | 14/30 [00:43<00:49,  3.10s/it, atk: -331.37774658 ent: -192.57131958 str: 1.95803320 loss: -521.99102783]Iterations:  50%|█████     | 15/30 [00:45<00:46,  3.13s/it, atk: -331.37774658 ent: -192.57131958 str: 1.95803320 loss: -521.99102783]Iterations:  50%|█████     | 15/30 [00:47<00:46,  3.13s/it, atk: -344.62307739 ent: -192.56159973 str: 1.96644044 loss: -535.21826172]Iterations:  53%|█████▎    | 16/30 [00:48<00:44,  3.15s/it, atk: -344.62307739 ent: -192.56159973 str: 1.96644044 loss: -535.21826172]Iterations:  53%|█████▎    | 16/30 [00:50<00:44,  3.15s/it, atk: -356.42034912 ent: -192.55593872 str: 1.98090172 loss: -546.99536133]Iterations:  57%|█████▋    | 17/30 [00:51<00:38,  3.00s/it, atk: -356.42034912 ent: -192.55593872 str: 1.98090172 loss: -546.99536133]Iterations:  57%|█████▋    | 17/30 [00:52<00:38,  3.00s/it, atk: -370.37857056 ent: -192.59063721 str: 2.00276184 loss: -560.96643066]Iterations:  60%|██████    | 18/30 [00:53<00:34,  2.91s/it, atk: -370.37857056 ent: -192.59063721 str: 2.00276184 loss: -560.96643066]Iterations:  60%|██████    | 18/30 [00:55<00:34,  2.91s/it, atk: -379.30300903 ent: -192.64817810 str: 2.02665186 loss: -569.92456055]Iterations:  63%|██████▎   | 19/30 [00:56<00:31,  2.83s/it, atk: -379.30300903 ent: -192.64817810 str: 2.02665186 loss: -569.92456055]Iterations:  63%|██████▎   | 19/30 [00:58<00:31,  2.83s/it, atk: -384.55065918 ent: -192.63668823 str: 2.04142594 loss: -575.14593506]Iterations:  67%|██████▋   | 20/30 [00:59<00:29,  2.91s/it, atk: -384.55065918 ent: -192.63668823 str: 2.04142594 loss: -575.14593506]Iterations:  67%|██████▋   | 20/30 [01:01<00:29,  2.91s/it, atk: -393.10519409 ent: -192.64530945 str: 2.07532263 loss: -583.67517090]Iterations:  70%|███████   | 21/30 [01:02<00:26,  2.90s/it, atk: -393.10519409 ent: -192.64530945 str: 2.07532263 loss: -583.67517090]Iterations:  70%|███████   | 21/30 [01:04<00:26,  2.90s/it, atk: -401.53161621 ent: -192.66796875 str: 2.10981107 loss: -592.08978271]Iterations:  73%|███████▎  | 22/30 [01:05<00:23,  2.95s/it, atk: -401.53161621 ent: -192.66796875 str: 2.10981107 loss: -592.08978271]Iterations:  73%|███████▎  | 22/30 [01:07<00:23,  2.95s/it, atk: -409.94238281 ent: -192.67683411 str: 2.12912321 loss: -600.49011230]Iterations:  77%|███████▋  | 23/30 [01:09<00:21,  3.08s/it, atk: -409.94238281 ent: -192.67683411 str: 2.12912321 loss: -600.49011230]Iterations:  77%|███████▋  | 23/30 [01:10<00:21,  3.08s/it, atk: -418.89724731 ent: -192.67582703 str: 2.12633061 loss: -609.44671631]Iterations:  80%|████████  | 24/30 [01:12<00:18,  3.12s/it, atk: -418.89724731 ent: -192.67582703 str: 2.12633061 loss: -609.44671631]Iterations:  80%|████████  | 24/30 [01:13<00:18,  3.12s/it, atk: -428.90383911 ent: -192.67655945 str: 2.13476872 loss: -619.44561768]Iterations:  83%|████████▎ | 25/30 [01:14<00:14,  2.98s/it, atk: -428.90383911 ent: -192.67655945 str: 2.13476872 loss: -619.44561768]Iterations:  83%|████████▎ | 25/30 [01:16<00:14,  2.98s/it, atk: -436.84686279 ent: -192.69276428 str: 2.15420508 loss: -627.38543701]Iterations:  87%|████████▋ | 26/30 [01:17<00:11,  2.87s/it, atk: -436.84686279 ent: -192.69276428 str: 2.15420508 loss: -627.38543701]Iterations:  87%|████████▋ | 26/30 [01:18<00:11,  2.87s/it, atk: -445.88711548 ent: -192.70164490 str: 2.16144252 loss: -636.42730713]Iterations:  90%|█████████ | 27/30 [01:20<00:08,  2.86s/it, atk: -445.88711548 ent: -192.70164490 str: 2.16144252 loss: -636.42730713]Iterations:  90%|█████████ | 27/30 [01:22<00:08,  2.86s/it, atk: -451.14141846 ent: -192.69419861 str: 2.18860745 loss: -641.64703369]Iterations:  93%|█████████▎| 28/30 [01:23<00:06,  3.06s/it, atk: -451.14141846 ent: -192.69419861 str: 2.18860745 loss: -641.64703369]Iterations:  93%|█████████▎| 28/30 [01:25<00:06,  3.06s/it, atk: -460.51510620 ent: -192.72026062 str: 2.21333623 loss: -651.02203369]Iterations:  97%|█████████▋| 29/30 [01:26<00:03,  3.07s/it, atk: -460.51510620 ent: -192.72026062 str: 2.21333623 loss: -651.02203369]Iterations:  97%|█████████▋| 29/30 [01:28<00:03,  3.07s/it, atk: -466.83435059 ent: -192.75976562 str: 2.20145917 loss: -657.39270020]Iterations: 100%|██████████| 30/30 [01:30<00:00,  3.11s/it, atk: -466.83435059 ent: -192.75976562 str: 2.20145917 loss: -657.39270020]Iterations: 100%|██████████| 30/30 [01:30<00:00,  3.01s/it, atk: -466.83435059 ent: -192.75976562 str: 2.20145917 loss: -657.39270020]
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000182, 0.946844]
+
+[DEBUG Iter 0] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.001539/0.007426/0.004150
+  Sum: 0.406719
+  All zeros: False
+  Spatial sum range: 0.020863 to 0.036490
+  Prob range: 0.068487 to 0.215893
+  Max prob per token (concentration): 0.190999
+  Entropy per token range: -1.942980 to -1.885073
+  Final entropy: -1.921274
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000185, 0.944864]
+
+[DEBUG Iter 10] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.001834/0.006939/0.004164
+  Sum: 0.408090
+  All zeros: False
+  Spatial sum range: 0.022305 to 0.036281
+  Prob range: 0.073985 to 0.210542
+  Max prob per token (concentration): 0.183106
+  Entropy per token range: -1.942763 to -1.889948
+  Final entropy: -1.926318
+
+[DEBUG] get_attention_with_grad:
+  Using: get_average_attention()
+  Looking for keys: ['up_cross', 'down_cross']
+  Available keys: ['down_cross', 'mid_cross', 'up_cross', 'down_self', 'mid_self', 'up_self']
+  Target resolution: 7x7 = 49
+  Available q values: [16, 49, 196]
+  Available sqrt(q): [4, 7, 14]
+  Processing key 'up_cross': 6 attention maps
+    Map 0: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 0: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 1: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 1: final shape torch.Size([7, 7, 77]) (exact match)
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: resized from 14x14 to 7x7
+    ✓ Added map 4: resized from 14x14 to 7x7
+    ✓ Added map 5: resized from 14x14 to 7x7
+  Processing key 'down_cross': 4 attention maps
+    Map 0: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 0: resized from 14x14 to 7x7
+    Map 1: shape=torch.Size([20, 196, 77]), q=196, sqrt(q)=14, target=49
+    ✓ Added map 1: resized from 14x14 to 7x7
+    Map 2: shape=torch.Size([40, 49, 77]), q=49, sqrt(q)=7, target=49
+    ✓ Added map 2: final shape torch.Size([7, 7, 77]) (exact match)
+    ✓ Added map 3: final shape torch.Size([7, 7, 77]) (exact match)
+  Total maps collected: 10
+  Final attention map shape: torch.Size([7, 7, 77])
+  Range: [0.000182, 0.944073]
+
+[DEBUG Iter 20] Attention Map Analysis:
+  Shape: torch.Size([7, 7, 2]) (batch=7, spatial=7, tokens=2)
+  Min/Max/Mean: 0.001784/0.006899/0.004137
+  Sum: 0.405427
+  All zeros: False
+  Spatial sum range: 0.022502 to 0.035713
+  Prob range: 0.073110 to 0.216879
+  Max prob per token (concentration): 0.183201
+  Entropy per token range: -1.942769 to -1.888641
+  Final entropy: -1.926453
+Accuracy on adversarial examples: 0.0%
+after_pred: tensor([388], device='cuda:0') tensor(1., device='cuda:0')
+after_true: tensor([634], device='cuda:0') tensor(2.6607e-21, device='cuda:0')
+L1: [6902.85]	L2: [27.22917]	Linf: [0.7764706]
+Clean acc: 0.0%
+Adv acc: 0.0%
+
+*********Transfer to resnet********
+Accuracy on benign examples: 90.9090909090909%
+Accuracy on adversarial examples: 0.0%
+
+*********Transfer to vgg********
+Accuracy on benign examples: 81.81818181818183%
+Accuracy on adversarial examples: 18.181818181818183%
+
+*********Transfer to mobile********
+Accuracy on benign examples: 72.72727272727273%
+Accuracy on adversarial examples: 0.0%
+
+*********Transfer to inception********
+Accuracy on benign examples: 90.9090909090909%
+Accuracy on adversarial examples: 18.181818181818183%
+
+*********Transfer to convnext********
+Accuracy on benign examples: 90.9090909090909%
+Accuracy on adversarial examples: 9.090909090909092%
+
+*********Transfer to vit********
+Accuracy on benign examples: 81.81818181818183%
+Accuracy on adversarial examples: 18.181818181818183%
+
+*********Transfer to swin********
+Accuracy on benign examples: 90.9090909090909%
+Accuracy on adversarial examples: 18.181818181818183%
+
+*********Transfer to deit-b********
+Accuracy on benign examples: 81.81818181818183%
+Accuracy on adversarial examples: 27.27272727272727%
+
+*********Transfer to deit-s********
+Accuracy on benign examples: 90.9090909090909%
+Accuracy on adversarial examples: 18.181818181818183%
+
+*********Transfer to mixer-b********
+Accuracy on benign examples: 63.63636363636363%
+Accuracy on adversarial examples: 9.090909090909092%
+
+*********Transfer to mixer-l********
+Accuracy on benign examples: 63.63636363636363%
+Accuracy on adversarial examples: 9.090909090909092%
+Warning: batch size is bigger than the data size. Setting batch size to data size
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.92s/it]100%|██████████| 1/1 [00:02<00:00,  2.59s/it]
+FID:  299.6170186958972
+
+*********fid: 299.6170186958972********

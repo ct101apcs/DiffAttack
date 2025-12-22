@@ -1,0 +1,51 @@
+
+******Attack based on Diffusion, Attacked Dataset: imagenet_compatible*********
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:00,  6.50it/s]Loading pipeline components...:  50%|█████     | 3/6 [00:00<00:00,  9.66it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 16.47it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 14.04it/s]
+
+*********Transfer to resnet********
+Accuracy on benign examples: 92.7%
+Accuracy on adversarial examples: 3.3000000000000003%
+
+*********Transfer to vgg********
+Accuracy on benign examples: 88.7%
+Accuracy on adversarial examples: 25.5%
+
+*********Transfer to mobile********
+Accuracy on benign examples: 86.9%
+Accuracy on adversarial examples: 23.200000000000003%
+
+*********Transfer to inception********
+Accuracy on benign examples: 80.5%
+Accuracy on adversarial examples: 28.9%
+
+*********Transfer to convnext********
+Accuracy on benign examples: 97.0%
+Accuracy on adversarial examples: 40.6%
+
+*********Transfer to vit********
+Accuracy on benign examples: 93.7%
+Accuracy on adversarial examples: 49.7%
+
+*********Transfer to swin********
+Accuracy on benign examples: 95.89999999999999%
+Accuracy on adversarial examples: 42.5%
+
+*********Transfer to deit-b********
+Accuracy on benign examples: 94.5%
+Accuracy on adversarial examples: 48.8%
+
+*********Transfer to deit-s********
+Accuracy on benign examples: 94.0%
+Accuracy on adversarial examples: 46.9%
+
+*********Transfer to mixer-b********
+Accuracy on benign examples: 82.5%
+Accuracy on adversarial examples: 39.4%
+
+*********Transfer to mixer-l********
+Accuracy on benign examples: 76.5%
+Accuracy on adversarial examples: 40.5%
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:01<00:24,  1.31s/it] 20%|██        | 4/20 [00:01<00:04,  3.50it/s] 35%|███▌      | 7/20 [00:01<00:02,  6.32it/s] 50%|█████     | 10/20 [00:01<00:01,  8.95it/s] 60%|██████    | 12/20 [00:01<00:00, 10.60it/s] 75%|███████▌  | 15/20 [00:01<00:00, 13.07it/s] 85%|████████▌ | 17/20 [00:02<00:00, 14.39it/s]100%|██████████| 20/20 [00:02<00:00, 16.12it/s]100%|██████████| 20/20 [00:02<00:00,  7.69it/s]
+FID:  62.608170518597376
+
+*********fid: 62.608170518597376********

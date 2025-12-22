@@ -97,20 +97,6 @@ class AttentionControlEdit(AttentionStore, abc.ABC):
                 """
                 self.loss += self.criterion(attn[1:], self.replace_self_attention(attn_base, attn_repalce))
             attn = attn.reshape(self.batch_size * h, *attn.shape[2:])
-        
-        if not is_cross:
-            timestep_loss = self.criterion(attn[1:], self.replace_self_attention(attn_base, attn_repalce))
-            
-            if not hasattr(self, 'timestep_loss_log'):
-                self.timestep_loss_log = []
-            
-            self.timestep_loss_log.append({
-                'step': self.cur_step,
-                'loss': timestep_loss.item(),
-                'iteration': getattr(self, 'current_iter', 0)  # Set this from main loop
-            })
-            
-            self.loss += timestep_loss
         return attn
 
     def replace_self_attention(self, attn_base, att_replace):
