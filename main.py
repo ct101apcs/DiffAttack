@@ -116,10 +116,16 @@ if __name__ == "__main__":
 
     print(f"\n******Attack based on Diffusion, Attacked Dataset: {args.dataset_name}*********")
 
+    # Clear GPU cache and set memory efficient settings
+    torch.cuda.empty_cache()
+    torch.backends.cudnn.benchmark = True
+    
     # Change the path to "stabilityai/stable-diffusion-2-base" if you want to use the pretrained model.
     pretrained_diffusion_path = args.pretrained_diffusion_path
 
-    ldm_stable = StableDiffusionPipeline.from_pretrained(pretrained_diffusion_path).to('cuda:0')
+    # Use cuda:0 when CUDA_VISIBLE_DEVICES is set, otherwise specify the device
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    ldm_stable = StableDiffusionPipeline.from_pretrained(pretrained_diffusion_path).to(device)
     ldm_stable.scheduler = DDIMScheduler.from_config(ldm_stable.scheduler.config)
 
     "Attack a subset images"

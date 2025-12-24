@@ -34,11 +34,19 @@ class AttentionControl(abc.ABC):
 
 
 class AttentionStore(AttentionControl):
-    def __init__(self, res):
+    def __init__(self, res, store_res_threshold=32):
+        """
+        Args:
+            res: Image resolution (e.g., 224 for classifier, 512 for diffusion)
+            store_res_threshold: Minimum spatial resolution to store (default 32 -> stores 32x32 and smaller)
+        """
         super(AttentionStore, self).__init__()
         self.step_store = self.get_empty_store()
         self.attention_store = {}
         self.res = res
+        # Store attention maps up to 32x32 (1024 tokens) to get good spatial detail
+        # while avoiding memory issues from 64x64 (4096 tokens)
+        self.max_tokens_to_store = store_res_threshold ** 2
 
     @staticmethod
     def get_empty_store():
@@ -47,22 +55,43 @@ class AttentionStore(AttentionControl):
 
     def forward(self, attn, is_cross: bool, place_in_unet: str):
         key = f"{place_in_unet}_{'cross' if is_cross else 'self'}"
-        if attn.shape[1] <= (self.res // 16) ** 2:  # avoid memory overhead
-            self.step_store[key].append(attn)
+        q = attn.shape[1]
+        
+        # Store attention maps with spatial resolution up to threshold
+        # This captures 8x8, 16x16, 32x32 but skips 64x64
+        if q <= self.max_tokens_to_store:
+            self.step_store[key].append(attn.detach())  # .detach() to save memory
+        
         return attn
 
     def between_steps(self):
         if len(self.attention_store) == 0:
-            self.attention_store = self.step_store
+            self.attention_store = {k: list(v) for k, v in self.step_store.items()}
         else:
             for key in self.attention_store:
+                # Defensive check: if sizes don't match, reset and start fresh
+                # This can happen when processing a new image with different batch size
+                if len(self.step_store[key]) != len(self.attention_store[key]):
+                    self.attention_store = {k: list(v) for k, v in self.step_store.items()}
+                    self.step_store = self.get_empty_store()
+                    return
                 for i in range(len(self.attention_store[key])):
+                    # Check tensor shapes match before accumulating
+                    if self.step_store[key][i].shape != self.attention_store[key][i].shape:
+                        # Shape mismatch - reset to fresh state with current step data
+                        self.attention_store = {k: list(v) for k, v in self.step_store.items()}
+                        self.step_store = self.get_empty_store()
+                        return
                     self.attention_store[key][i] = self.step_store[key][i] + self.attention_store[key][i]
         self.step_store = self.get_empty_store()
 
     def get_average_attention(self):
-        average_attention = {key: [item / self.cur_step for item in self.attention_store[key]] for key in
-                             self.attention_store}
+        if self.cur_step == 0:
+            return self.step_store  # Return current step if no averaging yet
+        average_attention = {
+            key: [item / self.cur_step for item in self.attention_store[key]] 
+            for key in self.attention_store
+        }
         return average_attention
 
     def reset(self):

@@ -2,7 +2,7 @@
 # Split into 2 equal parts for parallel processing
 import os
 import shutil
-def split_dataset(input_dir, output_dir1, output_dir2, total_files=1000):
+def split_dataset(input_dir, output_dir1, output_dir2, total_files=662):
     if not os.path.exists(output_dir1):
         os.makedirs(output_dir1)
     if not os.path.exists(output_dir2):
@@ -21,8 +21,8 @@ def split_dataset(input_dir, output_dir1, output_dir2, total_files=1000):
         
 # Example usage
 input_directory = "datasets/imagenet-compatible/images"
-output_directory1 = "datasets/imagenet-compatible/images_part1"
-output_directory2 = "datasets/imagenet-compatible/images_part2"
+output_directory1 = "datasets/imagenet-compatible/tmp/images_part1"
+output_directory2 = "datasets/imagenet-compatible/tmp/images_part2"
 
 # Create the directories if they don't exist
 os.makedirs(output_directory1, exist_ok=True)
